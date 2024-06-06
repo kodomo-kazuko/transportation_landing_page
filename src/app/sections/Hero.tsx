@@ -1,6 +1,6 @@
 "use client";
 
-import React, { ReactNode, useEffect, useState } from "react";
+import React from "react";
 import ColorWrapper from "../components/ColorWrapper";
 import Start from "../../../public/images/figIMG/Splash.png";
 import Image from "next/image";
@@ -9,8 +9,8 @@ import SwipeWrapper from "../components/SwipeWrapper";
 
 const createAnimatedText = (text: string) => {
   return text.split(" ").map((word, index) => (
-    <SwipeWrapper key={index} animation="slide-right" delay={index * 250}>
-      <div className="text-8xl font-bold lg:ml-10 mt-10 lg:mt-0 mb-4">
+    <SwipeWrapper key={index} animation="fade-right" delay={index * 300}>
+      <div className="text-4xl sm:text-8xl font-bold lg:ml-10 mt-4 sm:mt-10 lg:mt-0 mb-4">
         {word}
       </div>
     </SwipeWrapper>
@@ -18,30 +18,31 @@ const createAnimatedText = (text: string) => {
 };
 
 const Hero: React.FC = () => {
-  const [opacity, setOpacity] = useState(0);
-
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setOpacity(1);
-    }, 1500);
-    return () => clearTimeout(timer);
-  }, []);
-
-  const text = createAnimatedText("NEW BUS APP!");
+  let screenSize: number = 0;
+  if (typeof window !== "undefined") {
+    if (window.innerWidth >= window.innerHeight) {
+      screenSize = 5;
+    } else {
+      screenSize = 2.5;
+    }
+  }
+  const text = createAnimatedText("ШИНЭ АВТОБУС АПП!!!");
 
   return (
     <ColorWrapper color={"white"}>
-      <div id="Hero" className="flex justify-center items-center">
-        <div className="flex flex-col items-center lg:flex-row">
-          <IPhone boxShadow="0px 5px 25px rgba(0,0,0,0.6)" width={300}>
-            <div style={{ opacity, transition: "opacity 2s ease-in-out" }}>
-              <Image src={Start} fill alt="" />
-            </div>
+      <div
+        id="Hero"
+        className="flex  justify-center items-center space-y-4 sm:space-y-0"
+      >
+        <div className=" z-10">
+          <IPhone
+            boxShadow="0px 5px 25px rgba(0,0,0,0.6)"
+            width={window.innerWidth / screenSize}
+          >
+            <Image src={Start} fill alt="" priority />
           </IPhone>
-          <div className="flex flex-col" style={{ zIndex: 0 }}>
-            {text}
-          </div>
         </div>
+        <div className="flex flex-col">{text}</div>
       </div>
     </ColorWrapper>
   );

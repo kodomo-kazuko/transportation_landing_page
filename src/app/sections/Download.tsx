@@ -10,18 +10,17 @@ export default function Download() {
     <ColorWrapper color="primary">
       <div
         id="Download"
-        className="container pt-8 pb-60 lg:p-0 flex flex-col lg:items-center gap-16 overflow-clip justify-center items-center"
+        className="container pt-8 pb-8 sm:pb-60 lg:p-0 flex flex-col lg:items-center gap-16 overflow-clip justify-center items-center px-4 sm:px-0"
       >
         <div className="z-10 lg:pt-16 text-base-normal">
-          <h1 className="font-semibold text-2xl leading-7 sm:text-3xl mb-5 sm:mb-6">
-            Цахим номын сангийн аппликейшн
+          <h1 className="font-semibold text-2xl leading-7 sm:text-5xl mb-5 sm:mb-6">
+            UBCARD
           </h1>
-          <p className="mb-8 sm:mb-10 font-normal text-sm sm:text-base">
-            Монголын үндэсний номын сангийн аппликейшнээ татаад хүссэн газраасаа
-            номын санд зочлоорой.
+          <p className="mb-8 sm:mb-10 font-normal sm:text-base">
+            Таны автобусны аяллыг хөнгөвчли
           </p>
         </div>
-        <div className="flex flex-col items-center justify-center">
+        <div className="flex flex-col items-center justify-center w-full sm:w-3/4 lg:w-2/4">
           <div className="flex flex-col sm:flex-row gap-3">
             <a className="w-full lg:w-fit focus-visible-class" href="">
               <button className=" bg-white font-semibold text-gray-700 rounded-2xl flex items-center justify-center gap-2 p-2">

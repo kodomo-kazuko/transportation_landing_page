@@ -21,7 +21,13 @@ export default function Footer() {
         <footer className="py-10 px-5 mb-10">
           <div className="flex flex-wrap justify-between">
             <div className="w-full md:w-1/4 mb-10 md:mb-0">
-              <Image src={Binary_Logo} alt="Logo" width={250} height={250} />
+              <Image
+                src={Binary_Logo}
+                alt="Logo"
+                width={250}
+                height={250}
+                priority
+              />
             </div>
             <div className="w-full md:w-1/4 mb-10 md:mb-0">
               <h2 className="text-lg mb-3">Contact Us</h2>

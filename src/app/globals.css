@@ -5,7 +5,7 @@
 body {
   @apply font-semibold text-gray-700;
   background-image: url("../../public//images//background/luke-chesser-PHtp0cDBJSM-unsplash.jpg");
-  /* background-color: black; */
+  overflow-x: hidden;
 }
 
 ::-webkit-scrollbar {
@@ -16,4 +16,5 @@ html {
   -ms-overflow-style: none;
   scrollbar-width: none;
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }

@@ -19,39 +19,39 @@ export default function NavBar() {
 
   return (
     <ColorWrapper color={"primary"}>
-      <div className="flex justify-center">
-        <div className="flex flex-auto justify-center ">
+      <div className="flex flex-col sm:flex-row justify-around items-center space-y-4 sm:space-y-0">
+        <div>
           <Image priority alt="" src={logoFull} />
         </div>
 
-        <div className="flex flex-auto justify-around">
+        <div className="flex flex-col sm:flex-row space-y-2 sm:space-y-0 sm:space-x-10">
           <MyButton
             bgColor="blue-400"
             fontType="sans"
             onClick={() => handleClick("Visual")}
           >
-            Visual
+            танилцуулга
           </MyButton>
           <MyButton
             bgColor="blue-400"
             fontType="sans"
             onClick={() => handleClick("FAQ")}
           >
-            FAQ
+            Түгээмэл асуултууд
           </MyButton>
           <MyButton
             bgColor="blue-400"
             fontType="sans"
             onClick={() => handleClick("Download")}
           >
-            Download
+            Татах
           </MyButton>
           <MyButton
             bgColor="blue-400"
             fontType="sans"
             onClick={() => handleClick("Footer")}
           >
-            Contact
+            Холбоо барих
           </MyButton>
         </div>
       </div>
