@@ -35,7 +35,7 @@ export default function NavBar({
           <MyButton
             bgColor="blue-400"
             fontType="sans"
-            onClick={() => handleClick("Visual", !showSecondDiv)}
+            onClick={() => handleClick("", !showSecondDiv)}
           >
             {showSecondDiv ? "Буцах" : "Ашиглах Заавар"}
           </MyButton>

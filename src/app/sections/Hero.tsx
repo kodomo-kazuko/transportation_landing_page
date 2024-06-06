@@ -39,7 +39,7 @@ const Hero: React.FC = () => {
             boxShadow="0px 5px 25px rgba(0,0,0,0.6)"
             width={window.innerWidth / screenSize}
           >
-            <Image src={Start} fill alt="" priority />
+            <Image src={Start} fill alt="" />
           </IPhone>
         </div>
         <div className="flex flex-col">{text}</div>

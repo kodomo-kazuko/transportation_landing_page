@@ -17,8 +17,8 @@ const SwipeWrapper: React.FC<ScrollWrapperProps> = ({
 }) => {
   useEffect(() => {
     AOS.init({
-      duration: 1500,
-      once: false,
+      duration: 1250,
+      once: true,
       mirror: false,
     });
   }, []);
