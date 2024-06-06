@@ -36,7 +36,7 @@ export default function FAQ() {
         <ColorWrapper color={"white"}>
           <div className="flex flex-col items-center justify-center px-4 sm:px-0">
             <div className="flex items-center flex-grow justify-center">
-              <h1 className="flex text-4xl sm:text-6xl md:text-5xl text-center">
+              <h1 className="flex text-4xl sm:text-6xl md:text-5xl items-center justify-center text-center">
                 Түгээмэл асуултууд
               </h1>
             </div>

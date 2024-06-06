@@ -1,13 +1,19 @@
-"use client";
-
 import React from "react";
 import MyButton from "../components/Button";
 import Image from "next/image";
 import logoFull from "../../../public/images/logo/UBCard-Logo.svg";
 import ColorWrapper from "../components/ColorWrapper";
 
-export default function NavBar() {
-  const handleClick = (id: string) => {
+interface NavBarProps {
+  showSecondDiv: boolean;
+  setShowSecondDiv: (showSecondDiv: boolean) => void;
+}
+
+export default function NavBar({
+  showSecondDiv,
+  setShowSecondDiv,
+}: NavBarProps) {
+  const handleClick = (id: string, shouldShowSecondDiv: boolean) => {
     const element = document.getElementById(id);
     if (element) {
       window.scrollTo({
@@ -15,6 +21,7 @@ export default function NavBar() {
         behavior: "smooth",
       });
     }
+    setShowSecondDiv(shouldShowSecondDiv);
   };
 
   return (
@@ -28,28 +35,28 @@ export default function NavBar() {
           <MyButton
             bgColor="blue-400"
             fontType="sans"
-            onClick={() => handleClick("Visual")}
+            onClick={() => handleClick("Visual", !showSecondDiv)}
           >
-            танилцуулга
+            {showSecondDiv ? "Буцах" : "Ашиглах Заавар"}
           </MyButton>
           <MyButton
             bgColor="blue-400"
             fontType="sans"
-            onClick={() => handleClick("FAQ")}
+            onClick={() => handleClick("FAQ", false)}
           >
             Түгээмэл асуултууд
           </MyButton>
           <MyButton
             bgColor="blue-400"
             fontType="sans"
-            onClick={() => handleClick("Download")}
+            onClick={() => handleClick("Download", false)}
           >
             Татах
           </MyButton>
           <MyButton
             bgColor="blue-400"
             fontType="sans"
-            onClick={() => handleClick("Footer")}
+            onClick={() => handleClick("Footer", false)}
           >
             Холбоо барих
           </MyButton>

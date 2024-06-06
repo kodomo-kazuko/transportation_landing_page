@@ -24,6 +24,10 @@ export default function Visuals() {
     object-position: center top;
   `;
 
+  const StyledH1 = styled.h1`
+    font-size: 2em;
+  `;
+
   return (
     <div id="Visual">
       <SwipeWrapper animation="slide-right">
@@ -38,7 +42,7 @@ export default function Visuals() {
               </IPhone>
             </div>
             <div className="flex basis-1/3 justify-center items-center">
-              <p>QR Code оо уншуулаад Зорчих боломжтой</p>
+              <StyledH1>QR Code-оо уншуулаад Зорчих</StyledH1>
             </div>
           </div>
         </ColorWrapper>
@@ -50,7 +54,10 @@ export default function Visuals() {
         <ColorWrapper color={"white"}>
           <div className="flex justify-evenly">
             <div className="flex basis-1/3 justify-center items-center">
-              "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do."
+              <StyledH1>
+                "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                do."
+              </StyledH1>
             </div>
             <div className="flex basis-1/3 justify-center items-center">
               <IPhone
@@ -78,7 +85,10 @@ export default function Visuals() {
               </IPhone>
             </div>
             <div className="flex basis-1/3 justify-center items-center">
-              "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do."
+              <StyledH1>
+                "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                do."
+              </StyledH1>
             </div>
           </div>
         </ColorWrapper>

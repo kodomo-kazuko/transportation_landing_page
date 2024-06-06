@@ -16,9 +16,9 @@ export default function Download() {
           <h1 className="font-semibold text-2xl leading-7 sm:text-5xl mb-5 sm:mb-6">
             UBCARD
           </h1>
-          <p className="mb-8 sm:mb-10 font-normal sm:text-base">
+          <h1 className="mb-8 sm:mb-10 font-normal sm:text-base">
             Таны автобусны аяллыг хөнгөвчли
-          </p>
+          </h1>
         </div>
         <div className="flex flex-col items-center justify-center w-full sm:w-3/4 lg:w-2/4">
           <div className="flex flex-col sm:flex-row gap-3">
