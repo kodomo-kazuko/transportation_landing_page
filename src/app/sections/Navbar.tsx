@@ -27,17 +27,17 @@ export default function NavBar({
   return (
     <ColorWrapper color={"primary"}>
       <div className="flex flex-col sm:flex-row justify-around items-center space-y-4 sm:space-y-0">
-        <div>
+        <button onClick={() => handleClick("", false)}>
           <Image priority alt="" src={logoFull} />
-        </div>
+        </button>
 
         <div className="flex flex-col sm:flex-row space-y-2 sm:space-y-0 sm:space-x-10">
           <MyButton
             bgColor="blue-400"
             fontType="sans"
-            onClick={() => handleClick("", !showSecondDiv)}
+            onClick={() => handleClick("", true)}
           >
-            {showSecondDiv ? "Буцах" : "Ашиглах Заавар"}
+            Ашиглах Заавар
           </MyButton>
           <MyButton
             bgColor="blue-400"

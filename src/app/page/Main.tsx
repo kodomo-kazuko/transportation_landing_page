@@ -15,8 +15,11 @@ export default function Main() {
       <Spacer height="40px" width="0" />
       <FAQ />
       <Spacer height="40px" width="0" />
-      <Download />
-      <Spacer height="40px" width="0" />
+
+      <div className="relative z-10  bottom-0 mb-[-25px]">
+        <Download />
+      </div>
+
       <Footer />
     </SwipeWrapper>
   );

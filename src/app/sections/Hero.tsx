@@ -6,6 +6,7 @@ import Start from "../../../public/images/figIMG/Splash.png";
 import Image from "next/image";
 import { IPhone } from "../components/iphone";
 import SwipeWrapper from "../components/SwipeWrapper";
+import { useScreenSize } from "../components/getScreenSize";
 
 const createAnimatedText = (text: string) => {
   return text.split(" ").map((word, index) => (
@@ -18,15 +19,8 @@ const createAnimatedText = (text: string) => {
 };
 
 const Hero: React.FC = () => {
-  let screenSize: number = 0;
-  if (typeof window !== "undefined") {
-    if (window.innerWidth >= window.innerHeight) {
-      screenSize = 5;
-    } else {
-      screenSize = 2.5;
-    }
-  }
-  const text = createAnimatedText("ШИНЭ АВТОБУС АПП!!!");
+  const screenSize = useScreenSize();
+  const text = createAnimatedText("ШИНЭ АВТОБУСНЫ АПП!!!");
 
   return (
     <ColorWrapper color={"white"}>
@@ -35,10 +29,7 @@ const Hero: React.FC = () => {
         className="flex  justify-center items-center space-y-4 sm:space-y-0"
       >
         <div className=" z-10">
-          <IPhone
-            boxShadow="0px 5px 25px rgba(0,0,0,0.6)"
-            width={window.innerWidth / screenSize}
-          >
+          <IPhone boxShadow="0px 5px 25px rgba(0,0,0,0.6)" width={screenSize}>
             <Image src={Start} fill alt="" />
           </IPhone>
         </div>

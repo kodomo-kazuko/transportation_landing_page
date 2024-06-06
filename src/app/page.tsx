@@ -18,7 +18,7 @@ export default function Home() {
         setShowSecondDiv={setShowSecondDiv}
       />
 
-      <Spacer height="20px" width="0" />
+      <Spacer height="40px" width="0" />
 
       {showSecondDiv ? Manual() : Main()}
 
