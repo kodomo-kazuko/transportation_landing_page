@@ -25,7 +25,7 @@ export default function NavBar({
   };
 
   return (
-    <ColorWrapper color={"primary"}>
+    <ColorWrapper color={"white"}>
       <div className="flex flex-col sm:flex-row justify-around items-center space-y-4 sm:space-y-0">
         <div>
           <Image priority alt="" src={logoFull} />

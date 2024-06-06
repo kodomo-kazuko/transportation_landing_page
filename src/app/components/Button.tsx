@@ -15,7 +15,7 @@ export default function MyButton({
 }: MyButtonProps) {
   return (
     <button
-      className={`font-${fontType} bg-${bgColor} hover:bg-${bgColor}-light text-xl`}
+      className={`font-${fontType} bg-${bgColor} hover:bg-${bgColor}-light text-xl `}
       onClick={onClick}
     >
       {children}
