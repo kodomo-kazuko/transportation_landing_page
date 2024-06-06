@@ -25,7 +25,7 @@ export default function Visuals() {
   `;
 
   const StyledH1 = styled.h1`
-    font-size: 2em;
+    font-size: 1.5em;
   `;
 
   return (
@@ -42,7 +42,7 @@ export default function Visuals() {
               </IPhone>
             </div>
             <div className="flex basis-1/3 justify-center items-center">
-              <StyledH1>QR Code-оо уншуулаад Зорчих</StyledH1>
+              <StyledH1>QR Code-оо уншуулаад зорчих боломж</StyledH1>
             </div>
           </div>
         </ColorWrapper>
@@ -55,8 +55,8 @@ export default function Visuals() {
           <div className="flex justify-evenly">
             <div className="flex basis-1/3 justify-center items-center">
               <StyledH1>
-                "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                do."
+                Qpay, Socialpay болон банкны картаар төлбөр төлөх боломжтой
+                хялбар төлбөрийн шийдэл
               </StyledH1>
             </div>
             <div className="flex basis-1/3 justify-center items-center">
@@ -86,8 +86,8 @@ export default function Visuals() {
             </div>
             <div className="flex basis-1/3 justify-center items-center">
               <StyledH1>
-                "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                do."
+                Газрын зураг дээрээс автобусны байршил болон зогсоол, карт
+                борлуулах цэгүүдийг харах
               </StyledH1>
             </div>
           </div>

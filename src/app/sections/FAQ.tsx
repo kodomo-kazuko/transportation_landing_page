@@ -5,28 +5,30 @@ import SwipeWrapper from "../components/SwipeWrapper";
 export default function FAQ() {
   const items = [
     {
-      title: "Accordion Item #1",
-      content: "This is the first item's accordion body.",
+      title: "'UBCARD' гэж юу вэ?",
+      content:
+        "GPS болон төлбөр тооцооны ухаалаг системд суурилсан нийтийн тээврийн үйлчилгээний аппликейшн",
+    },
+
+    {
+      title: "Хөнгөлөлттэй эрх гэж юу вэ?",
+      content:
+        "Хөнгөлөлттэй эрх нь 'Хязгааргүй эрх', 'Оюутны эрх' гэсэн төрлүүдтэй ба та өөрийн хэрэгцээнд зориулан худалдан авах эсвэл үнэгүй авах боломжтой. Хөнгөлөлттэй эрхээр зорчсон тохиолдолд хэтэвчнээс мөнгө хасагдахгүй.",
     },
     {
-      title: "Accordion Item #2",
-      content: "This is the second item's accordion body.",
+      title: "Төлбөр хэрхэн төлөх вэ?",
+      content:
+        "Хэрэглэгч QPay, Socialpay болон өөрийн хэрэглэдэг банкны картыг аппликейшнд холбон төлбөрөө төлж, картаа цэнэглэнэ.",
     },
     {
-      title: "Accordion Item #3",
-      content: "This is the third item's accordion body.",
+      title: "Хэрэглэгчийн үнэлгээ гэж юу вэ?",
+      content:
+        "Картаа уншуулан автобусанд суусан үед тухайн автобусны явж буй байршил харагдана. Та автобус болон жолоочид сэтгэгдэл үлдээх, үнэлгээ өгөх боломжтой.",
     },
     {
-      title: "Accordion Item #1",
-      content: "This is the first item's accordion body.",
-    },
-    {
-      title: "Accordion Item #2",
-      content: "This is the second item's accordion body.",
-    },
-    {
-      title: "Accordion Item #3",
-      content: "This is the third item's accordion body.",
+      title:
+        "Нийтийн тээвэртэй холбоотой гомдол, санал, хүсэлтийг хаана хандах вэ?",
+      content: "",
     },
   ];
 
@@ -50,7 +52,10 @@ export default function FAQ() {
                       value={index.toString()}
                       trigger={item.title}
                     >
-                      {item.content}
+                      {/* {item.content} */}
+                      <div className="p-1 text-gray-700 text-sm font-normal leading-relaxed">
+                        {item.content}
+                      </div>
                     </AccordionItem>
                   ))}
                 </Accordion>
