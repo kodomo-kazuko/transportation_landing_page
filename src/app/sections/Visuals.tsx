@@ -11,13 +11,10 @@ import map from "../../../public/images//figIMG/Stations 4.png";
 import ColorWrapper from "../components/ColorWrapper";
 import SwipeWrapper from "../components/SwipeWrapper";
 
+import { useScreenSize } from "../components/getScreenSize";
+
 export default function Visuals() {
-  let screenSize: number = 0;
-  if (window.innerWidth >= window.innerHeight) {
-    screenSize = 5;
-  } else {
-    screenSize = 2.5;
-  }
+  const screenSize = useScreenSize();
 
   const StyledImage = styled(Image)`
     object-fit: cover;
@@ -36,7 +33,7 @@ export default function Visuals() {
             <div className="flex basis-1/3 justify-center items-center">
               <IPhone
                 boxShadow="0px 5px 25px rgba(0,0,0,0.6)"
-                width={window.innerWidth / screenSize}
+                width={screenSize}
               >
                 <Image src={GG} alt="" layout="fill" priority />
               </IPhone>
@@ -62,7 +59,7 @@ export default function Visuals() {
             <div className="flex basis-1/3 justify-center items-center">
               <IPhone
                 boxShadow="0px 5px 25px rgba(0,0,0,0.6)"
-                width={window.innerWidth / screenSize}
+                width={screenSize}
               >
                 <StyledImage src={Payment} alt="" layout="fill" priority />
               </IPhone>
@@ -79,7 +76,7 @@ export default function Visuals() {
             <div className="flex basis-1/3 justify-center items-center">
               <IPhone
                 boxShadow="0px 5px 25px rgba(0,0,0,0.6)"
-                width={window.innerWidth / screenSize}
+                width={screenSize}
               >
                 <Image src={map} alt="" layout="fill" priority />
               </IPhone>

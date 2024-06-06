@@ -34,7 +34,7 @@ export default function FAQ() {
 
   return (
     <div id="FAQ">
-      <SwipeWrapper animation={"slide-left"}>
+      <SwipeWrapper animation={""}>
         <ColorWrapper color={"white"}>
           <div className="flex flex-col items-center justify-center px-4 sm:px-0">
             <div className="flex items-center flex-grow justify-center">
