@@ -5,14 +5,10 @@ import logoFull from "../../../public/images/logo/UBCard-Logo.svg";
 import ColorWrapper from "../components/ColorWrapper";
 
 interface NavBarProps {
-  showSecondDiv: boolean;
   setShowSecondDiv: (showSecondDiv: boolean) => void;
 }
 
-export default function NavBar({
-  showSecondDiv,
-  setShowSecondDiv,
-}: NavBarProps) {
+export default function NavBar({ setShowSecondDiv }: NavBarProps) {
   const handleClick = (id: string, shouldShowSecondDiv: boolean) => {
     const element = document.getElementById(id);
     if (element) {
@@ -25,7 +21,7 @@ export default function NavBar({
   };
 
   return (
-    <ColorWrapper color={"white"}>
+    <ColorWrapper color={"primary"}>
       <div className="flex flex-col sm:flex-row justify-around items-center space-y-4 sm:space-y-0">
         <button onClick={() => handleClick("", false)}>
           <Image priority alt="" src={logoFull} />

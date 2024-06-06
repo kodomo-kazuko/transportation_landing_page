@@ -13,12 +13,9 @@ export default function Home() {
 
   return (
     <Layout>
-      <NavBar
-        showSecondDiv={showSecondDiv}
-        setShowSecondDiv={setShowSecondDiv}
-      />
+      <NavBar setShowSecondDiv={setShowSecondDiv} />
 
-      <Spacer height="40px" width="0" />
+      <Spacer height="50px" width="0" />
 
       {showSecondDiv ? Manual() : Main()}
 
