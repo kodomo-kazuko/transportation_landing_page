@@ -4,8 +4,9 @@ import React, { useState } from "react";
 import NavBar from "./sections/Navbar";
 import Layout from "./components/layout";
 import ScrollToTopButton from "./components/ScrollToTop";
-import SwipeWrapper from "./components/SwipeWrapper";
+import Manual from "./page/Manual";
 import Main from "./page/Main";
+import Spacer from "./components/spacer";
 
 export default function Home() {
   const [showSecondDiv, setShowSecondDiv] = useState(false);
@@ -17,11 +18,9 @@ export default function Home() {
         setShowSecondDiv={setShowSecondDiv}
       />
 
-      {showSecondDiv ? (
-        <SwipeWrapper animation="fade-right">stuff will be added</SwipeWrapper>
-      ) : (
-        Main()
-      )}
+      <Spacer height="20px" width="0" />
+
+      {showSecondDiv ? Manual() : Main()}
 
       <ScrollToTopButton />
     </Layout>
