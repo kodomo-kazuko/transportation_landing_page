@@ -1,7 +1,7 @@
 import image_1 from "../../../../public/images/manual/6_direction_4.png";
 import image_2 from "../../../../public/images/manual/6_direction_5.png";
 import image_3 from "../../../../public/images/manual/6_direction_6.png";
-import ContentWrapper, { CardData } from "@/app/components/ContentWrapper";
+import ContentWrapper, { CardData } from "@/app/wrappers/ContentWrapper";
 
 export default function Direction2() {
   const cards: CardData[] = [

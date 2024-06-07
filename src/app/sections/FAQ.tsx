@@ -1,6 +1,6 @@
 import Accordion, { AccordionItem } from "../components/Accordion";
-import ColorWrapper from "../components/ColorWrapper";
-import SwipeWrapper from "../components/SwipeWrapper";
+import ColorWrapper from "../wrappers/ColorWrapper";
+import SwipeWrapper from "../wrappers/SwipeWrapper";
 
 export default function FAQ() {
   const items = [

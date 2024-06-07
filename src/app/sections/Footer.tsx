@@ -3,7 +3,7 @@
 import Image from "next/image";
 import Binary_Logo from "../../../public/images/logo/BINARY_LOGO_WHITE.svg";
 
-import ColorWrapper from "../components/ColorWrapper";
+import ColorWrapper from "../wrappers/ColorWrapper";
 import Spacer from "../components/spacer";
 import {
   FaPhoneAlt,

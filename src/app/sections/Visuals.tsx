@@ -8,8 +8,8 @@ import Spacer from "../components/spacer";
 import GG from "../../../public/images/figIMG/Home-Regular 3.png";
 import Payment from "../../../public/images/figIMG/Qpay.png";
 import map from "../../../public/images//figIMG/Stations 4.png";
-import ColorWrapper from "../components/ColorWrapper";
-import SwipeWrapper from "../components/SwipeWrapper";
+import ColorWrapper from "../wrappers/ColorWrapper";
+import SwipeWrapper from "../wrappers/SwipeWrapper";
 
 import { useScreenSize } from "../components/getScreenSize";
 
@@ -28,30 +28,32 @@ export default function Visuals() {
   return (
     <div id="Visual">
       <SwipeWrapper animation="fade-up">
-        <ColorWrapper color={"primary"}>
-          <div className="flex justify-evenly">
-            <div className="flex basis-1/3 justify-center items-center">
-              <IPhone
-                boxShadow="0px 5px 25px rgba(0,0,0,0.6)"
-                width={screenSize}
-              >
-                <Image src={GG} alt="" layout="fill" priority />
-              </IPhone>
+        <div className="shadow-xl rounded-xl">
+          <ColorWrapper color={"primary"}>
+            <div className="flex justify-evenly">
+              <div className="flex basis-1/3 justify-center items-center">
+                <IPhone
+                  boxShadow="0px 5px 25px rgba(0,0,0,0.6)"
+                  width={screenSize}
+                >
+                  <Image src={GG} alt="" layout="fill" priority />
+                </IPhone>
+              </div>
+              <div className="flex basis-1/3 justify-center items-center">
+                <StyledH1>
+                  Заавал автобусны карт ашиглах шаардлагагүй QR Code уншуулаад
+                  зорчих боломж
+                </StyledH1>
+              </div>
             </div>
-            <div className="flex basis-1/3 justify-center items-center">
-              <StyledH1>
-                Заавал автобусны карт ашиглах шаардлагагүй QR Code уншуулаад
-                зорчих боломж
-              </StyledH1>
-            </div>
-          </div>
-        </ColorWrapper>
+          </ColorWrapper>
+        </div>
       </SwipeWrapper>
 
       <Spacer height="40px" width="0" />
 
       <SwipeWrapper animation="fade-up-left">
-        <div className="shadow-md rounded-xl">
+        <div className="shadow-xl rounded-xl">
           <ColorWrapper color={"transparent"}>
             <div className="flex justify-evenly">
               <div className="flex basis-1/3 justify-center items-center">
@@ -76,24 +78,26 @@ export default function Visuals() {
       <Spacer height="40px" width="0" />
 
       <SwipeWrapper animation={"fade-up-right"}>
-        <ColorWrapper color={"primary"}>
-          <div className="flex justify-evenly">
-            <div className="flex basis-1/3 justify-center items-center">
-              <IPhone
-                boxShadow="0px 5px 25px rgba(0,0,0,0.6)"
-                width={screenSize}
-              >
-                <Image src={map} alt="" layout="fill" priority />
-              </IPhone>
+        <div className="shadow-xl rounded-xl">
+          <ColorWrapper color={"primary"}>
+            <div className="flex justify-evenly">
+              <div className="flex basis-1/3 justify-center items-center">
+                <IPhone
+                  boxShadow="0px 5px 25px rgba(0,0,0,0.6)"
+                  width={screenSize}
+                >
+                  <Image src={map} alt="" layout="fill" priority />
+                </IPhone>
+              </div>
+              <div className="flex basis-1/3 justify-center items-center">
+                <StyledH1>
+                  Газрын зураг дээрээс автобусны байршил болон зогсоол, карт
+                  борлуулах цэгүүдийг харах
+                </StyledH1>
+              </div>
             </div>
-            <div className="flex basis-1/3 justify-center items-center">
-              <StyledH1>
-                Газрын зураг дээрээс автобусны байршил болон зогсоол, карт
-                борлуулах цэгүүдийг харах
-              </StyledH1>
-            </div>
-          </div>
-        </ColorWrapper>
+          </ColorWrapper>
+        </div>
       </SwipeWrapper>
     </div>
   );

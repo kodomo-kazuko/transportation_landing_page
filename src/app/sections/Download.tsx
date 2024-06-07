@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import ColorWrapper from "../components/ColorWrapper";
+import ColorWrapper from "../wrappers/ColorWrapper";
 import PlayStore from "../../../public/images/Icon/PlayStore.svg";
 import AppStore from "../../../public/images/Icon/AppStore.svg";
 import { IPhone } from "../components/iphone";
@@ -14,7 +14,7 @@ export default function Download() {
       <ColorWrapper color="primary">
         <div
           id="Download"
-          className="container   pt-8 pb-8 sm:pb-6 lg:p-0 flex flex-col lg:flex-row lg:items-center gap-16 overflow-clip justify-center items-center px-4 sm:px-0 mx-5 sm:mx-10"
+          className="container   pt-8 pb-8 sm:pb-6 lg:p-0 flex flex-col lg:flex-row lg:items-center gap-16 overflow-clip justify-center items-center px-4 "
         >
           <div className="lg:absolute sm:none bottom-4 left-16 ">
             <IPhone boxShadow="0px 5px 25px rgba(0,0,0,0.6)" width={updateSize}>

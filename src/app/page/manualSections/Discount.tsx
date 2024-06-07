@@ -1,7 +1,7 @@
 import image_1 from "../../../../public/images/manual/3_discount_1.png";
 import image_2 from "../../../../public/images/manual/3_discount_2.png";
 import image_3 from "../../../../public/images/manual/3_discount_3.png";
-import ContentWrapper, { CardData } from "@/app/components/ContentWrapper";
+import ContentWrapper, { CardData } from "@/app/wrappers/ContentWrapper";
 
 export default function Discount() {
   const cards: CardData[] = [

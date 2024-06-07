@@ -33,8 +33,8 @@ export default function ScrollToTopButton() {
           onClick={scrollToTop}
           className="fixed bottom-10 right-10 cursor-pointer"
         >
-          <button className="p-4 rounded-full text-5xl text-ub-secondary ring-3 ring-black bg-blue-400 border-2 md:text-6xl">
-            <MdOutlineKeyboardDoubleArrowUp />
+          <button className="p-4 rounded-full text-4xl text-ub-secondary ring-3 ring-black bg-blue-500 border-2 md:text-4xl">
+            <MdOutlineKeyboardDoubleArrowUp color="white" />
           </button>
         </div>
       )}

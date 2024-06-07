@@ -1,5 +1,5 @@
 import React, { ReactNode } from "react";
-import ColorWrapper from "@/app/components/ColorWrapper";
+import ColorWrapper from "@/app/wrappers/ColorWrapper";
 import Card from "@/app/components/Card";
 import { IPhone } from "@/app/components/iphone";
 import SideButton from "@/app/components/SideButton";

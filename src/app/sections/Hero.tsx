@@ -1,11 +1,11 @@
 "use client";
 
 import React from "react";
-import ColorWrapper from "../components/ColorWrapper";
+import ColorWrapper from "../wrappers/ColorWrapper";
 import Start from "../../../public/images/figIMG/Splash.png";
 import Image from "next/image";
 import { IPhone } from "../components/iphone";
-import SwipeWrapper from "../components/SwipeWrapper";
+import SwipeWrapper from "../wrappers/SwipeWrapper";
 import { useScreenSize } from "../components/getScreenSize";
 
 const createAnimatedText = (text: string) => {
@@ -31,7 +31,14 @@ const Hero: React.FC = () => {
         >
           <div className=" z-10">
             <IPhone boxShadow="0px 5px 25px rgba(0,0,0,0.6)" width={screenSize}>
-              <Image src={Start} fill alt="" />
+              <video
+                style={{ width: "100%", height: "100%" }}
+                src="https://images.apple.com/media/us/iphone-x/2017/01df5b43-28e4-4848-bf20-490c34a926a7/overview/primary/hero/small_2x.mp4"
+                autoPlay
+                loop
+                muted
+                playsInline
+              />
             </IPhone>
           </div>
           <div className="flex flex-col">{text}</div>

@@ -1,6 +1,6 @@
 import Download from "../sections/Download";
 import Spacer from "../components/spacer";
-import SwipeWrapper from "../components/SwipeWrapper";
+import SwipeWrapper from "../wrappers/SwipeWrapper";
 import FAQ from "../sections/FAQ";
 import Footer from "../sections/Footer";
 import Hero from "../sections/Hero";
@@ -19,7 +19,7 @@ export default function Main() {
 
       <FAQ />
 
-      <Spacer height="40px" width="0" />
+      <Spacer height="80px" width="0" />
 
       <Download />
 
