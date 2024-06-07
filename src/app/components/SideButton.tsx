@@ -1,9 +1,15 @@
-import { FaArrowRight, FaArrowUp } from "react-icons/fa";
+import { FaArrowRight, FaArrowDown } from "react-icons/fa";
 
-export default function SideButton() {
+interface SideButtonProps {
+  direction: "right" | "down";
+}
+
+const SideButton: React.FC<SideButtonProps> = ({ direction }) => {
   return (
     <button className="p-4 bg-blue-500 text-white rounded-full text-3xl">
-      <FaArrowRight />
+      {direction === "right" ? <FaArrowRight /> : <FaArrowDown />}
     </button>
   );
-}
+};
+
+export default SideButton;

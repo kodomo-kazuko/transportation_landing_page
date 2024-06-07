@@ -29,33 +29,37 @@ const ContentWrapper: React.FC<ContentWrapperProps> = ({
   const screenSize = useScreenSize();
 
   return (
-    <>
-      <div className=" text-black text-3xl pl-10">{title}</div>
-      <div
-        className={`shadow-2xl rounded-3xl ${
-          isMobile ? "flex-col" : "flex-row"
-        }`}
-      >
-        <ColorWrapper color="transparent">
-          <div>
-            <div className="flex justify-around items-center">
-              {cards.map((card, index) => (
-                <>
-                  <Card title={card.title} description={card.description}>
-                    <div className="flex w-11/12 md:w-7/10 mx-auto justify-center">
-                      <IPhone boxShadow={undefined} width={screenSize}>
-                        <Image alt="" src={card.image} fill priority />
-                      </IPhone>
-                    </div>
-                  </Card>
-                  {index < cards.length - 1 && <SideButton />}
-                </>
-              ))}
-            </div>
+    <div
+      className={`shadow-2xl rounded-3xl flex ${
+        isMobile ? "flex-col" : "flex-row"
+      }`}
+    >
+      <ColorWrapper color="transparent">
+        <div className="text-black text-3xl pl-10 md:text-4xl">{title}</div>
+        <div>
+          <div
+            className={`flex ${
+              isMobile ? "flex-col space-y-4" : "flex-row space-x-4"
+            } justify-around items-center overflow-auto`}
+          >
+            {cards.map((card, index) => (
+              <>
+                <Card title={card.title} description={card.description}>
+                  <div className="flex w-11/12 md:w-7/10 mx-auto justify-center">
+                    <IPhone boxShadow={undefined} width={screenSize}>
+                      <Image alt="" src={card.image} fill priority />
+                    </IPhone>
+                  </div>
+                </Card>
+                {index < cards.length - 1 && (
+                  <SideButton direction={isMobile ? "down" : "right"} />
+                )}
+              </>
+            ))}
           </div>
-        </ColorWrapper>
-      </div>
-    </>
+        </div>
+      </ColorWrapper>
+    </div>
   );
 };
 
