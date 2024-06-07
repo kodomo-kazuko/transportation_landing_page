@@ -48,24 +48,26 @@ export default function Visuals() {
       <Spacer height="40px" width="0" />
 
       <SwipeWrapper animation="slide-left">
-        <ColorWrapper color={"white"}>
-          <div className="flex justify-evenly">
-            <div className="flex basis-1/3 justify-center items-center">
-              <StyledH1>
-                Qpay, Socialpay болон банкны картаар төлбөр төлөх боломжтой
-                хялбар төлбөрийн шийдэл
-              </StyledH1>
+        <div className="shadow-md rounded-xl">
+          <ColorWrapper color={"transparent"}>
+            <div className="flex justify-evenly">
+              <div className="flex basis-1/3 justify-center items-center">
+                <StyledH1>
+                  Qpay, Socialpay болон банкны картаар төлбөр төлөх боломжтой
+                  хялбар төлбөрийн шийдэл
+                </StyledH1>
+              </div>
+              <div className="flex basis-1/3 justify-center items-center">
+                <IPhone
+                  boxShadow="0px 5px 25px rgba(0,0,0,0.6)"
+                  width={screenSize}
+                >
+                  <StyledImage src={Payment} alt="" layout="fill" priority />
+                </IPhone>
+              </div>
             </div>
-            <div className="flex basis-1/3 justify-center items-center">
-              <IPhone
-                boxShadow="0px 5px 25px rgba(0,0,0,0.6)"
-                width={screenSize}
-              >
-                <StyledImage src={Payment} alt="" layout="fill" priority />
-              </IPhone>
-            </div>
-          </div>
-        </ColorWrapper>
+          </ColorWrapper>
+        </div>
       </SwipeWrapper>
 
       <Spacer height="40px" width="0" />

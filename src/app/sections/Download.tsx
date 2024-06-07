@@ -7,7 +7,7 @@ import AppStore from "../../../public/images/Icon/AppStore.svg";
 
 export default function Download() {
   return (
-    <div className="shadow-xl rounded-xl">
+    <div className="shadow-2xl rounded-xl">
       <ColorWrapper color="transparent">
         <div
           id="Download"

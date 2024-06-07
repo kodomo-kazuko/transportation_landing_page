@@ -23,19 +23,21 @@ const Hero: React.FC = () => {
   const text = createAnimatedText("ШИНЭ АВТОБУСНЫ АПП!!!");
 
   return (
-    <ColorWrapper color={"white"}>
-      <div
-        id="Hero"
-        className="flex  justify-center items-center space-y-4 sm:space-y-0"
-      >
-        <div className=" z-10">
-          <IPhone boxShadow="0px 5px 25px rgba(0,0,0,0.6)" width={screenSize}>
-            <Image src={Start} fill alt="" />
-          </IPhone>
+    <div className="shadow-md rounded-xl">
+      <ColorWrapper color={"transparent"}>
+        <div
+          id="Hero"
+          className="flex  justify-center items-center space-y-4 sm:space-y-0"
+        >
+          <div className=" z-10">
+            <IPhone boxShadow="0px 5px 25px rgba(0,0,0,0.6)" width={screenSize}>
+              <Image src={Start} fill alt="" />
+            </IPhone>
+          </div>
+          <div className="flex flex-col">{text}</div>
         </div>
-        <div className="flex flex-col">{text}</div>
-      </div>
-    </ColorWrapper>
+      </ColorWrapper>
+    </div>
   );
 };
 

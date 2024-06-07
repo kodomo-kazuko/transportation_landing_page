@@ -33,9 +33,9 @@ export default function FAQ() {
   ];
 
   return (
-    <div id="FAQ">
-      <SwipeWrapper animation={""}>
-        <ColorWrapper color={"white"}>
+    <SwipeWrapper animation={""}>
+      <div id="FAQ" className="shadow-md rounded-xl">
+        <ColorWrapper color={"transparent"}>
           <div className="flex flex-col items-center justify-center px-4 sm:px-0">
             <div className="flex items-center flex-grow justify-center">
               <h1 className="flex text-4xl sm:text-6xl md:text-5xl items-center justify-center text-center">
@@ -63,7 +63,7 @@ export default function FAQ() {
             </div>
           </div>
         </ColorWrapper>
-      </SwipeWrapper>
-    </div>
+      </div>
+    </SwipeWrapper>
   );
 }
