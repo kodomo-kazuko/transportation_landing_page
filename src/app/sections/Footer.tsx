@@ -19,7 +19,7 @@ export default function Footer() {
       <ColorWrapper color="secondary">
         <Spacer height={"40"} width={""} />
         <footer className="py-10 px-5 mb-10">
-          <div className="flex flex-wrap justify-between">
+          <div className="flex flex-wrap justify-between font-normal">
             <div className="w-full md:w-1/4 mb-10 md:mb-0">
               <Image
                 src={Binary_Logo}
@@ -29,14 +29,21 @@ export default function Footer() {
                 priority
               />
             </div>
-            <div className="w-full md:w-1/4 mb-10 md:mb-0">
-              <h2 className="text-lg mb-3">Contact Us</h2>
-              <p>
-                <FaPhoneAlt /> Call us: 99027454
-              </p>
-              <p>
-                <FaEnvelopeOpenText /> binarysystems.mn@gmail.com
-              </p>
+            <div className="w-full  md:w-1/4 mb-10 md:mb-0">
+              <h2 className="text-lg  mb-3">Contact Us</h2>
+              <div className="flex flex-nowrap gap-2">
+                <div>
+                  <FaPhoneAlt />
+                </div>
+                <div>Call us: 99027454</div>
+              </div>
+              <br></br>
+              <div className="flex flex-nowrap gap-2">
+                <div>
+                  <FaEnvelopeOpenText />
+                </div>
+                <div>binarysystems.mn@gmail.com</div>
+              </div>
             </div>
             <div className="w-full md:w-1/4">
               <h2 className="text-lg mb-3">Social</h2>
