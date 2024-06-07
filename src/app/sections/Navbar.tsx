@@ -5,14 +5,10 @@ import logoFull from "../../../public/images/logo/UBCard-Logo.svg";
 import ColorWrapper from "../components/ColorWrapper";
 
 interface NavBarProps {
-  showSecondDiv: boolean;
   setShowSecondDiv: (showSecondDiv: boolean) => void;
 }
 
-export default function NavBar({
-  showSecondDiv,
-  setShowSecondDiv,
-}: NavBarProps) {
+export default function NavBar({ setShowSecondDiv }: NavBarProps) {
   const handleClick = (id: string, shouldShowSecondDiv: boolean) => {
     const element = document.getElementById(id);
     if (element) {

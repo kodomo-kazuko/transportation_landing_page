@@ -1,5 +1,3 @@
-"use client";
-
 import React, { ReactNode, useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -17,9 +15,9 @@ const SwipeWrapper: React.FC<ScrollWrapperProps> = ({
 }) => {
   useEffect(() => {
     AOS.init({
-      duration: 1500,
-      once: true,
-      mirror: false,
+      duration: 2000,
+      once: false,
+      mirror: true,
     });
   }, []);
 
