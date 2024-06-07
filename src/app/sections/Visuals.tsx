@@ -22,7 +22,7 @@ export default function Visuals() {
   `;
 
   const StyledH1 = styled.h1`
-    font-size: 1.5em;
+    font-size: calc(0.7em + 1vw);
   `;
 
   return (
