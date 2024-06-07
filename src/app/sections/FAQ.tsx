@@ -7,7 +7,7 @@ export default function FAQ() {
     {
       title: "'UBCARD' гэж юу вэ?",
       content:
-        "GPS болон төлбөр тооцооны ухаалаг системд суурилсан нийтийн тээврийн үйлчилгээний аппликейшн",
+        "GPS болон төлбөр тооцооны ухаалаг системд суурилсан нийтийн тээврийн үйлчилгээний аппликейшн юм.",
     },
 
     {
@@ -25,45 +25,42 @@ export default function FAQ() {
       content:
         "Картаа уншуулан автобусанд суусан үед тухайн автобусны явж буй байршил харагдана. Та автобус болон жолоочид сэтгэгдэл үлдээх, үнэлгээ өгөх боломжтой.",
     },
-    {
-      title:
-        "Нийтийн тээвэртэй холбоотой гомдол, санал, хүсэлтийг хаана хандах вэ?",
-      content: "",
-    },
   ];
 
   return (
-    <SwipeWrapper animation={""}>
-      <div id="FAQ" className="shadow-md rounded-xl">
-        <ColorWrapper color={"transparent"}>
-          <div className="flex flex-col items-center justify-center px-4 sm:px-0">
-            <div className="flex items-center flex-grow justify-center">
-              <h1 className="flex text-4xl sm:text-6xl md:text-5xl items-center justify-center text-center">
-                Түгээмэл асуултууд
-              </h1>
-            </div>
+    <div id="FAQ">
+      <SwipeWrapper animation={"right"}>
+        <div className="shadow-md rounded-xl">
+          <ColorWrapper color={"transparent"}>
+            <div className="flex flex-col items-center justify-center px-4 sm:px-0">
+              <div className="flex items-center flex-grow justify-center">
+                <h1 className="flex text-4xl sm:text-6xl md:text-5xl items-center justify-center text-center">
+                  Түгээмэл асуултууд
+                </h1>
+              </div>
 
-            <div className="flex w-full sm:w-3/4 lg:w-2/4 justify-center items-center">
-              <div className="flex-1">
-                <Accordion value={null}>
-                  {items.map((item, index) => (
-                    <AccordionItem
-                      key={index}
-                      value={index.toString()}
-                      trigger={item.title}
-                    >
-                      {/* {item.content} */}
-                      <div className="p-1 text-gray-700 text-sm font-normal leading-relaxed">
-                        {item.content}
-                      </div>
-                    </AccordionItem>
-                  ))}
-                </Accordion>
+              <div className="flex w-full sm:w-3/4 lg:w-2/4 justify-center items-center">
+                <div className="flex-1">
+                  <Accordion value={null}>
+                    {items.map((item, index) => (
+                      <AccordionItem
+                        key={index}
+                        value={index.toString()}
+                        trigger={item.title}
+                      >
+                        {/* {item.content} */}
+                        <div className="p-1 text-gray-700 text-sm font-normal leading-relaxed">
+                          {item.content}
+                        </div>
+                      </AccordionItem>
+                    ))}
+                  </Accordion>
+                </div>
               </div>
             </div>
-          </div>
-        </ColorWrapper>
-      </div>
-    </SwipeWrapper>
+          </ColorWrapper>
+        </div>
+      </SwipeWrapper>
+    </div>
   );
 }
