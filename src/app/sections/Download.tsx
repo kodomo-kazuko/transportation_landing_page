@@ -3,56 +3,61 @@ import Image from "next/image";
 import ColorWrapper from "../components/ColorWrapper";
 import PlayStore from "../../../public/images/Icon/PlayStore.svg";
 import AppStore from "../../../public/images/Icon/AppStore.svg";
+import { IPhone } from "../components/iphone";
+import Start from "../../../public/images/figIMG/Splash.png";
+import { useScreenSize } from "../components/getScreenSize";
 
 export default function Download() {
+  const updateSize = useScreenSize({ landscapeRatio: 9, portraitRatio: 3 });
   return (
-    <div className="shadow-2xl rounded-xl">
-      <ColorWrapper color="transparent">
+    <div className="relative shadow-2xl rounded-xl">
+      <ColorWrapper color="primary">
         <div
           id="Download"
-          className="container pt-8 pb-8 sm:pb-6 lg:p-0 flex flex-col lg:items-center gap-16 overflow-clip justify-center items-center px-0 mx-0"
+          className="container   pt-8 pb-8 sm:pb-6 lg:p-0 flex flex-col lg:flex-row lg:items-center gap-16 overflow-clip justify-center items-center px-4 sm:px-0 mx-5 sm:mx-10"
         >
-          <div className="z-10 lg:pt-16 text-base-normal items-center">
-            <h1 className="font-semibold text-xl leading-7 sm:text-xl mb-5 sm:mb-6 flex justify-center">
-              UBCARD аппликейшн татах
-            </h1>
-            <h1 className="font-normal sm:text-base flex justify-center">
-              Яг одоо татан авч хурдан, хялбар шийдлүүдийг өдөр тутмын
-              амьдралдаа хэрэгжүүлээрэй. Таны автобус аяллыг хөнгөвчилнө.
-            </h1>
+          <div className="absolute bottom-4 left-10 ">
+            <IPhone boxShadow="0px 5px 25px rgba(0,0,0,0.6)" width={updateSize}>
+              <Image src={Start} fill alt="" />
+            </IPhone>
           </div>
-          <div className="flex flex-col items-center justify-center w-full sm:w-3/4 lg:w-2/4">
-            <div className="flex flex-col sm:flex-row gap-3">
-              <a className="w-full lg:w-fit focus-visible-class" href="">
-                <button className="w-full lg:w-60 bg-neutral-800 font-semibold text-white rounded-2xl flex items-center border border-gray-400 justify-start sm:justify-center gap-2 p-2">
-                  <div className="flex justify-center items-center">
+
+          <div className="z-10 lg:pt-16 text-base-normal items-center flex flex-col justify-center lg:w-2/4">
+            <div className="mb-8">
+              <h1 className="font-semibold text-xl leading-7 sm:text-xl mb-5 sm:mb-6">
+                UBCARD аппликейшн татах
+              </h1>
+              <h1 className="font-normal sm:text-base">
+                Яг одоо татан авч хурдан, хялбар шийдлүүдийг өдөр тутмын
+                амьдралдаа хэрэгжүүлээрэй. Таны автобус аяллыг хөнгөвчилнө.
+              </h1>
+            </div>
+
+            <div className="flex flex-col items-center justify-center lg:w-2/4">
+              <div className="flex flex-col sm:flex-row gap-3">
+                <a className="w-full lg:w-fit focus-visible-class" href="">
+                  <button className="w-full lg:w-60 bg-neutral-800 font-semibold text-white rounded-2xl flex items-center border justify-center gap-2 p-2">
                     <Image
                       alt="App Store Logo"
                       src={AppStore}
                       width={50}
                       height={50}
                     />
-                  </div>
-                  <div>
                     <span>App Store</span>
-                  </div>
-                </button>
-              </a>
-              <a className="w-full lg:w-fit focus-visible-class" href="">
-                <button className="w-full lg:w-60 bg-neutral-800 font-semibold text-white rounded-2xl flex items-center border border-gray-400 justify-start sm:justify-center gap-2 p-2">
-                  <div className="flex justify-center items-center">
+                  </button>
+                </a>
+                <a className="w-full lg:w-fit focus-visible-class" href="">
+                  <button className="w-full lg:w-60 bg-neutral-800 font-semibold text-white rounded-2xl flex items-center border justify-center gap-2 p-2">
                     <Image
                       alt="Play Store Logo"
                       src={PlayStore}
                       width={50}
                       height={50}
                     />
-                  </div>
-                  <div>
                     <span>Google Play</span>
-                  </div>
-                </button>
-              </a>
+                  </button>
+                </a>
+              </div>
             </div>
           </div>
         </div>

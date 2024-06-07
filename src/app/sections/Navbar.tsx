@@ -3,6 +3,7 @@ import MyButton from "../components/Button";
 import Image from "next/image";
 import logoFull from "../../../public/images/logo/UBCard-Logo.svg";
 import ColorWrapper from "../components/ColorWrapper";
+import Title from "../components/Title";
 
 interface NavBarProps {
   setShowSecondDiv: (showSecondDiv: boolean) => void;
@@ -33,7 +34,7 @@ export default function NavBar({ setShowSecondDiv }: NavBarProps) {
             fontType="sans"
             onClick={() => handleClick("", true)}
           >
-            Ашиглах Заавар
+            Ашиглах заавар
           </MyButton>
           <MyButton
             bgColor="blue-400"
