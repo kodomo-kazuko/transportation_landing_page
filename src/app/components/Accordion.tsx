@@ -35,7 +35,7 @@ export default function Accordion({
 
   useEffect(() => {
     onChange?.(selected);
-  }, [selected]);
+  }, [selected, onChange]);
 
   return (
     <ul {...props}>

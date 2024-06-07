@@ -12,8 +12,9 @@ export default function NavBar({ setShowSecondDiv }: NavBarProps) {
   const handleClick = (id: string, shouldShowSecondDiv: boolean) => {
     const element = document.getElementById(id);
     if (element) {
+      const offset = window.innerHeight * 0.05;
       window.scrollTo({
-        top: element.offsetTop - 40,
+        top: element.offsetTop - offset,
         behavior: "smooth",
       });
     }
