@@ -23,7 +23,7 @@ export default function Download() {
           </div>
 
           <div className="z-10 lg:pt-16 text-base-normal items-center flex flex-col justify-center lg:w-2/4">
-            <div className="mb-8">
+            <div className="mb-8 ">
               <h1 className="font-semibold text-xl leading-7 sm:text-xl mb-5 sm:mb-6">
                 UBCARD аппликейшн татах
               </h1>

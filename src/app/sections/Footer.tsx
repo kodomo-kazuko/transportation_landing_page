@@ -18,7 +18,7 @@ export default function Footer() {
     <div id="Footer">
       <ColorWrapper color="secondary">
         <Spacer height={"40"} width={""} />
-        <footer className="py-10 px-5 mb-10">
+        <footer className="py-10 px-5 mb-5">
           <div className="flex flex-wrap justify-between font-normal">
             <div className="w-full md:w-1/4 mb-10 md:mb-0">
               <Image
@@ -72,11 +72,11 @@ export default function Footer() {
               </div>
             </div>
           </div>
-          <div className="flex justify-center mt-5 font-thin text-sm">
-            <p>@BinarySystems 2024</p>
-          </div>
         </footer>
-        <Spacer height={"40"} width={""} />
+        <div className="flex justify-center  font-thin text-sm">
+          <p>BinarySystems &copy;2024</p>
+        </div>
+        <Spacer height={"35"} width={""} />
       </ColorWrapper>
     </div>
   );
