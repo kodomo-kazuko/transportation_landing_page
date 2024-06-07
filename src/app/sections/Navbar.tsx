@@ -3,7 +3,6 @@ import MyButton from "../components/Button";
 import Image from "next/image";
 import logoFull from "../../../public/images/logo/UBCard-Logo.svg";
 import ColorWrapper from "../components/ColorWrapper";
-import Title from "../components/Title";
 
 interface NavBarProps {
   setShowSecondDiv: (showSecondDiv: boolean) => void;
@@ -30,28 +29,28 @@ export default function NavBar({ setShowSecondDiv }: NavBarProps) {
 
         <div className="flex flex-col sm:flex-row space-y-2 sm:space-y-0 sm:space-x-10">
           <MyButton
-            bgColor="blue-400"
+            bgColor=""
             fontType="sans"
             onClick={() => handleClick("", true)}
           >
             Ашиглах заавар
           </MyButton>
           <MyButton
-            bgColor="blue-400"
+            bgColor=""
             fontType="sans"
             onClick={() => handleClick("FAQ", false)}
           >
             Түгээмэл асуултууд
           </MyButton>
           <MyButton
-            bgColor="blue-400"
+            bgColor=""
             fontType="sans"
             onClick={() => handleClick("Download", false)}
           >
             Татах
           </MyButton>
           <MyButton
-            bgColor="blue-400"
+            bgColor=""
             fontType="sans"
             onClick={() => handleClick("Footer", false)}
           >

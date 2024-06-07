@@ -1,9 +1,7 @@
 "use client";
 
 import React, { useEffect, useState } from "react";
-import { FaArrowUp } from "react-icons/fa";
-import Circumflex from "../../../public/images/Icon/circumflex-icon-original.svg";
-import Image from "next/image";
+import { MdOutlineKeyboardDoubleArrowUp } from "react-icons/md";
 
 export default function ScrollToTopButton() {
   const [isVisible, setIsVisible] = useState(false);
@@ -35,8 +33,8 @@ export default function ScrollToTopButton() {
           onClick={scrollToTop}
           className="fixed bottom-10 right-10 cursor-pointer"
         >
-          <button className="p-4 bg-blue-500 text-white rounded-full text-3xl">
-            <FaArrowUp />
+          <button className="p-4 rounded-full text-5xl text-ub-secondary ring-3 ring-black bg-blue-400 border-2 md:text-6xl">
+            <MdOutlineKeyboardDoubleArrowUp />
           </button>
         </div>
       )}
