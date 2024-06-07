@@ -1,7 +1,14 @@
-import ColorWrapper from "../components/ColorWrapper";
-import Spacer from "../components/spacer";
-import SwipeWrapper from "../components/SwipeWrapper";
 import Login from "./manualSections/Login";
+import Wallet from "./manualSections/Wallet";
+import Charge from "./manualSections/Charge";
+import History from "./manualSections/History";
+import Discount from "./manualSections/Discount";
+import Feedback from "./manualSections/Feedback";
+import Direction from "./manualSections/Direction";
+import Direction2 from "./manualSections/Direction2";
+import SwipeWrapper from "../components/SwipeWrapper";
+import PhysicalCard from "./manualSections/PhysicalCard";
+import ScrollToTopButton from "../components/ScrollToTop";
 
 export default function Manual() {
   let screenSize: number = 0;
@@ -18,11 +25,25 @@ export default function Manual() {
           <div>
             <Login />
 
-            <Spacer height={"40px"} width={""} />
+            <Wallet />
 
-            <Login />
+            <Discount />
+
+            <Charge />
+
+            <PhysicalCard />
+
+            <Direction />
+
+            <Direction2 />
+
+            <Feedback />
+
+            <History />
           </div>
         </SwipeWrapper>
+
+        <ScrollToTopButton />
       </div>
     );
   }
