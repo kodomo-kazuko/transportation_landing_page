@@ -1,9 +1,14 @@
 import { useState, useEffect } from "react";
 
-export function useScreenSize() {
-  const landscapeRatio = 6;
-  const portraitRatio = 2.5;
+interface Props {
+  landscapeRatio?: number;
+  portraitRatio?: number;
+}
 
+export function useScreenSize({
+  landscapeRatio = 6,
+  portraitRatio = 2.5,
+}: Props = {}) {
   const [screenSize, setScreenSize] = useState(landscapeRatio);
 
   useEffect(() => {
