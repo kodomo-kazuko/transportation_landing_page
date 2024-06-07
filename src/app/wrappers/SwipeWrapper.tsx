@@ -18,7 +18,7 @@ const SwipeWrapper: React.FC<ScrollWrapperProps> = ({
       duration: 1500,
       once: true,
       mirror: true,
-      offset: 200,
+      offset: 100,
     });
   }, []);
 
