@@ -39,7 +39,10 @@ export default function Visuals() {
               </IPhone>
             </div>
             <div className="flex basis-1/3 justify-center items-center">
-              <StyledH1>QR Code-оо уншуулаад зорчих боломж</StyledH1>
+              <StyledH1>
+                Заавал автобусны карт ашиглах шаардлагагүй QR Code уншуулаад
+                зорчих боломж
+              </StyledH1>
             </div>
           </div>
         </ColorWrapper>
