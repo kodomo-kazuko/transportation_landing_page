@@ -24,8 +24,8 @@ export default function Download() {
         </div>
         <div className="flex flex-col items-center justify-center w-full sm:w-3/4 lg:w-2/4">
           <div className="flex flex-col sm:flex-row gap-3">
-            <a className=" w-full lg:w-fit focus-visible-class" href="">
-              <button className=" bg-white font-semibold text-gray-700 rounded-2xl flex items-center border border-gray-400 justify-center gap-2 p-2">
+            <a className="w-full lg:w-fit focus-visible-class" href="">
+              <button className="w-full lg:w-60  bg-white font-semibold text-gray-700 rounded-2xl flex items-center border border-gray-400 justify-center gap-2 p-2">
                 <Image
                   alt="App Store Logo"
                   src={AppStore}
@@ -35,9 +35,8 @@ export default function Download() {
                 <span>App Store</span>
               </button>
             </a>
-
             <a className="w-full lg:w-fit focus-visible-class" href="">
-              <button className=" bg-white font-semibold text-gray-700 rounded-2xl flex items-center border border-gray-400 justify-center gap-2 p-2">
+              <button className="w-full lg:w-60 bg-white font-semibold text-gray-700 rounded-2xl flex items-center border border-gray-400 justify-center gap-2 p-2">
                 <Image
                   alt="Play Store Logo"
                   src={PlayStore}
