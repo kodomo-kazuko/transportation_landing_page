@@ -2,6 +2,8 @@
 
 import React, { useEffect, useState } from "react";
 import { FaArrowUp } from "react-icons/fa";
+import Circumflex from "../../../public/images/Icon/circumflex-icon-original.svg";
+import Image from "next/image";
 
 export default function ScrollToTopButton() {
   const [isVisible, setIsVisible] = useState(false);

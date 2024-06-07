@@ -30,7 +30,7 @@ const ContentWrapper: React.FC<ContentWrapperProps> = ({
 
   return (
     <div
-      className={`shadow-2xl rounded-3xl flex ${
+      className={`shadow-md rounded-3xl flex ${
         isMobile ? "flex-col" : "flex-row"
       }`}
     >
@@ -39,7 +39,7 @@ const ContentWrapper: React.FC<ContentWrapperProps> = ({
         <div>
           <div
             className={`flex ${
-              isMobile ? "flex-col space-y-4" : "flex-row space-x-4"
+              isMobile ? "flex-col space-y-8" : "flex-row space-x-8"
             } justify-around items-center overflow-auto`}
           >
             {cards.map((card, index) => (

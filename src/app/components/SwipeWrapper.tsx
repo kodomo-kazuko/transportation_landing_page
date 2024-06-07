@@ -18,8 +18,13 @@ const SwipeWrapper: React.FC<ScrollWrapperProps> = ({
       duration: 2000,
       once: false,
       mirror: true,
+      offset: 200,
     });
   }, []);
+
+  useEffect(() => {
+    AOS.refresh();
+  }, [children, animation, delay]);
 
   return (
     <div data-aos={animation} data-aos-delay={delay}>
