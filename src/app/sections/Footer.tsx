@@ -72,7 +72,7 @@ export default function Footer() {
               </div>
             </div>
           </div>
-          <div className="flex justify-center mt-5 font-thin">
+          <div className="flex justify-center mt-5 font-thin text-sm">
             <p>@BinarySystems 2024</p>
           </div>
         </footer>
