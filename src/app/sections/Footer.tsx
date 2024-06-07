@@ -71,9 +71,9 @@ export default function Footer() {
                 </button>
               </div>
             </div>
-            <div className="w-full md:w-1/4">
-              <p>@BinarySystems 2024</p>
-            </div>
+          </div>
+          <div className="flex justify-center mt-5 font-thin">
+            <p>@BinarySystems 2024</p>
           </div>
         </footer>
         <Spacer height={"40"} width={""} />
