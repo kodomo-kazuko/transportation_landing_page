@@ -11,7 +11,7 @@ import { useScreenSize } from "../components/getScreenSize";
 const createAnimatedText = (text: string) => {
   return text.split(" ").map((word, index) => (
     <SwipeWrapper key={index} animation="fade-right" delay={index * 300}>
-      <div className="text-5xl text-left sm:text-left sm:text-5xl md:text-8xl font-bold lg:ml-10 mt-4 sm:mt-10 lg:mt-0 mb-4">
+      <div className="text-3xl text-left sm:text-left sm:text-5xl md:text-8xl font-bold lg:ml-10 mt-4 sm:mt-10 lg:mt-0 mb-4">
         {word}
       </div>
     </SwipeWrapper>
