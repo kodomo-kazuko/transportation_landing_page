@@ -4,7 +4,6 @@ import React from "react";
 import Image from "next/image";
 import ColorWrapper from "../wrappers/ColorWrapper";
 import { IPhone } from "../components/iphone";
-import Start from "../../../public/images/figIMG/Splash.png";
 import { useScreenSize } from "../components/getScreenSize";
 import SwipeWrapper from "../wrappers/SwipeWrapper";
 

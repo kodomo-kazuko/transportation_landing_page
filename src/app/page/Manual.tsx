@@ -21,7 +21,7 @@ export default function Manual() {
 
     return (
       <div>
-        <SwipeWrapper animation="fade-right">
+        <SwipeWrapper animation="fade-up">
           <div>
             <Login />
 

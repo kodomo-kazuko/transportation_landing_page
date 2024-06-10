@@ -8,9 +8,13 @@ import { FaBars } from "react-icons/fa";
 
 interface NavBarProps {
   setShowSecondDiv: (showSecondDiv: boolean) => void;
+  setScrollToId: (id: string) => void;
 }
 
-export default function NavBar({ setShowSecondDiv }: NavBarProps) {
+export default function NavBar({
+  setShowSecondDiv,
+  setScrollToId,
+}: NavBarProps) {
   const [isMenuVisible, setIsMenuVisible] = useState(false);
   const [isMobile, setIsMobile] = useState<boolean | null>(null);
 
@@ -29,15 +33,19 @@ export default function NavBar({ setShowSecondDiv }: NavBarProps) {
   }, []);
 
   const handleClick = (id: string, shouldShowSecondDiv: boolean) => {
-    const element = document.getElementById(id);
-    if (element) {
-      const offset = window.innerHeight * 0.05;
-      window.scrollTo({
-        top: element.offsetTop - offset,
-        behavior: "smooth",
-      });
-    }
     setShowSecondDiv(shouldShowSecondDiv);
+
+    // Wait for the state update to be completed before scrolling
+    setTimeout(() => {
+      const element = document.getElementById(id);
+      if (element) {
+        const offset = window.innerHeight * 0.05;
+        window.scrollTo({
+          top: element.offsetTop - offset,
+          behavior: "smooth",
+        });
+      }
+    }, 100);
   };
 
   // Don't render until we know the screen width
