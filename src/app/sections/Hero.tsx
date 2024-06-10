@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import ColorWrapper from "../wrappers/ColorWrapper";
 import { IPhone } from "../components/iphone";
@@ -20,6 +20,7 @@ const createAnimatedText = (texts: string[], animationType: string) => {
 };
 
 const Hero: React.FC = () => {
+  const [videoOpacity, setVideoOpacity] = useState(0);
   const { screenSize, windowWidth } = useScreenSize({
     landscapeRatio: 7,
     portraitRatio: 3,
@@ -29,6 +30,14 @@ const Hero: React.FC = () => {
     ["Шинэ", "автобусны", "апп гарлаа!"],
     animationType
   );
+
+  useEffect(() => {
+    // Start the opacity transition 500ms after the component mounts
+    const timeoutId = setTimeout(() => setVideoOpacity(1), 500);
+
+    // Clean up the timeout when the component unmounts
+    return () => clearTimeout(timeoutId);
+  }, []);
 
   return (
     <ColorWrapper color={"transparent"}>
@@ -41,7 +50,12 @@ const Hero: React.FC = () => {
           <IPhone boxShadow="0px 5px 25px rgba(0,0,0,0.6)" width={screenSize}>
             <video
               preload="auto"
-              style={{ width: "100%", height: "100%" }}
+              style={{
+                width: "100%",
+                height: "100%",
+                opacity: videoOpacity,
+                transition: "opacity 2s",
+              }}
               src="https://images.apple.com/media/us/iphone-x/2017/01df5b43-28e4-4848-bf20-490c34a926a7/overview/primary/hero/small_2x.mp4"
               autoPlay
               loop
