@@ -8,8 +8,10 @@ import Visuals from "../sections/Visuals";
 
 export default function Main() {
   return (
-    <SwipeWrapper animation="fade-right">
-      <Hero />
+    <>
+      <SwipeWrapper animation="fade-right">
+        <Hero />
+      </SwipeWrapper>
 
       <Spacer height="40px" width="0" />
 
@@ -26,6 +28,6 @@ export default function Main() {
       <Spacer height="40px" width="0" />
 
       <Footer />
-    </SwipeWrapper>
+    </>
   );
 }

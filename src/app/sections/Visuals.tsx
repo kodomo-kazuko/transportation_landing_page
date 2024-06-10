@@ -14,7 +14,7 @@ import SwipeWrapper from "../wrappers/SwipeWrapper";
 import { useScreenSize } from "../components/getScreenSize";
 
 export default function Visuals() {
-  const screenSize = useScreenSize();
+  const { screenSize } = useScreenSize();
 
   const StyledImage = styled(Image)`
     object-fit: cover;

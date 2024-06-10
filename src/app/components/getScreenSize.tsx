@@ -12,9 +12,11 @@ export function useScreenSize({
   constantSize,
 }: Props = {}) {
   const [screenSize, setScreenSize] = useState(constantSize || landscapeRatio);
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
   useEffect(() => {
     function updateSize() {
+      setWindowWidth(window.innerWidth);
       if (!constantSize) {
         const newScreenSize =
           window.innerWidth >= window.innerHeight
@@ -28,5 +30,5 @@ export function useScreenSize({
     return () => window.removeEventListener("resize", updateSize);
   }, [landscapeRatio, portraitRatio, constantSize]);
 
-  return screenSize;
+  return { screenSize, windowWidth };
 }

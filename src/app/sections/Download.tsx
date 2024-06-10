@@ -9,7 +9,8 @@ import { useScreenSize } from "../components/getScreenSize";
 import SwipeWrapper from "../wrappers/SwipeWrapper";
 
 export default function Download() {
-  const updateSize = useScreenSize({ landscapeRatio: 7, portraitRatio: 3 });
+  const { screenSize } = useScreenSize({ landscapeRatio: 7, portraitRatio: 3 });
+  const updateSize = screenSize;
   return (
     <div id="Download" className="lg:relative sm:none shadow-2xl rounded-xl">
       <SwipeWrapper animation="fade-up">
