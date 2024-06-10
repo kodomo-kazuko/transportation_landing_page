@@ -14,11 +14,22 @@ const SwipeWrapper: React.FC<ScrollWrapperProps> = ({
   delay = 0,
 }) => {
   useEffect(() => {
+    // Calculate offset based on screen width
+    let offset;
+    const screenWidth = window.innerWidth;
+    if (screenWidth < 640) {
+      offset = 100; // Mobile devices
+    } else if (screenWidth < 1024) {
+      offset = 200; // Tablets
+    } else {
+      offset = 300; // Desktops
+    }
+
     AOS.init({
       duration: 1500,
       once: true,
       mirror: true,
-      offset: 100,
+      offset,
     });
   }, []);
 
