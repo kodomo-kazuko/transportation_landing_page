@@ -11,7 +11,7 @@ interface NavBarProps {
 
 export default function NavBar({ setShowSecondDiv }: NavBarProps) {
   const [isMenuVisible, setIsMenuVisible] = useState(false);
-  const [isMobile, setIsMobile] = useState(false);
+  const [isMobile, setIsMobile] = useState<boolean | null>(null);
 
   // Function to check screen size and set isMobile state
   const checkScreenSize = () => {
@@ -38,6 +38,11 @@ export default function NavBar({ setShowSecondDiv }: NavBarProps) {
     }
     setShowSecondDiv(shouldShowSecondDiv);
   };
+
+  // Don't render until we know the screen width
+  if (isMobile === null) {
+    return null;
+  }
 
   return (
     <div className="shadow-xl rounded-xl">
