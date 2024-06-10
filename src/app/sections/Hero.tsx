@@ -11,7 +11,7 @@ const createAnimatedText = (texts: string[], animationType: string) => {
   return texts.map((text, index) => (
     <SwipeWrapper key={index} animation={animationType} delay={index * 300}>
       <div
-        className={`text-3xl sm:text-5xl md:text-8xl font-bold lg:ml-10 mt-4 sm:mt-10 lg:mt-0 mb-4 text-center sm:text-left`}
+        className={`text-4xl sm:text-5xl md:text-8xl font-bold lg:ml-10 mt-0 sm:mt-10 lg:mt-0 mb-4 text-center sm:text-left`}
       >
         {text}
       </div>
