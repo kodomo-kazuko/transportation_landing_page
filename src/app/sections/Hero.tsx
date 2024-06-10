@@ -31,28 +31,26 @@ const Hero: React.FC = () => {
   );
 
   return (
-    <div className="shadow-md rounded-xl">
-      <ColorWrapper color={"transparent"}>
-        <div
-          id="Hero"
-          className={`flex flex-col sm:flex-row-reverse justify-center items-center space-y-4 sm:space-y-0`}
-        >
-          <div className="flex flex-col">{text}</div>
-          <div className="z-10">
-            <IPhone boxShadow="0px 5px 25px rgba(0,0,0,0.6)" width={screenSize}>
-              <video
-                style={{ width: "100%", height: "100%" }}
-                src="https://images.apple.com/media/us/iphone-x/2017/01df5b43-28e4-4848-bf20-490c34a926a7/overview/primary/hero/small_2x.mp4"
-                autoPlay
-                loop
-                muted
-                playsInline
-              />
-            </IPhone>
-          </div>
+    <ColorWrapper color={"transparent"}>
+      <div
+        id="Hero"
+        className={`flex flex-col sm:flex-row-reverse justify-center items-center space-y-4 sm:space-y-0`}
+      >
+        <div className="flex flex-col">{text}</div>
+        <div className="z-10">
+          <IPhone boxShadow="0px 5px 25px rgba(0,0,0,0.6)" width={screenSize}>
+            <video
+              style={{ width: "100%", height: "100%" }}
+              src="https://images.apple.com/media/us/iphone-x/2017/01df5b43-28e4-4848-bf20-490c34a926a7/overview/primary/hero/small_2x.mp4"
+              autoPlay
+              loop
+              muted
+              playsInline
+            />
+          </IPhone>
         </div>
-      </ColorWrapper>
-    </div>
+      </div>
+    </ColorWrapper>
   );
 };
 

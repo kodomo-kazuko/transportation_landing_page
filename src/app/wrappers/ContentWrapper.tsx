@@ -29,11 +29,7 @@ const ContentWrapper: React.FC<ContentWrapperProps> = ({
   const { screenSize } = useScreenSize();
 
   return (
-    <div
-      className={`shadow-md rounded-3xl flex ${
-        isMobile ? "flex-col" : "flex-row"
-      }`}
-    >
+    <div className={` flex ${isMobile ? "flex-col" : "flex-row"}`}>
       <ColorWrapper color="transparent">
         <div className="text-black text-3xl pl-10 md:text-4xl">{title}</div>
         <div>

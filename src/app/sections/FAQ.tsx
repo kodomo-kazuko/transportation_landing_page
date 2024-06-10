@@ -30,7 +30,7 @@ export default function FAQ() {
   return (
     <div id="FAQ">
       <SwipeWrapper animation={"fade-up"}>
-        <div className="shadow-md rounded-xl">
+        <div className="">
           <ColorWrapper color={"transparent"}>
             <div className="flex flex-col items-center justify-center px-4 sm:px-0">
               <div className="flex items-center flex-grow justify-center">
