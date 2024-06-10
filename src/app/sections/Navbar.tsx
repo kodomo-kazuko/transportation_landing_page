@@ -48,7 +48,7 @@ export default function NavBar({ setShowSecondDiv }: NavBarProps) {
     <div className="shadow-xl rounded-xl">
       <ColorWrapper color={"primary"}>
         <div className="flex flex-col sm:flex-row justify-around items-center space-y-4 sm:space-y-0">
-          <div className="flex flex-row justify-around items-center space-x-4">
+          <div className="flex flex-row justify-between items-center space-x-8">
             {isMobile && (
               <button onClick={() => setIsMenuVisible(!isMenuVisible)}>
                 <FaBars size={30} />
