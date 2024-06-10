@@ -20,7 +20,7 @@ const SwipeWrapper: React.FC<ScrollWrapperProps> = ({
     if (screenWidth < 640) {
       offset = 200; // Mobile devices
     } else if (screenWidth < 1024) {
-      offset = 200; // Tablets
+      offset = 250; // Tablets
     } else {
       offset = 300; // Desktops
     }

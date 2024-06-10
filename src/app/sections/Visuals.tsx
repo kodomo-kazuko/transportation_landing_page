@@ -52,7 +52,7 @@ export default function Visuals() {
 
       <Spacer height="40px" width="0" />
 
-      <SwipeWrapper animation="fade-up-left">
+      <SwipeWrapper animation="fade-up">
         <div className="shadow-xl rounded-xl">
           <ColorWrapper color={"transparent"}>
             <div className="flex justify-evenly">
@@ -77,7 +77,7 @@ export default function Visuals() {
 
       <Spacer height="40px" width="0" />
 
-      <SwipeWrapper animation={"fade-up-right"}>
+      <SwipeWrapper animation={"fade-up"}>
         <div className="shadow-xl rounded-xl">
           <ColorWrapper color={"primary"}>
             <div className="flex justify-evenly">

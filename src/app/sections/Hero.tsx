@@ -24,9 +24,7 @@ const Hero: React.FC = () => {
     landscapeRatio: 7,
     portraitRatio: 3,
   });
-  console.log(windowWidth);
   const animationType = windowWidth <= 480 ? "fade-right" : "fade-right";
-  console.log(animationType);
   const text = createAnimatedText(
     ["Шинэ", "автобусны", "апп гарлаа!"],
     animationType
