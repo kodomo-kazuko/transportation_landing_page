@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import MyButton from "../components/Button";
 import Image from "next/image";
 import logoFull from "../../../public/images/logo/UBCard-Logo.svg";
+import icon from "../../../public/images/Icon/white_ub.svg";
 import ColorWrapper from "../wrappers/ColorWrapper";
 import { FaBars } from "react-icons/fa";
 
@@ -47,51 +48,84 @@ export default function NavBar({ setShowSecondDiv }: NavBarProps) {
   return (
     <div className="shadow-xl rounded-xl">
       <ColorWrapper color={"primary"}>
-        <div className="flex flex-col sm:flex-row justify-around items-center space-y-4 sm:space-y-0">
-          <div className="flex flex-row justify-between items-center space-x-8">
+        <div className="flex flex-row justify-between items-center p-4">
+          <div className="flex items-center">
+            <button onClick={() => handleClick("", false)}>
+              <Image priority alt="" src={isMobile ? logoFull : logoFull} />
+            </button>
+          </div>
+          <div className="flex-grow flex justify-end items-center">
             {isMobile && (
               <button onClick={() => setIsMenuVisible(!isMenuVisible)}>
                 <FaBars size={30} />
               </button>
             )}
-            <button onClick={() => handleClick("", false)}>
-              <Image priority alt="" src={logoFull} />
-            </button>
+            {!isMobile && (
+              <div className="flex space-x-10">
+                <MyButton
+                  bgColor=""
+                  fontType="sans"
+                  onClick={() => handleClick("", true)}
+                >
+                  Ашиглах заавар
+                </MyButton>
+                <MyButton
+                  bgColor=""
+                  fontType="sans"
+                  onClick={() => handleClick("FAQ", false)}
+                >
+                  Түгээмэл асуултууд
+                </MyButton>
+                <MyButton
+                  bgColor=""
+                  fontType="sans"
+                  onClick={() => handleClick("Download", false)}
+                >
+                  Татах
+                </MyButton>
+                <MyButton
+                  bgColor=""
+                  fontType="sans"
+                  onClick={() => handleClick("Footer", false)}
+                >
+                  Холбоо барих
+                </MyButton>
+              </div>
+            )}
           </div>
-
-          {(isMenuVisible || !isMobile) && (
-            <div className="flex flex-col sm:flex-row space-y-2 sm:space-y-0 sm:space-x-10 text-left sm:text-center ">
-              <MyButton
-                bgColor=""
-                fontType="sans"
-                onClick={() => handleClick("", true)}
-              >
-                Ашиглах заавар
-              </MyButton>
-              <MyButton
-                bgColor=""
-                fontType="sans"
-                onClick={() => handleClick("FAQ", false)}
-              >
-                Түгээмэл асуултууд
-              </MyButton>
-              <MyButton
-                bgColor=""
-                fontType="sans"
-                onClick={() => handleClick("Download", false)}
-              >
-                Татах
-              </MyButton>
-              <MyButton
-                bgColor=""
-                fontType="sans"
-                onClick={() => handleClick("Footer", false)}
-              >
-                Холбоо барих
-              </MyButton>
-            </div>
-          )}
         </div>
+        {isMobile && isMenuVisible && (
+          <div className="flex flex-col space-y-2 p-4">
+            <MyButton
+              bgColor=""
+              fontType="sans"
+              onClick={() => handleClick("", true)}
+            >
+              Ашиглах заавар
+            </MyButton>
+            <MyButton
+              bgColor=""
+              fontType="sans"
+              onClick={() => handleClick("FAQ", false)}
+            >
+              Түгээмэл асуултууд
+            </MyButton>
+            <MyButton
+              bgColor=""
+              fontType="sans"
+              onClick={() => handleClick("Download", false)}
+            >
+              Татах
+            </MyButton>
+            <MyButton
+              bgColor=""
+              fontType="sans"
+              onClick={() => handleClick("Footer", false)}
+            >
+              Холбоо барих
+            </MyButton>
+          </div>
+        )}
       </ColorWrapper>
     </div>
   );

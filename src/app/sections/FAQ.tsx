@@ -34,7 +34,9 @@ export default function FAQ() {
           <ColorWrapper color={"transparent"}>
             <div className="flex flex-col items-center justify-center px-4 sm:px-0">
               <div className="flex items-center flex-grow justify-center">
-                <h1 className="flex text-4xl sm:text-6xl md:text-5xl items-center justify-center text-center">
+                <h1 className="flex text-4xl sm:text-6xl md:text-5xl items-center justify-center text-center mb-4">
+                  {" "}
+                  {/* Add margin-bottom here */}
                   Түгээмэл асуултууд
                 </h1>
               </div>
@@ -48,7 +50,6 @@ export default function FAQ() {
                         value={index.toString()}
                         trigger={item.title}
                       >
-                        {/* {item.content} */}
                         <div className="p-1 text-gray-700 text-sm font-normal leading-relaxed">
                           {item.content}
                         </div>

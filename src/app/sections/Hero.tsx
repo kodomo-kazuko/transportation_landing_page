@@ -11,7 +11,7 @@ import { useScreenSize } from "../components/getScreenSize";
 const createAnimatedText = (text: string) => {
   return text.split(" ").map((word, index) => (
     <SwipeWrapper key={index} animation="fade-right" delay={index * 300}>
-      <div className="text-3xl text-left sm:text-left sm:text-5xl md:text-8xl font-bold lg:ml-10 mt-4 sm:mt-10 lg:mt-0 mb-4">
+      <div className="text-3xl sm:text-left sm:text-5xl md:text-8xl font-bold lg:ml-10 mt-4 sm:mt-10 lg:mt-0 mb-4 text-center">
         {word}
       </div>
     </SwipeWrapper>
@@ -20,7 +20,7 @@ const createAnimatedText = (text: string) => {
 
 const Hero: React.FC = () => {
   const screenSize = useScreenSize();
-  const text = createAnimatedText("ШИНЭ АВТОБУСНЫ АПП!!!");
+  const text = createAnimatedText("Шинэ автобусны апп");
 
   return (
     <div className="shadow-md rounded-xl">
