@@ -40,6 +40,7 @@ const Hero: React.FC = () => {
         <div className="z-10">
           <IPhone boxShadow="0px 5px 25px rgba(0,0,0,0.6)" width={screenSize}>
             <video
+              preload="https://images.apple.com/media/us/iphone-x/2017/01df5b43-28e4-4848-bf20-490c34a926a7/overview/primary/hero/small_2x.mp4"
               style={{ width: "100%", height: "100%" }}
               src="https://images.apple.com/media/us/iphone-x/2017/01df5b43-28e4-4848-bf20-490c34a926a7/overview/primary/hero/small_2x.mp4"
               autoPlay
