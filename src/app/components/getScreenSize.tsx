@@ -12,10 +12,10 @@ export function useScreenSize({
   constantSize,
 }: Props = {}) {
   const [screenSize, setScreenSize] = useState(constantSize || landscapeRatio);
-  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+  const [windowWidth, setWindowWidth] = useState(0);
 
-  useEffect(() => {
-    function updateSize() {
+  const updateSize = () => {
+    if (typeof window !== "undefined") {
       setWindowWidth(window.innerWidth);
       if (!constantSize) {
         const newScreenSize =
@@ -25,10 +25,13 @@ export function useScreenSize({
         setScreenSize(window.innerWidth / newScreenSize);
       }
     }
+  };
+
+  useEffect(() => {
     window.addEventListener("resize", updateSize);
     updateSize();
     return () => window.removeEventListener("resize", updateSize);
-  }, [landscapeRatio, portraitRatio, constantSize]);
+  }, [landscapeRatio, portraitRatio, constantSize, updateSize]);
 
   return { screenSize, windowWidth };
 }

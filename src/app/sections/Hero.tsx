@@ -1,15 +1,14 @@
 "use client";
 
 import React from "react";
+import Image from "next/image";
 import ColorWrapper from "../wrappers/ColorWrapper";
 import { IPhone } from "../components/iphone";
-import SwipeWrapper from "../wrappers/SwipeWrapper";
+import Start from "../../../public/images/figIMG/Splash.png";
 import { useScreenSize } from "../components/getScreenSize";
+import SwipeWrapper from "../wrappers/SwipeWrapper";
 
-const createAnimatedText = (texts: string[]) => {
-  const { windowWidth } = useScreenSize();
-  const animationType = windowWidth <= 480 ? "fade-up" : "fade-right";
-
+const createAnimatedText = (texts: string[], animationType: string) => {
   return texts.map((text, index) => (
     <SwipeWrapper key={index} animation={animationType} delay={index * 300}>
       <div
@@ -22,8 +21,17 @@ const createAnimatedText = (texts: string[]) => {
 };
 
 const Hero: React.FC = () => {
-  const { screenSize } = useScreenSize();
-  const text = createAnimatedText(["ШИНЭ", "автобусны", "апп гарлаа!"]);
+  const { screenSize, windowWidth } = useScreenSize({
+    landscapeRatio: 7,
+    portraitRatio: 3,
+  });
+  console.log(windowWidth);
+  const animationType = windowWidth <= 480 ? "fade-right" : "fade-right";
+  console.log(animationType);
+  const text = createAnimatedText(
+    ["Шинэ", "автобусны", "апп гарлаа!"],
+    animationType
+  );
 
   return (
     <div className="shadow-md rounded-xl">
