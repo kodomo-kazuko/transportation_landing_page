@@ -6,9 +6,5 @@ interface LayoutProps {
 }
 
 export default function Layout({ children }: LayoutProps) {
-  return (
-    <ColorWrapper color={"white"} className={"rounded-2xl m-3"}>
-      {children}
-    </ColorWrapper>
-  );
+  return <ColorWrapper color={"white"}>{children}</ColorWrapper>;
 }

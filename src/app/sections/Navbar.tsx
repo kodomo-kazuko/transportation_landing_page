@@ -2,9 +2,8 @@ import React, { useState, useEffect } from "react";
 import MyButton from "../components/Button";
 import Image from "next/image";
 import logoFull from "../../../public/images/logo/UBCard-Logo.svg";
-import icon from "../../../public/images/Icon/white_ub.svg";
-import ColorWrapper from "../wrappers/ColorWrapper";
 import { FaBars } from "react-icons/fa";
+import ColorWrapper from "../wrappers/ColorWrapper";
 
 interface NavBarProps {
   setShowSecondDiv: (showSecondDiv: boolean) => void;
@@ -13,24 +12,18 @@ interface NavBarProps {
 
 const MOBILE_SCREEN_WIDTH = 768;
 
-export default function NavBar({
-  setShowSecondDiv,
-  setScrollToId,
-}: NavBarProps) {
+const NavBar: React.FC<NavBarProps> = ({ setShowSecondDiv, setScrollToId }) => {
   const [isMenuVisible, setIsMenuVisible] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
 
-  // Function to check screen size and set isMobile state
   const checkScreenSize = () => {
     setIsMobile(window.innerWidth < MOBILE_SCREEN_WIDTH);
   };
 
-  // Add event listener for window resize
   useEffect(() => {
     checkScreenSize();
     window.addEventListener("resize", checkScreenSize);
 
-    // Cleanup function
     return () => {
       window.removeEventListener("resize", checkScreenSize);
     };
@@ -38,9 +31,7 @@ export default function NavBar({
 
   const handleClick = (id: string, shouldShowSecondDiv: boolean) => {
     setShowSecondDiv(shouldShowSecondDiv);
-
-    // Wait for the state update to be completed before scrolling
-    const timeoutId = setTimeout(() => {
+    setTimeout(() => {
       const element = document.getElementById(id);
       if (element) {
         const offset = window.innerHeight * 0.05;
@@ -50,17 +41,14 @@ export default function NavBar({
         });
       }
     }, 100);
-
-    // Clear the timeout
-    return () => clearTimeout(timeoutId);
   };
 
   return (
-    <ColorWrapper color={"primary"} className={"rounded-t-2xl"}>
-      <div className="flex flex-row justify-between items-center p-3">
-        <div className="flex flex-1 items-center justify-between w-full  mb-2 sm:mb-0">
+    <ColorWrapper color="primary">
+      <div className="flex justify-center sm:justify-between items-center p-1 sm:w-2/3 mx-auto">
+        <div className="flex items-center justify-between w-full mb-2 sm:mb-0">
           <button onClick={() => handleClick("", false)}>
-            <Image priority alt="Logo" src={isMobile ? logoFull : logoFull} />
+            <Image priority alt="Logo" src={logoFull} />
           </button>
           {isMobile && (
             <button onClick={() => setIsMenuVisible(!isMenuVisible)}>
@@ -69,7 +57,7 @@ export default function NavBar({
           )}
         </div>
         {!isMobile && (
-          <div className="flex space-x-10 flex-1">
+          <div className="flex space-x-10">
             <MyButton
               bgColor=""
               fontType="sans"
@@ -84,13 +72,7 @@ export default function NavBar({
             >
               Түгээмэл асуултууд
             </MyButton>
-            <MyButton
-              bgColor=""
-              fontType="sans"
-              onClick={() => handleClick("Download", false)}
-            >
-              Татах
-            </MyButton>
+
             <MyButton
               bgColor=""
               fontType="sans"
@@ -117,13 +99,7 @@ export default function NavBar({
           >
             Түгээмэл асуултууд
           </MyButton>
-          <MyButton
-            bgColor=""
-            fontType="sans"
-            onClick={() => handleClick("Download", false)}
-          >
-            Татах
-          </MyButton>
+
           <MyButton
             bgColor=""
             fontType="sans"
@@ -135,4 +111,6 @@ export default function NavBar({
       )}
     </ColorWrapper>
   );
-}
+};
+
+export default NavBar;

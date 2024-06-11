@@ -19,7 +19,7 @@ export default function Footer() {
   return (
     <div id="Footer">
       <SwipeWrapper animation="">
-        <ColorWrapper color="secondary" className=" rounded-b-2xl">
+        <ColorWrapper color="secondary">
           <InfoSection />
         </ColorWrapper>
       </SwipeWrapper>

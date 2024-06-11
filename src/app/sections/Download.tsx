@@ -14,7 +14,10 @@ export default function Download() {
   const updateSize = screenSize;
   return (
     <div id="Download" className="lg:relative sm:none shadow-2xl rounded-xl">
-      <ColorWrapper color="primary" className=" justify-center flex">
+      <ColorWrapper
+        color="primary"
+        className=" justify-center flex py-10 sm:py-20"
+      >
         <div className="container sm: m-5 pb-8 sm:pb-6 lg:p-0 flex flex-col lg:flex-row xl:flex-col lg:items-center overflow-clip justify-center items-center px-4 ">
           <div className="lg:absolute sm:none bottom-4 left-20 ">
             {/* <IPhone boxShadow="0px 5px 25px rgba(0,0,0,0.6)" width={updateSize}>
