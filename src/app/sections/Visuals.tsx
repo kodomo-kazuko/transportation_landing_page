@@ -8,6 +8,7 @@ import VisualWrapper from "../wrappers/VisualWrapper";
 
 import { useScreenSize } from "../components/getScreenSize";
 import AnimationWrapper from "../wrappers/AnimationWrapper";
+import AlignedImage from "../components/ImageFix";
 
 export default function Visuals() {
   const { screenSize } = useScreenSize({
@@ -69,7 +70,7 @@ export default function Visuals() {
           text="Qpay, Socialpay болон банкны картаар төлбөр төлөх боломжтой хялбар төлбөрийн шийдэл"
         >
           <IPhone boxShadow="0px 5px 25px rgba(0,0,0,0.6)" width={screenSize}>
-            <Image src={Payment} alt="" layout="fill" priority />
+            <AlignedImage src={Payment} alt="Payment" width={screenSize} />
           </IPhone>
         </VisualWrapper>
       </AnimationWrapper>

@@ -154,21 +154,19 @@ const IPhoneRoot = styled.div((props) => ({
 
 export const IPhone = ({ children, boxShadow, width }) => {
   return (
-    <>
-      <IPhoneRoot boxShadow={boxShadow} fontSize={width / 342}>
-        <div className="side">
-          <div className="screen">
-            <div className="content">{children}</div>
-          </div>
+    <IPhoneRoot boxShadow={boxShadow} fontSize={width / 342}>
+      <div className="side">
+        <div className="screen">
+          <div className="content">{children}</div>
         </div>
-        <div className="line" />
-        <div className="header">
-          <div className="sensor-1" />
-          <div className="sensor-2" />
-        </div>
-        <div className="volume-button" />
-        <div className="power-button" />
-      </IPhoneRoot>
-    </>
+      </div>
+      <div className="line" />
+      <div className="header">
+        <div className="sensor-1" />
+        <div className="sensor-2" />
+      </div>
+      <div className="volume-button" />
+      <div className="power-button" />
+    </IPhoneRoot>
   );
 };
