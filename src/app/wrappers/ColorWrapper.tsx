@@ -27,8 +27,6 @@ export default function ColorWrapper({
       : "text-white";
 
   return (
-    <div className={`p-5 ${colorClass} ${textColor} ${className} `}>
-      {children}
-    </div>
+    <div className={`${colorClass} ${textColor} ${className} `}>{children}</div>
   );
 }

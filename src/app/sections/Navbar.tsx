@@ -54,14 +54,14 @@ export default function NavBar({
   }
 
   return (
-    <ColorWrapper color={"primary"} className={" rounded-t-2xl"}>
-      <div className="flex flex-row justify-between items-center p-4">
-        <div className="flex items-center">
+    <ColorWrapper color={"primary"} className={"rounded-t-2xl"}>
+      <div className="flex flex-col sm:flex-row justify-center sm:justify-between items-center p-3">
+        <div className="flex-1 flex items-center justify-center sm:justify-start mb-2 sm:mb-0">
           <button onClick={() => handleClick("", false)}>
             <Image priority alt="" src={isMobile ? logoFull : logoFull} />
           </button>
         </div>
-        <div className="flex-grow flex justify-end items-center">
+        <div className="flex-1 flex justify-end items-center">
           {isMobile && (
             <button onClick={() => setIsMenuVisible(!isMenuVisible)}>
               <FaBars size={30} />

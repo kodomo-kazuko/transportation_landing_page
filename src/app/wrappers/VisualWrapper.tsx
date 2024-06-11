@@ -22,10 +22,11 @@ const VisualWrapper: React.FC<VisualWrapperProps> = ({
   children,
   shadow = "shadow-xl rounded-xl",
 }) => {
+  const className = "p-2 sm:p-5";
   return (
     <SwipeWrapper animation={animation}>
       <div className={shadow}>
-        <ColorWrapper color={color}>
+        <ColorWrapper color={color} className={className}>
           <div className="flex justify-evenly">
             <div className="flex basis-1/3 justify-center items-center">
               {children}
