@@ -1,104 +1,87 @@
-"use client";
-
 import { IPhone } from "../components/iphone";
 import Image from "next/image";
-import styled from "@emotion/styled";
-import Spacer from "../components/spacer";
 
 import GG from "../../../public/images/figIMG/Home-Regular 3.png";
 import Payment from "../../../public/images/figIMG/Qpay.png";
 import map from "../../../public/images//figIMG/Stations 4.png";
-import ColorWrapper from "../wrappers/ColorWrapper";
-import SwipeWrapper from "../wrappers/SwipeWrapper";
+import VisualWrapper from "../wrappers/VisualWrapper";
 
 import { useScreenSize } from "../components/getScreenSize";
+import AnimationWrapper from "../wrappers/AnimationWrapper";
 
 export default function Visuals() {
-  const { screenSize } = useScreenSize();
+  const { screenSize } = useScreenSize({ landscapeRatio: 8, portraitRatio: 4 });
 
-  const StyledImage = styled(Image)`
-    object-fit: cover;
-    object-position: center top;
-  `;
-
-  const StyledH1 = styled.h1`
-    font-size: calc(0.7em + 1vw);
-  `;
+  const MotionProps = {
+    whileHover: { scale: 1.02 },
+    whileTap: { scale: 0.99 },
+  };
 
   return (
-    <div id="Visual">
-      <SwipeWrapper animation="fade-up">
-        <div className="shadow-xl rounded-xl">
-          <ColorWrapper color={"primary"}>
-            <div className="flex justify-evenly">
-              <div className="flex basis-1/3 justify-center items-center">
-                <IPhone
-                  boxShadow="0px 5px 25px rgba(0,0,0,0.6)"
-                  width={screenSize}
-                >
-                  <Image src={GG} alt="" layout="fill" priority />
-                </IPhone>
-              </div>
-              <div className="flex basis-1/3 justify-center items-center">
-                <StyledH1>
-                  Заавал автобусны карт ашиглах шаардлагагүй QR Code уншуулаад
-                  зорчих боломж
-                </StyledH1>
-              </div>
-            </div>
-          </ColorWrapper>
-        </div>
-      </SwipeWrapper>
+    <div
+      id="Visual"
+      className="flex flex-col sm:flex-row flex-wrap justify-center"
+    >
+      <AnimationWrapper motionProps={MotionProps}>
+        <VisualWrapper
+          color="primary"
+          animation="fade-up"
+          text="Заавал автобусны карт ашиглах шаардлагагүй QR Code уншуулаад зорчих боломж"
+        >
+          <IPhone boxShadow="0px 5px 25px rgba(0,0,0,0.6)" width={screenSize}>
+            <Image src={GG} alt="" layout="fill" priority />
+          </IPhone>
+        </VisualWrapper>
+      </AnimationWrapper>
 
-      <Spacer height="40px" width="0" />
+      <AnimationWrapper motionProps={MotionProps}>
+        <VisualWrapper
+          color="secondary"
+          animation="fade-up"
+          text="Заавал автобусны карт ашиглах шаардлагагүй QR Code уншуулаад зорчих боломж"
+        >
+          <IPhone boxShadow="0px 5px 25px rgba(0,0,0,0.6)" width={screenSize}>
+            <Image src={GG} alt="" layout="fill" priority />
+          </IPhone>
+        </VisualWrapper>
+      </AnimationWrapper>
 
-      <SwipeWrapper animation="fade-up">
-        <div className=" rounded-xl">
-          <ColorWrapper color={"transparent"}>
-            <div className="flex justify-evenly">
-              <div className="flex basis-1/3 justify-center items-center">
-                <StyledH1>
-                  Qpay, Socialpay болон банкны картаар төлбөр төлөх боломжтой
-                  хялбар төлбөрийн шийдэл
-                </StyledH1>
-              </div>
-              <div className="flex basis-1/3 justify-center items-center">
-                <IPhone
-                  boxShadow="0px 5px 25px rgba(0,0,0,0.6)"
-                  width={screenSize}
-                >
-                  <StyledImage src={Payment} alt="" layout="fill" priority />
-                </IPhone>
-              </div>
-            </div>
-          </ColorWrapper>
-        </div>
-      </SwipeWrapper>
+      <AnimationWrapper motionProps={MotionProps} className=" w-full">
+        <VisualWrapper
+          color="white"
+          animation="fade-up"
+          text="Заавал автобусны карт ашиглах шаардлагагүй QR Code уншуулаад зорчих боломж"
+        >
+          <IPhone boxShadow="0px 5px 25px rgba(0,0,0,0.6)" width={screenSize}>
+            <Image src={GG} alt="" layout="fill" priority />
+          </IPhone>
+        </VisualWrapper>
+      </AnimationWrapper>
 
-      <Spacer height="40px" width="0" />
+      <AnimationWrapper motionProps={MotionProps}>
+        <VisualWrapper
+          shadow=""
+          color="secondary"
+          animation="fade-up"
+          text="Qpay, Socialpay болон банкны картаар төлбөр төлөх боломжтой хялбар төлбөрийн шийдэл"
+        >
+          <IPhone boxShadow="0px 5px 25px rgba(0,0,0,0.6)" width={screenSize}>
+            <Image src={Payment} alt="" layout="fill" priority />
+          </IPhone>
+        </VisualWrapper>
+      </AnimationWrapper>
 
-      <SwipeWrapper animation={"fade-up"}>
-        <div className="shadow-xl rounded-xl">
-          <ColorWrapper color={"primary"}>
-            <div className="flex justify-evenly">
-              <div className="flex basis-1/3 justify-center items-center">
-                <IPhone
-                  boxShadow="0px 5px 25px rgba(0,0,0,0.6)"
-                  width={screenSize}
-                >
-                  <Image src={map} alt="" layout="fill" priority />
-                </IPhone>
-              </div>
-              <div className="flex basis-1/3 justify-center items-center">
-                <StyledH1>
-                  Газрын зураг дээрээс автобусны байршил болон зогсоол, карт
-                  борлуулах цэгүүдийг харах
-                </StyledH1>
-              </div>
-            </div>
-          </ColorWrapper>
-        </div>
-      </SwipeWrapper>
+      <AnimationWrapper motionProps={MotionProps}>
+        <VisualWrapper
+          color="primary"
+          animation="fade-up"
+          text="Газрын зураг дээрээс автобусны байршил болон зогсоол, карт борлуулах цэгүүдийг харах"
+        >
+          <IPhone boxShadow="0px 5px 25px rgba(0,0,0,0.6)" width={screenSize}>
+            <Image src={map} alt="" layout="fill" priority />
+          </IPhone>
+        </VisualWrapper>
+      </AnimationWrapper>
     </div>
   );
 }

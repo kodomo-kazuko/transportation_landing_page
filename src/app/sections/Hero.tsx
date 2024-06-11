@@ -27,7 +27,7 @@ const Hero: React.FC = () => {
   });
   const animationType = windowWidth <= 480 ? "fade-right" : "fade-right";
   const text = createAnimatedText(
-    ["Шинэ", "автобусны", "апп гарлаа!"],
+    ["Автобусны", "Шинэ", "апп гарлаа!"],
     animationType
   );
 

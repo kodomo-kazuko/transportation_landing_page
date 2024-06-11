@@ -18,7 +18,7 @@ export default function Footer() {
   return (
     <div id="Footer">
       <SwipeWrapper animation="">
-        <ColorWrapper color="secondary">
+        <ColorWrapper color="secondary" className=" rounded-b-2xl">
           <Spacer height={"40"} width={""} />
           <footer className="py-10 px-5 mb-5">
             <div className="flex flex-wrap justify-between font-normal">

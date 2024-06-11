@@ -29,39 +29,37 @@ export default function FAQ() {
 
   return (
     <div id="FAQ">
-      <SwipeWrapper animation={"fade-up"}>
-        <div className="">
-          <ColorWrapper color={"transparent"}>
-            <div className="flex flex-col items-center justify-center px-4 sm:px-0">
-              <div className="flex items-center flex-grow justify-center">
-                <h1 className="flex text-4xl sm:text-6xl md:text-5xl items-center justify-center text-center mb-4">
-                  {" "}
-                  {/* Add margin-bottom here */}
-                  Түгээмэл асуултууд
-                </h1>
-              </div>
+      <div className="">
+        <ColorWrapper color={"transparent"}>
+          <div className="flex flex-col items-center justify-center px-4 sm:px-0">
+            <div className="flex items-center flex-grow justify-center">
+              <h1 className="flex text-4xl sm:text-6xl md:text-5xl items-center justify-center text-center mb-4">
+                {" "}
+                {/* Add margin-bottom here */}
+                Түгээмэл асуултууд
+              </h1>
+            </div>
 
-              <div className="flex w-full sm:w-3/4 lg:w-2/4 justify-center items-center">
-                <div className="flex-1">
-                  <Accordion value={null}>
-                    {items.map((item, index) => (
-                      <AccordionItem
-                        key={index}
-                        value={index.toString()}
-                        trigger={item.title}
-                      >
-                        <div className="p-1 text-gray-700 text-sm font-normal leading-relaxed">
-                          {item.content}
-                        </div>
-                      </AccordionItem>
-                    ))}
-                  </Accordion>
-                </div>
+            <div className="flex w-full sm:w-3/4 lg:w-2/4 justify-center items-center">
+              <div className="flex-1">
+                <Accordion value={null}>
+                  {items.map((item, index) => (
+                    <AccordionItem
+                      key={index}
+                      value={index.toString()}
+                      trigger={item.title}
+                    >
+                      <div className="p-1 text-gray-700 text-sm font-normal leading-relaxed">
+                        {item.content}
+                      </div>
+                    </AccordionItem>
+                  ))}
+                </Accordion>
               </div>
             </div>
-          </ColorWrapper>
-        </div>
-      </SwipeWrapper>
+          </div>
+        </ColorWrapper>
+      </div>
     </div>
   );
 }

@@ -21,11 +21,7 @@ export default function Main() {
 
       <FAQ />
 
-      <Spacer height="80px" width="0" />
-
       <Download />
-
-      <Spacer height="40px" width="0" />
 
       <Footer />
     </>

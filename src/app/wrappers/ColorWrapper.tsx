@@ -1,8 +1,9 @@
 import { ReactNode } from "react";
 
-interface WrapperBlueProps {
+export interface WrapperBlueProps {
   children: ReactNode;
   color: "primary" | "secondary" | "transparent" | "white";
+  className?: string;
 }
 
 const colorClasses = {
@@ -12,7 +13,11 @@ const colorClasses = {
   white: "bg-white",
 };
 
-export default function ColorWrapper({ children, color }: WrapperBlueProps) {
+export default function ColorWrapper({
+  children,
+  color,
+  className,
+}: WrapperBlueProps) {
   const colorClass = colorClasses[color];
   const textColor =
     color === "transparent"
@@ -22,9 +27,7 @@ export default function ColorWrapper({ children, color }: WrapperBlueProps) {
       : "text-white";
 
   return (
-    <div
-      className={`p-4 bg-gradient-radial ${colorClass} ${textColor} rounded-xl`}
-    >
+    <div className={`p-5 ${colorClass} ${textColor} ${className} `}>
       {children}
     </div>
   );
