@@ -21,10 +21,7 @@ const createAnimatedText = (texts: string[], animationType: string) => {
 
 const Hero: React.FC = () => {
   const [videoOpacity, setVideoOpacity] = useState(0);
-  const { screenSize, windowWidth } = useScreenSize({
-    landscapeRatio: 7,
-    portraitRatio: 3,
-  });
+  const { screenSize, windowWidth } = useScreenSize({});
   const animationType = windowWidth <= 480 ? "fade-right" : "fade-right";
   const text = createAnimatedText(
     ["Автобусны", "Шинэ", "апп гарлаа!"],

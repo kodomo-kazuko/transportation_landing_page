@@ -13,7 +13,12 @@ const AnimationWrapper: React.FC<AnimationWrapperProps> = ({
   className = "w-full sm:w-1/2",
 }) => {
   return (
-    <motion.div className={className} {...motionProps}>
+    <motion.div
+      className={`relative ${className}`}
+      style={{ zIndex: 0 }}
+      whileHover={{ scale: 1.02, zIndex: 1 }}
+      whileTap={{ scale: 0.99 }}
+    >
       {children}
     </motion.div>
   );

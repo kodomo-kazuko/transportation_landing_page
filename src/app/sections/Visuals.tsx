@@ -10,11 +10,14 @@ import { useScreenSize } from "../components/getScreenSize";
 import AnimationWrapper from "../wrappers/AnimationWrapper";
 
 export default function Visuals() {
-  const { screenSize } = useScreenSize({ landscapeRatio: 8, portraitRatio: 4 });
+  const { screenSize } = useScreenSize({
+    landscapeRatio: { xs: 2.5, sm: 5, md: 6, lg: 6, xl: 6, "2xl": 7 },
+  });
 
   const MotionProps = {
     whileHover: { scale: 1.02 },
     whileTap: { scale: 0.99 },
+    zIndex: 2,
   };
 
   return (

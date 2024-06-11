@@ -1,37 +1,52 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback } from "react";
 
-interface Props {
-  landscapeRatio?: number;
-  portraitRatio?: number;
-  constantSize?: number;
-}
+const defaultBreakpoints = { xs: 2.5, sm: 3, md: 4, lg: 5, xl: 6, "2xl": 7 };
 
 export function useScreenSize({
-  landscapeRatio = 6,
-  portraitRatio = 2.5,
+  landscapeRatio = defaultBreakpoints,
   constantSize,
-}: Props = {}) {
-  const [screenSize, setScreenSize] = useState(constantSize || landscapeRatio);
+}: {
+  landscapeRatio?: typeof defaultBreakpoints;
+  portraitRatio?: typeof defaultBreakpoints;
+  constantSize?: number;
+}) {
+  const [screenSize, setScreenSize] = useState(
+    constantSize || landscapeRatio.xs || 0
+  );
   const [windowWidth, setWindowWidth] = useState(0);
 
-  const updateSize = () => {
+  const updateSize = useCallback(() => {
     if (typeof window !== "undefined") {
       setWindowWidth(window.innerWidth);
       if (!constantSize) {
-        const newScreenSize =
-          window.innerWidth >= window.innerHeight
-            ? landscapeRatio
-            : portraitRatio;
+        let newScreenSize = landscapeRatio.xs || 0;
+        if (window.innerWidth >= 1536) {
+          // 2xl
+          newScreenSize = landscapeRatio["2xl"] || 0;
+        } else if (window.innerWidth >= 1280) {
+          // xl
+          newScreenSize = landscapeRatio.xl || 0;
+        } else if (window.innerWidth >= 1024) {
+          // lg
+          newScreenSize = landscapeRatio.lg || 0;
+        } else if (window.innerWidth >= 768) {
+          // md
+          newScreenSize = landscapeRatio.md || 0;
+        } else if (window.innerWidth >= 640) {
+          // sm
+          newScreenSize = landscapeRatio.sm || 0;
+        }
+
         setScreenSize(window.innerWidth / newScreenSize);
       }
     }
-  };
+  }, [landscapeRatio, constantSize]);
 
   useEffect(() => {
     window.addEventListener("resize", updateSize);
     updateSize();
     return () => window.removeEventListener("resize", updateSize);
-  }, [landscapeRatio, portraitRatio, constantSize, updateSize]);
+  }, [updateSize]);
 
   return { screenSize, windowWidth };
 }

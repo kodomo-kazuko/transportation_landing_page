@@ -6,27 +6,28 @@ import AppStore from "../../../public/images/Icon/AppStore.svg";
 import { IPhone } from "../components/iphone";
 import Start from "../../../public/images/figIMG/Splash.png";
 import { useScreenSize } from "../components/getScreenSize";
-import SwipeWrapper from "../wrappers/SwipeWrapper";
 
 export default function Download() {
-  const { screenSize } = useScreenSize({ landscapeRatio: 7, portraitRatio: 3 });
+  const { screenSize } = useScreenSize({
+    landscapeRatio: { xs: 2.5, sm: 3, md: 4, lg: 6, xl: 6, "2xl": 9 },
+  });
   const updateSize = screenSize;
   return (
     <div id="Download" className="lg:relative sm:none shadow-2xl rounded-xl">
-      <ColorWrapper color="primary">
-        <div className="container   pt-8 pb-8 sm:pb-6 lg:p-0 flex flex-col lg:flex-row lg:items-center gap-16 overflow-clip justify-center items-center px-4 ">
+      <ColorWrapper color="primary" className=" justify-center flex">
+        <div className="container sm: m-5 pt-8 pb-8 sm:pb-6 lg:p-0 flex flex-col lg:flex-row xl:flex-col lg:items-center gap-16 overflow-clip justify-center items-center px-4 ">
           <div className="lg:absolute sm:none bottom-4 left-20 ">
-            <IPhone boxShadow="0px 5px 25px rgba(0,0,0,0.6)" width={updateSize}>
+            {/* <IPhone boxShadow="0px 5px 25px rgba(0,0,0,0.6)" width={updateSize}>
               <Image src={Start} fill alt="" />
-            </IPhone>
+            </IPhone> */}
           </div>
 
-          <div className="z-10 lg:pt-12 text-base-normal items-center flex flex-col justify-center lg:w-2/4">
+          <div className="z-10 lg:pt-12 text-base sm:text-lg lg:text-base-normal items-center flex flex-col justify-center lg:w-2/4">
             <div className="mb-8 ">
-              <h1 className="font-semibold text-xl leading-7 sm:text-xl mb-5 sm:mb-6">
+              <h1 className="font-semibold text-xl leading-7 sm:text-2xl lg:text-xl mb-5 sm:mb-6">
                 UBCARD аппликейшн татах
               </h1>
-              <h1 className="font-normal sm:text-base">
+              <h1 className="font-normal text-sm sm:text-base lg:text-base">
                 Яг одоо аппликейшнаа татан авч хурдан, хялбар шийдлүүдийг өдөр
                 тутмын амьдралдаа хэрэгжүүлээрэй. Таны автобус аяллыг
                 хөнгөвчилнө.

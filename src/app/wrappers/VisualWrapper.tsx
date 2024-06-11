@@ -4,7 +4,7 @@ import ColorWrapper, { WrapperBlueProps } from "../wrappers/ColorWrapper";
 import styled from "@emotion/styled";
 
 const StyledH1 = styled.h1`
-  font-size: calc(0.7em + 1vw);
+  font-size: calc(0.5em + 0.8vw);
 `;
 
 interface VisualWrapperProps {
