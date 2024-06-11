@@ -24,7 +24,7 @@ const Hero: React.FC = () => {
   const { screenSize, windowWidth } = useScreenSize({});
   const animationType = windowWidth <= 480 ? "fade-right" : "fade-right";
   const text = createAnimatedText(
-    ["Автобусны", "Шинэ", "апп гарлаа!"],
+    ["Автобусны", "шинэ апп", "гарлаа!"],
     animationType
   );
 

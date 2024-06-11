@@ -22,7 +22,7 @@ const VisualWrapper: React.FC<VisualWrapperProps> = ({
   children,
   shadow = "shadow-xl rounded-xl",
 }) => {
-  const className = "p-2 sm:p-5";
+  const className = "p-2 sm:p-8";
   return (
     <SwipeWrapper animation={animation}>
       <div className={shadow}>

@@ -15,14 +15,14 @@ export default function Download() {
   return (
     <div id="Download" className="lg:relative sm:none shadow-2xl rounded-xl">
       <ColorWrapper color="primary" className=" justify-center flex">
-        <div className="container sm: m-5 pt-8 pb-8 sm:pb-6 lg:p-0 flex flex-col lg:flex-row xl:flex-col lg:items-center gap-16 overflow-clip justify-center items-center px-4 ">
+        <div className="container sm: m-5 pb-8 sm:pb-6 lg:p-0 flex flex-col lg:flex-row xl:flex-col lg:items-center overflow-clip justify-center items-center px-4 ">
           <div className="lg:absolute sm:none bottom-4 left-20 ">
             {/* <IPhone boxShadow="0px 5px 25px rgba(0,0,0,0.6)" width={updateSize}>
               <Image src={Start} fill alt="" />
             </IPhone> */}
           </div>
 
-          <div className="z-10 lg:pt-12 text-base sm:text-lg lg:text-base-normal items-center flex flex-col justify-center lg:w-2/4">
+          <div className="z-10  text-base sm:text-lg lg:text-base-normal items-center flex flex-col justify-center lg:w-2/4">
             <div className="mb-8 ">
               <h1 className="font-semibold text-xl leading-7 sm:text-2xl lg:text-xl mb-5 sm:mb-6">
                 UBCARD аппликейшн татах

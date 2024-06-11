@@ -58,7 +58,7 @@ export default function NavBar({
   return (
     <ColorWrapper color={"primary"} className={"rounded-t-2xl"}>
       <div className="flex flex-row justify-between items-center p-3">
-        <div className="flex items-center justify-between w-full  mb-2 sm:mb-0">
+        <div className="flex flex-1 items-center justify-between w-full  mb-2 sm:mb-0">
           <button onClick={() => handleClick("", false)}>
             <Image priority alt="Logo" src={isMobile ? logoFull : logoFull} />
           </button>
@@ -69,7 +69,7 @@ export default function NavBar({
           )}
         </div>
         {!isMobile && (
-          <div className="flex space-x-10">
+          <div className="flex space-x-10 flex-1">
             <MyButton
               bgColor=""
               fontType="sans"

@@ -13,13 +13,15 @@ export default function Main() {
         <Hero />
       </SwipeWrapper>
 
-      <Spacer height="40px" width="0" />
+      <Spacer height="3vh" width="0" />
 
       <Visuals />
 
-      <Spacer height="40px" width="0" />
+      <Spacer height="3vh" width="0" />
 
       <FAQ />
+
+      <Spacer height="3vh" width="0" />
 
       <Download />
 

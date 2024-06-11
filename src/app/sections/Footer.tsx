@@ -19,7 +19,7 @@ export default function Footer() {
     <div id="Footer">
       <SwipeWrapper animation="">
         <ColorWrapper color="secondary" className=" rounded-b-2xl">
-          <Spacer height={"40"} width={""} />
+          <Spacer height="3vh" width="0" />
           <footer className="py-10 px-5 mb-5">
             <div className="flex flex-wrap justify-between font-normal">
               <div className="w-full md:w-1/4 mb-10 md:mb-0">
@@ -78,7 +78,7 @@ export default function Footer() {
           <div className="flex justify-center  font-thin text-sm">
             <p>BinarySystems &copy;2024</p>
           </div>
-          <Spacer height={"35"} width={""} />
+          <Spacer height="3vh" width="0" />
         </ColorWrapper>
       </SwipeWrapper>
     </div>
