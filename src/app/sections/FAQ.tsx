@@ -29,13 +29,11 @@ export default function FAQ() {
 
   return (
     <div id="FAQ">
-      <div className="">
+      <div className=" my-10 sm:my-20">
         <ColorWrapper color={"transparent"}>
           <div className="flex flex-col items-center justify-center px-4 sm:px-0">
             <div className="flex items-center flex-grow justify-center">
-              <h1 className="flex text-4xl sm:text-6xl md:text-5xl items-center justify-center text-center mb-4">
-                {" "}
-                {/* Add margin-bottom here */}
+              <h1 className="flex text-4xl sm:text-6xl md:text-5xl items-center justify-center text-center mb-10">
                 Түгээмэл асуултууд
               </h1>
             </div>
