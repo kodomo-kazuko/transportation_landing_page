@@ -40,7 +40,7 @@ const Hero: React.FC = () => {
     <ColorWrapper color={"transparent"}>
       <div
         id="Hero"
-        className={`flex flex-col sm:flex-row-reverse justify-center items-center space-y-4 sm:space-y-0`}
+        className={`flex flex-col sm:flex-row-reverse justify-center items-center space-y-4 sm:space-y-0 pb-16 pt-10 sm:pb-32 sm:pt-20`}
       >
         <div className="flex flex-col">{text}</div>
         <div className="z-10">
