@@ -26,7 +26,7 @@ const ContentWrapper: React.FC<ContentWrapperProps> = ({
       ? window.innerWidth < window.innerHeight
       : false;
 
-  const { screenSize } = useScreenSize();
+  const { screenSize } = useScreenSize({});
 
   return (
     <div className={` flex ${isMobile ? "flex-col" : "flex-row"}`}>
