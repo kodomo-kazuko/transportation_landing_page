@@ -75,7 +75,7 @@ const Hero: React.FC = () => {
           </div>
         </div>
         <div className="z-10 md:w-1/2 md:flex md:items-center md:justify-center relative">
-          <div className="absolute w-3/4 h-1/2 md:w-1/2 md:h-1/2 lg:w-1/3 lg:h-1/3 rounded-bl-full rounded-tr-full bg-ub-secondary" />
+          <div className="absolute  sm:w-3/4 sm:h-1/2 md:w-3/4 md:h-1/2 rounded-bl-full rounded-tr-full bg-ub-secondary" />
           <div className="flex justify-center items-center">
             <IPhone boxShadow="" width={screenSize}>
               <Image src={start} alt={""} fill priority />
