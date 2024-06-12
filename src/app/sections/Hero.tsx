@@ -12,7 +12,7 @@ const createAnimatedText = (texts: string[], animationType: string) => {
   return texts.map((text, index) => (
     <SwipeWrapper key={index} animation={animationType} delay={index * 300}>
       <div
-        className={`text-4xl sm:text-3xl md:text-6xl font-bold lg:ml-10 mt-0 sm:mt-10 lg:mt-0 mb-4 text-left sm:text-left`}
+        className={`text-4xl sm:text-3xl md:text-6xl font-bold lg:ml-10 mt-0 sm:mt-10 lg:mt-0 mb-4 text-center sm:text-left`}
       >
         {text}
       </div>
@@ -43,15 +43,15 @@ const Hero: React.FC = () => {
         id="Hero"
         className={`flex flex-col justify-center items-center space-y-4 pb-16 pt-10 sm:pb-32 sm:pt-20 md:space-y-0 md:flex-row lg:space-y-0 lg:flex-row xl:space-y-0 xl:flex-row 2xl:space-y-0 2xl:flex-row`}
       >
-        <div className="flex flex-col space-y-4 md:w-1/2 md:flex md:items-start justify-center md:justify-start md:pl-36">
+        <div className="flex flex-col space-y-4 md:w-1/2 md:flex md:items-start justify-center md:justify-start md:pl-10">
           {text}
-          <p className="text-lg text-gray-500 sm:text-xl md:text-2xl lg:ml-10 text-left sm:text-left">
+          <p className=" px-20 sm:px-0 text-lg text-gray-500 sm:text-xl md:text-2xl lg:ml-10 text-center sm:text-left">
             welcome the new and improved bus app. It would legit knock your
             socks off if it had hands.
           </p>
           <div className="flex flex-col sm:flex-row space-y-2 sm:space-y-0 sm:space-x-2 lg:pl-10">
-            <a>
-              <button className="w-full sm:w-32 md:w-40 lg:w-48 xl:w-56 2xl:w-64 text-gray-700 bg-white border border-black font-semibold  rounded-2xl flex items-center  justify-center gap-2 p-2">
+            <a className=" flex justify-center">
+              <button className="  w-2/3 sm:w-24 md:w-32 lg:w-48 xl:w-56 2xl:w-64 text-gray-700 bg-white border border-black font-semibold  rounded-2xl flex items-center  justify-center gap-2 p-2">
                 <Image
                   alt="App Store Logo"
                   src={AppStore}
@@ -61,8 +61,8 @@ const Hero: React.FC = () => {
                 <span>App Store</span>
               </button>
             </a>
-            <a className="w-full sm:w-fit focus-visible-class" href="">
-              <button className="w-full sm:w-32 md:w-40 lg:w-48 xl:w-56 2xl:w-64 text-gray-700 bg-white border border-black font-semibold  rounded-2xl flex items-center  justify-center gap-2 p-2">
+            <a className=" flex justify-center">
+              <button className="w-2/3 sm:w-24 md:w-32 lg:w-48 xl:w-56 2xl:w-64 text-gray-700 bg-white border border-black font-semibold  rounded-2xl flex items-center  justify-center gap-2 p-2">
                 <Image
                   alt="Play Store Logo"
                   src={PlayStore}
@@ -75,7 +75,7 @@ const Hero: React.FC = () => {
           </div>
         </div>
         <div className="z-10 md:w-1/2 md:flex md:items-center md:justify-center relative">
-          <div className="absolute sm:w-3/4 sm:h-1/2 md:w-3/4 md:h-1/2 rounded-bl-full rounded-tr-full bg-ub-secondary" />
+          <div className="absolute w-3/4 h-1/2 md:w-1/2 md:h-1/2 lg:w-1/3 lg:h-1/3 rounded-bl-full rounded-tr-full bg-ub-secondary" />
           <div className="flex justify-center items-center">
             <IPhone boxShadow="" width={screenSize}>
               <Image src={start} alt={""} fill priority />
