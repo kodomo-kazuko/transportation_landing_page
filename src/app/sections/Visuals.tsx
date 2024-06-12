@@ -3,10 +3,9 @@ import Image from "next/image";
 
 import GG from "../../../public/images/figIMG/Home-Regular 3.png";
 import Payment from "../../../public/images/figIMG/Qpay.png";
-import map from "../../../public/images//figIMG/Stations 4.png";
 import bus_list from "../../../public/images/figIMG/Stations 1.png";
 import location from "../../../public/images/figIMG/Stations 4.png";
-import direction from "../../../public/images/figIMG/Get directions.png";
+import direction from "../../../public/images/figIMG/Биет-Картууд.png";
 
 import VisualWrapper from "../wrappers/VisualWrapper";
 
@@ -42,7 +41,7 @@ export default function Visuals() {
           text="Qpay, Socialpay болон банкны картаар төлбөр төлөх боломжтой хялбар төлбөрийн шийдэл"
         >
           <IPhone boxShadow="0px 5px 25px rgba(0,0,0,0.6)" width={screenSize}>
-            <AlignedImage src={Payment} alt="" priority />
+            <AlignedImage src={Payment} alt="" priority width={screenSize} />
           </IPhone>
         </VisualWrapper>
       </div>
@@ -79,7 +78,7 @@ export default function Visuals() {
           text="Qpay, Socialpay болон банкны картаар төлбөр төлөх боломжтой хялбар төлбөрийн шийдэл"
         >
           <IPhone boxShadow="0px 5px 25px rgba(0,0,0,0.6)" width={screenSize}>
-            <AlignedImage src={direction} alt="Payment" />
+            <Image src={direction} alt="Payment" fill priority />
           </IPhone>
         </VisualWrapper>
       </div>

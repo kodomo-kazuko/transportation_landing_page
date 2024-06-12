@@ -1,33 +1,20 @@
-import React from "react";
 import Image, { StaticImageData } from "next/image";
 
-interface AlignedImageProps {
+interface Props {
   src: StaticImageData;
   alt: string;
-  priority?: boolean;
+  priority: boolean;
+  width: number;
 }
 
-const AlignedImage: React.FC<AlignedImageProps> = ({
-  src,
-  alt,
-  priority = false,
-}) => {
+const AlignedImage = ({ src, alt, priority, width }: Props) => {
   return (
-    <div
-      style={{
-        position: "absolute",
-        top: 0,
-        left: 0,
-        height: "100%",
-        width: "100%",
-      }}
-    >
+    <div style={{ position: "absolute", width: width - 13, height: "100%" }}>
       <Image
         src={src}
         alt={alt}
-        layout="fill"
-        objectFit="cover"
         priority={priority}
+        style={{ position: "absolute", top: "4%" }}
       />
     </div>
   );

@@ -12,7 +12,7 @@ const createAnimatedText = (texts: string[], animationType: string) => {
   return texts.map((text, index) => (
     <SwipeWrapper key={index} animation={animationType} delay={index * 300}>
       <div
-        className={`text-4xl sm:text-3xl md:text-6xl font-bold lg:ml-10 mt-0 sm:mt-10 lg:mt-0 mb-4 text-center sm:text-left`}
+        className={`text-4xl text-ub-secondary sm:text-3xl md:text-6xl font-bold lg:ml-10 mt-0 sm:mt-10 lg:mt-0 mb-4 text-center sm:text-left`}
       >
         {text}
       </div>
@@ -51,7 +51,7 @@ const Hero: React.FC = () => {
           </p>
           <div className="flex flex-col sm:flex-row space-y-2 sm:space-y-0 sm:space-x-2 lg:pl-10">
             <a className=" flex justify-center">
-              <button className="  w-2/3 sm:w-24 md:w-32 lg:w-48 xl:w-56 2xl:w-64 text-gray-700 bg-white border border-black font-semibold  rounded-2xl flex items-center  justify-center gap-2 p-2">
+              <button className="  w-2/3 sm:w-24 md:w-32 lg:w-48 xl:w-56 2xl:w-64 text-gray-100 bg-ub-secondary  font-semibold  rounded-2xl flex items-center  justify-center gap-2 p-2">
                 <Image
                   alt="App Store Logo"
                   src={AppStore}
@@ -62,7 +62,7 @@ const Hero: React.FC = () => {
               </button>
             </a>
             <a className=" flex justify-center">
-              <button className="w-2/3 sm:w-24 md:w-32 lg:w-48 xl:w-56 2xl:w-64 text-gray-700 bg-white border border-black font-semibold  rounded-2xl flex items-center  justify-center gap-2 p-2">
+              <button className="w-2/3 sm:w-24 md:w-32 lg:w-48 xl:w-56 2xl:w-64 text-gray-100 bg-ub-secondary  font-semibold  rounded-2xl flex items-center  justify-center gap-2 p-2">
                 <Image
                   alt="Play Store Logo"
                   src={PlayStore}

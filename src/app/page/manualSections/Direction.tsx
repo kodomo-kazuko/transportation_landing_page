@@ -1,4 +1,4 @@
-import image_1 from "../../../../public/images/manual/6_direction_1.png";
+import image_1 from "../../../../public/images/manual/Stations 1.jpg";
 import image_2 from "../../../../public/images/manual/6_direction_2.png";
 import image_3 from "../../../../public/images/manual/6_direction_3.png";
 import ContentWrapper, { CardData } from "@/app/wrappers/ContentWrapper";
