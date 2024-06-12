@@ -31,7 +31,7 @@ const ContentWrapper: React.FC<ContentWrapperProps> = ({
   return (
     <div className={` flex ${isMobile ? "flex-col" : "flex-row"}`}>
       <ColorWrapper color="transparent">
-        <div className="text-black text-3xl pl-10 md:text-4xl">{title}</div>
+        <div className="text-black text-3xl pl-8 md:text-4xl">{title}</div>
         <div>
           <div
             className={`flex ${
