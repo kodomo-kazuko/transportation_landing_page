@@ -41,7 +41,7 @@ const Hero: React.FC = () => {
     <ColorWrapper color={"transparent"}>
       <div
         id="Hero"
-        className={`flex flex-col justify-center items-center space-y-4 pb-16 pt-10 sm:pb-32 sm:pt-20 md:space-y-0 md:flex-row lg:space-y-0 lg:flex-row xl:space-y-0 xl:flex-row 2xl:space-y-0 2xl:flex-row`}
+        className={`flex flex-col justify-center items-center space-y-4 pb-16 pt-10 sm:pb-32 sm:pt-16 md:space-y-0 md:flex-row lg:space-y-0 lg:flex-row xl:space-y-0 xl:flex-row 2xl:space-y-0 2xl:flex-row`}
       >
         <div className="flex flex-col space-y-4 md:w-1/2 md:flex md:items-start justify-center md:justify-start md:pl-10">
           {text}
