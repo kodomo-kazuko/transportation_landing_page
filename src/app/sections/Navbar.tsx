@@ -44,20 +44,51 @@ const NavBar: React.FC<NavBarProps> = ({ setShowSecondDiv, setScrollToId }) => {
   };
 
   return (
-    <ColorWrapper color="primary">
-      <div className="flex justify-center sm:justify-between items-center p-1 sm:w-2/3 mx-auto">
-        <div className="flex items-center justify-between w-full mb-2 sm:mb-0">
-          <button onClick={() => handleClick("", false)}>
-            <Image priority alt="Logo" src={logoFull} />
-          </button>
-          {isMobile && (
+    <div className="">
+      <ColorWrapper color="secondary">
+        <div className="flex justify-between items-center p-3 sm:w-2/3 mx-auto">
+          <div className="hidden sm:flex sm:justify-center">
+            <button onClick={() => handleClick("", false)}>
+              <Image priority alt="Logo" src={logoFull} />
+            </button>
+          </div>
+          <div className="flex items-center justify-between w-full sm:hidden">
+            <button onClick={() => handleClick("", false)}>
+              <Image priority alt="Logo" src={logoFull} />
+            </button>
             <button onClick={() => setIsMenuVisible(!isMenuVisible)}>
               <FaBars size={30} />
             </button>
+          </div>
+          {!isMobile && (
+            <div className="flex space-x-10">
+              <MyButton
+                bgColor=""
+                fontType="sans"
+                onClick={() => handleClick("", true)}
+              >
+                Ашиглах заавар
+              </MyButton>
+              <MyButton
+                bgColor=""
+                fontType="sans"
+                onClick={() => handleClick("FAQ", false)}
+              >
+                Түгээмэл асуултууд
+              </MyButton>
+
+              <MyButton
+                bgColor=""
+                fontType="sans"
+                onClick={() => handleClick("Footer", false)}
+              >
+                Холбоо барих
+              </MyButton>
+            </div>
           )}
         </div>
-        {!isMobile && (
-          <div className="flex space-x-10">
+        {isMobile && isMenuVisible && (
+          <div className="flex flex-col space-y-2 p-4">
             <MyButton
               bgColor=""
               fontType="sans"
@@ -82,34 +113,8 @@ const NavBar: React.FC<NavBarProps> = ({ setShowSecondDiv, setScrollToId }) => {
             </MyButton>
           </div>
         )}
-      </div>
-      {isMobile && isMenuVisible && (
-        <div className="flex flex-col space-y-2 p-4">
-          <MyButton
-            bgColor=""
-            fontType="sans"
-            onClick={() => handleClick("", true)}
-          >
-            Ашиглах заавар
-          </MyButton>
-          <MyButton
-            bgColor=""
-            fontType="sans"
-            onClick={() => handleClick("FAQ", false)}
-          >
-            Түгээмэл асуултууд
-          </MyButton>
-
-          <MyButton
-            bgColor=""
-            fontType="sans"
-            onClick={() => handleClick("Footer", false)}
-          >
-            Холбоо барих
-          </MyButton>
-        </div>
-      )}
-    </ColorWrapper>
+      </ColorWrapper>
+    </div>
   );
 };
 

@@ -28,16 +28,19 @@ export default function Home() {
 
   return (
     <Layout>
-      <NavBar
-        setShowSecondDiv={setShowSecondDiv}
-        setScrollToId={setScrollToId}
-      />
+      <div>
+        <NavBar
+          setShowSecondDiv={setShowSecondDiv}
+          setScrollToId={setScrollToId}
+        />
 
-      <Spacer height="3vh" width="0" />
+        <Spacer height="3vh" width="0" />
 
-      {showSecondDiv ? Manual() : Main()}
-
-      <ScrollToTopButton />
+        {showSecondDiv ? Manual() : Main()}
+      </div>
+      <div className=" -z-50">
+        <ScrollToTopButton />
+      </div>
     </Layout>
   );
 }

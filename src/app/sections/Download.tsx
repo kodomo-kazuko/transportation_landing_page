@@ -3,8 +3,6 @@ import Image from "next/image";
 import ColorWrapper from "../wrappers/ColorWrapper";
 import PlayStore from "../../../public/images/Icon/PlayStore.svg";
 import AppStore from "../../../public/images/Icon/AppStore.svg";
-import { IPhone } from "../components/iphone";
-import Start from "../../../public/images/figIMG/Splash.png";
 import { useScreenSize } from "../components/getScreenSize";
 
 export default function Download() {

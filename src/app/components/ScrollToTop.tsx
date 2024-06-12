@@ -27,13 +27,13 @@ export default function ScrollToTopButton() {
   }, []);
 
   return (
-    <div className="scroll-to-top">
+    <div className="scroll-to-top -z-50">
       {isVisible && (
         <div
           onClick={scrollToTop}
           className="fixed bottom-10 right-10 cursor-pointer"
         >
-          <button className="p-4 rounded-full text-2xl text-ub-secondary ring-3 ring-black bg-blue-500 border-2 md:text-4xl">
+          <button className="p-4 rounded-full text-2xl text-ub-secondary ring-3 ring-black bg-blue-500 border-2 md:text-3xl">
             <MdOutlineKeyboardDoubleArrowUp color="white" />
           </button>
         </div>

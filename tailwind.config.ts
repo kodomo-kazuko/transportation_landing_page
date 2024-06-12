@@ -9,7 +9,7 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        "ub-primary": "#264BE7",
+        "ub-primary": "#5F00DA",
         "ub-secondary": "#1B1D28",
       },
       backgroundImage: {

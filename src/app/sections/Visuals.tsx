@@ -8,7 +8,6 @@ import bus_list from "../../../public/images/figIMG/Stations 1.png";
 import location from "../../../public/images/figIMG/Stations 4.png";
 import direction from "../../../public/images/figIMG/Get directions.png";
 
-import AnimationWrapper from "../wrappers/AnimationWrapper";
 import VisualWrapper from "../wrappers/VisualWrapper";
 
 import AlignedImage from "../components/ImageFix";
@@ -19,18 +18,12 @@ export default function Visuals() {
     landscapeRatio: { xs: 2.5, sm: 5, md: 6, lg: 6, xl: 6, "2xl": 7 },
   });
 
-  const MotionProps = {
-    whileHover: { scale: 1.02 },
-    whileTap: { scale: 0.99 },
-    zIndex: 2,
-  };
-
   return (
     <div
       id="Visual"
       className="flex flex-col sm:flex-row flex-wrap justify-center"
     >
-      <AnimationWrapper motionProps={MotionProps}>
+      <div className="sm:w-1/2">
         <VisualWrapper
           color="primary"
           animation="fade-up"
@@ -40,23 +33,23 @@ export default function Visuals() {
             <Image src={GG} alt="" layout="fill" priority />
           </IPhone>
         </VisualWrapper>
-      </AnimationWrapper>
+      </div>
 
-      <AnimationWrapper motionProps={MotionProps}>
+      <div className="sm:w-1/2">
         <VisualWrapper
-          color="secondary"
+          color="white"
           animation="fade-up"
           text="Qpay, Socialpay болон банкны картаар төлбөр төлөх боломжтой хялбар төлбөрийн шийдэл"
         >
           <IPhone boxShadow="0px 5px 25px rgba(0,0,0,0.6)" width={screenSize}>
-            <AlignedImage src={Payment} alt="" priority width={screenSize} />
+            <AlignedImage src={Payment} alt="" priority />
           </IPhone>
         </VisualWrapper>
-      </AnimationWrapper>
+      </div>
 
-      <AnimationWrapper motionProps={MotionProps} className="w-full">
+      <div className="w-full">
         <VisualWrapper
-          color="white"
+          color="secondary"
           animation="fade-up"
           text="Заавал автобусны карт ашиглах шаардлагагүй QR Code уншуулаад зорчих боломж"
         >
@@ -64,11 +57,11 @@ export default function Visuals() {
             <Image src={bus_list} alt="" layout="fill" priority />
           </IPhone>
         </VisualWrapper>
-      </AnimationWrapper>
+      </div>
 
-      <AnimationWrapper motionProps={MotionProps}>
+      <div className="sm:w-1/2">
         <VisualWrapper
-          color="secondary"
+          color="white"
           animation="fade-up"
           text="Газрын зураг дээрээс автобусны байршил болон зогсоол, карт борлуулах цэгүүдийг харах"
         >
@@ -76,9 +69,9 @@ export default function Visuals() {
             <Image src={location} alt="" layout="fill" priority />
           </IPhone>
         </VisualWrapper>
-      </AnimationWrapper>
+      </div>
 
-      <AnimationWrapper motionProps={MotionProps}>
+      <div className="sm:w-1/2">
         <VisualWrapper
           shadow=""
           color="primary"
@@ -86,10 +79,10 @@ export default function Visuals() {
           text="Qpay, Socialpay болон банкны картаар төлбөр төлөх боломжтой хялбар төлбөрийн шийдэл"
         >
           <IPhone boxShadow="0px 5px 25px rgba(0,0,0,0.6)" width={screenSize}>
-            <AlignedImage src={direction} alt="Payment" width={screenSize} />
+            <AlignedImage src={direction} alt="Payment" />
           </IPhone>
         </VisualWrapper>
-      </AnimationWrapper>
+      </div>
     </div>
   );
 }
