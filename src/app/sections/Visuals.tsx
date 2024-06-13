@@ -26,7 +26,7 @@ export default function Visuals() {
           color="secondary"
           animation="fade-right"
           className=" "
-          text="Заавал автобусны карт ашиглах шаардлагагүй QR Code уншуулаад зорчих боломж"
+          text="автобусны карт ашиглах шаардлагагүй. QR Code уншуулаад зорч"
         >
           <IPhone boxShadow="0px 5px 25px rgba(0,0,0,0.6)" width={screenSize}>
             <Image src={GG} alt="" layout="fill" priority />
@@ -49,7 +49,7 @@ export default function Visuals() {
       <div className="w-full">
         <VisualWrapper
           color="secondary"
-          animation="slide-right"
+          animation="fade-up"
           text="Заавал автобусны карт ашиглах шаардлагагүй QR Code уншуулаад зорчих боломж"
         >
           <IPhone boxShadow="0px 5px 25px rgba(0,0,0,0.6)" width={screenSize}>
@@ -61,7 +61,7 @@ export default function Visuals() {
       <div className="sm:w-1/2">
         <VisualWrapper
           color="white"
-          animation="fade-up"
+          animation="fade-left"
           text="Газрын зураг дээрээс автобусны байршил болон зогсоол, карт борлуулах цэгүүдийг харах"
         >
           <IPhone boxShadow="0px 5px 25px rgba(0,0,0,0.6)" width={screenSize}>
@@ -74,7 +74,7 @@ export default function Visuals() {
         <VisualWrapper
           shadow=""
           color="secondary"
-          animation="fade-up"
+          animation="fade-right"
           className=""
           text="Qpay, Socialpay болон банкны картаар төлбөр төлөх боломжтой хялбар төлбөрийн шийдэл"
         >

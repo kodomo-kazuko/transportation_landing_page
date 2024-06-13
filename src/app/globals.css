@@ -4,7 +4,7 @@
 
 body {
   @apply font-semibold text-gray-700;
-  background-color: #f5f5f5;
+  background-color: #eeeeee;
   overflow-x: hidden;
   /* background-image: url("../../public//images//background/luke-chesser-PHtp0cDBJSM-unsplash.jpg"); */
   /* background-color: lightgrey; */

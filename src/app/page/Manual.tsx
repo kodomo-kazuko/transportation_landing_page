@@ -21,27 +21,25 @@ export default function Manual() {
 
     return (
       <div>
-        <SwipeWrapper animation="fade-up">
-          <div>
-            <Login />
+        <div>
+          <Login />
 
-            <Wallet />
+          <Wallet />
 
-            <Discount />
+          <Discount />
 
-            <Charge />
+          <Charge />
 
-            <PhysicalCard />
+          <PhysicalCard />
 
-            <Direction />
+          <Direction />
 
-            <Direction2 />
+          <Direction2 />
 
-            <Feedback />
+          <Feedback />
 
-            <History />
-          </div>
-        </SwipeWrapper>
+          <History />
+        </div>
 
         <ScrollToTopButton />
       </div>

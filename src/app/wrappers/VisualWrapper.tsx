@@ -2,6 +2,7 @@ import React, { ReactNode } from "react";
 import SwipeWrapper from "../wrappers/SwipeWrapper";
 import ColorWrapper, { WrapperBlueProps } from "../wrappers/ColorWrapper";
 import styled from "@emotion/styled";
+import AnimationWrapper from "./AnimationWrapper";
 
 const StyledH1 = styled.h1`
   font-size: calc(0.5em + 0.8vw);
@@ -24,11 +25,7 @@ const VisualWrapper: React.FC<VisualWrapperProps> = ({
   shadow,
   className,
 }) => {
-  const MotionProps = {
-    whileHover: { scale: 1.02 },
-    whileTap: { scale: 0.99 },
-    zIndex: 2,
-  };
+  const MotionProps = {};
 
   return (
     <SwipeWrapper animation={animation}>

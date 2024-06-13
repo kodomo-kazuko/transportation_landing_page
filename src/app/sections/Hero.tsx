@@ -7,6 +7,7 @@ import PlayStore from "../../../public/images/Icon/PlayStore.svg";
 import AppStore from "../../../public/images/Icon/AppStore.svg";
 import test from "../../../public/images/figIMG/test (2).png";
 import { motion } from "framer-motion";
+import AnimationWrapper from "../wrappers/AnimationWrapper";
 
 const createAnimatedText = (texts: string[], animationType: string) => {
   return texts.map((text, index) => (
