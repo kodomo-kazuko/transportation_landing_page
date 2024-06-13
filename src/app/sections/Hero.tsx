@@ -30,6 +30,8 @@ const Hero: React.FC = () => {
     animationType
   );
 
+  const buttonSize: number = 35;
+
   return (
     <ColorWrapper color={"transparent"}>
       <div
@@ -53,8 +55,8 @@ const Hero: React.FC = () => {
                   <Image
                     alt="App Store Logo"
                     src={AppStore}
-                    width={50}
-                    height={50}
+                    width={buttonSize}
+                    height={buttonSize}
                   />
                   <span className="text-center sm:text-left">App Store</span>
                 </button>
@@ -69,8 +71,8 @@ const Hero: React.FC = () => {
                   <Image
                     alt="Play Store Logo"
                     src={PlayStore}
-                    width={50}
-                    height={50}
+                    width={buttonSize}
+                    height={buttonSize}
                   />
                   <span className="text-center sm:text-left">Google Play</span>
                 </button>

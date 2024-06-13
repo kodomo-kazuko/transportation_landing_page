@@ -11,6 +11,7 @@ export default function Download() {
     landscapeRatio: { xs: 2.5, sm: 3, md: 4, lg: 6, xl: 6, "2xl": 9 },
   });
   const updateSize = screenSize;
+  const buttonSize: number = 35;
   return (
     <div id="Download" className="lg:relative sm:none shadow-2xl rounded-xl">
       <ColorWrapper
@@ -47,8 +48,8 @@ export default function Download() {
                       <Image
                         alt="App Store Logo"
                         src={AppStore}
-                        width={50}
-                        height={50}
+                        width={buttonSize}
+                        height={buttonSize}
                       />
                       <span>App Store</span>
                     </button>
@@ -63,8 +64,8 @@ export default function Download() {
                       <Image
                         alt="Play Store Logo"
                         src={PlayStore}
-                        width={50}
-                        height={50}
+                        width={buttonSize}
+                        height={buttonSize}
                       />
                       <span>Google Play</span>
                     </button>
