@@ -4,6 +4,7 @@ import Image from "next/image";
 import logoFull from "../../../public/images/logo/UBCard-Logo.svg";
 import { FaBars } from "react-icons/fa";
 import ColorWrapper from "../wrappers/ColorWrapper";
+import { motion } from "framer-motion";
 
 interface NavBarProps {
   setShowSecondDiv: (showSecondDiv: boolean) => void;
@@ -48,9 +49,11 @@ const NavBar: React.FC<NavBarProps> = ({ setShowSecondDiv, setScrollToId }) => {
       <ColorWrapper color="secondary" className=" p-1">
         <div className="flex justify-between items-center p-3 md:w-4/5 mx-auto">
           <div className="hidden md:flex md:justify-center">
-            <button onClick={() => handleClick("", false)}>
-              <Image priority alt="Logo" src={logoFull} />
-            </button>
+            <motion.div whileHover={{ scale: 1.1 }}>
+              <button onClick={() => handleClick("", false)}>
+                <Image priority alt="Logo" src={logoFull} />
+              </button>
+            </motion.div>
           </div>
           <div className="flex items-center justify-between w-full md:hidden">
             <button onClick={() => handleClick("", false)}>

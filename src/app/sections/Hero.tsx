@@ -45,28 +45,38 @@ const Hero: React.FC = () => {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-3 lg:pl-10 justify-center sm:justify-center items-center">
-            <a className="w-1/2 sm:w-auto lg:w-fit focus-visible-class" href="">
-              <button className="w-full sm:w-60 text-gray-100 bg-ub-secondary font-semibold rounded-2xl flex items-center justify-center gap-2 p-2">
-                <Image
-                  alt="App Store Logo"
-                  src={AppStore}
-                  width={50}
-                  height={50}
-                />
-                <span className="text-center sm:text-left">App Store</span>
-              </button>
-            </a>
-            <a className="w-1/2 sm:w-auto lg:w-fit focus-visible-class" href="">
-              <button className="w-full sm:w-60 text-gray-100 bg-ub-secondary font-semibold rounded-2xl flex items-center justify-center gap-2 p-2">
-                <Image
-                  alt="Play Store Logo"
-                  src={PlayStore}
-                  width={50}
-                  height={50}
-                />
-                <span className="text-center sm:text-left">Google Play</span>
-              </button>
-            </a>
+            <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.99 }}>
+              <a
+                className="w-1/2 sm:w-auto lg:w-fit focus-visible-class"
+                href=""
+              >
+                <button className="w-full sm:w-60 text-gray-100 bg-ub-secondary font-semibold rounded-2xl flex items-center justify-center gap-2 p-2">
+                  <Image
+                    alt="App Store Logo"
+                    src={AppStore}
+                    width={50}
+                    height={50}
+                  />
+                  <span className="text-center sm:text-left">App Store</span>
+                </button>
+              </a>
+            </motion.div>
+            <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.99 }}>
+              <a
+                className="w-1/2 sm:w-auto lg:w-fit focus-visible-class"
+                href=""
+              >
+                <button className="w-full sm:w-60 text-gray-100 bg-ub-secondary font-semibold rounded-2xl flex items-center justify-center gap-2 p-2">
+                  <Image
+                    alt="Play Store Logo"
+                    src={PlayStore}
+                    width={50}
+                    height={50}
+                  />
+                  <span className="text-center sm:text-left">Google Play</span>
+                </button>
+              </a>
+            </motion.div>
           </div>
         </div>
         <div className="z-10 md:w-1/2 md:flex md:items-center md:justify-center relative">

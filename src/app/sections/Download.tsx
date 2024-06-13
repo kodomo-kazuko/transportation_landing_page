@@ -4,6 +4,7 @@ import ColorWrapper from "../wrappers/ColorWrapper";
 import PlayStore from "../../../public/images/Icon/PlayStore.svg";
 import AppStore from "../../../public/images/Icon/AppStore.svg";
 import { useScreenSize } from "../components/getScreenSize";
+import { motion } from "framer-motion";
 
 export default function Download() {
   const { screenSize } = useScreenSize({
@@ -37,28 +38,38 @@ export default function Download() {
 
             <div className="flex flex-col items-center justify-center lg:w-2/4">
               <div className="flex flex-col sm:flex-row gap-3">
-                <a className="w-full lg:w-fit focus-visible-class" href="">
-                  <button className="w-full lg:w-60 text-gray-700 bg-white font-semibold  rounded-2xl flex items-center  justify-center gap-2 p-2">
-                    <Image
-                      alt="App Store Logo"
-                      src={AppStore}
-                      width={50}
-                      height={50}
-                    />
-                    <span>App Store</span>
-                  </button>
-                </a>
-                <a className="w-full lg:w-fit focus-visible-class" href="">
-                  <button className="w-full lg:w-60 text-gray-700 bg-white font-semibold  rounded-2xl flex items-center  justify-center gap-2 p-2">
-                    <Image
-                      alt="Play Store Logo"
-                      src={PlayStore}
-                      width={50}
-                      height={50}
-                    />
-                    <span>Google Play</span>
-                  </button>
-                </a>
+                <motion.div
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.99 }}
+                >
+                  <a className="w-full lg:w-fit focus-visible-class" href="">
+                    <button className="w-full lg:w-60 text-gray-700 bg-white font-semibold  rounded-2xl flex items-center  justify-center gap-2 p-2">
+                      <Image
+                        alt="App Store Logo"
+                        src={AppStore}
+                        width={50}
+                        height={50}
+                      />
+                      <span>App Store</span>
+                    </button>
+                  </a>
+                </motion.div>
+                <motion.div
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.99 }}
+                >
+                  <a className="w-full lg:w-fit focus-visible-class" href="">
+                    <button className="w-full lg:w-60 text-gray-700 bg-white font-semibold  rounded-2xl flex items-center  justify-center gap-2 p-2">
+                      <Image
+                        alt="Play Store Logo"
+                        src={PlayStore}
+                        width={50}
+                        height={50}
+                      />
+                      <span>Google Play</span>
+                    </button>
+                  </a>
+                </motion.div>
               </div>
             </div>
           </div>

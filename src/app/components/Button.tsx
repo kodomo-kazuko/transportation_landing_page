@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import React, { ReactNode } from "react";
 
 interface MyButtonProps {
@@ -14,11 +15,13 @@ export default function MyButton({
   onClick,
 }: MyButtonProps) {
   return (
-    <button
-      className={`font-${fontType} bg-${bgColor} hover:bg-${bgColor}-light text-left sm:text-center rounded-xl p-1 hover:text-gray-200`}
-      onClick={onClick}
-    >
-      {children}
-    </button>
+    <motion.div whileHover={{ scale: 1.1 }}>
+      <button
+        className={`font-${fontType} bg-${bgColor} hover:bg-${bgColor}-light text-left sm:text-center rounded-xl p-1 hover:text-gray-200`}
+        onClick={onClick}
+      >
+        {children}
+      </button>
+    </motion.div>
   );
 }
