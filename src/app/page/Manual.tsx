@@ -9,6 +9,7 @@ import Direction2 from "./manualSections/Direction2";
 import SwipeWrapper from "../wrappers/SwipeWrapper";
 import PhysicalCard from "./manualSections/PhysicalCard";
 import ScrollToTopButton from "../components/ScrollToTop";
+import Spacer from "../components/spacer";
 
 export default function Manual() {
   let screenSize: number = 0;
@@ -20,7 +21,8 @@ export default function Manual() {
     }
 
     return (
-      <div>
+      <>
+        <Spacer height="3vh" width="0" />
         <div>
           <Login />
 
@@ -42,7 +44,7 @@ export default function Manual() {
         </div>
 
         <ScrollToTopButton />
-      </div>
+      </>
     );
   }
 }

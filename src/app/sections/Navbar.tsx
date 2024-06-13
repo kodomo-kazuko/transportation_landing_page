@@ -47,7 +47,7 @@ const NavBar: React.FC<NavBarProps> = ({ setShowSecondDiv, setScrollToId }) => {
   return (
     <div className="">
       <ColorWrapper color="secondary" className=" p-1">
-        <div className="flex justify-between items-center p-3 md:w-4/5 mx-auto">
+        <div className="flex justify-between items-center p-3 md:w-11/12 mx-auto">
           <div className="hidden md:flex md:justify-center">
             <motion.div whileHover={{ scale: 1.1 }}>
               <button onClick={() => handleClick("", false)}>
