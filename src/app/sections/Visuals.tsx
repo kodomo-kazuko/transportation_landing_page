@@ -9,7 +9,6 @@ import direction from "../../../public/images/figIMG/Биет-Картууд.png
 
 import VisualWrapper from "../wrappers/VisualWrapper";
 
-import AlignedImage from "../components/ImageFix";
 import { useScreenSize } from "../components/getScreenSize";
 
 export default function Visuals() {
@@ -24,8 +23,9 @@ export default function Visuals() {
     >
       <div className="sm:w-1/2">
         <VisualWrapper
-          color="primary"
-          animation="fade-up"
+          color="secondary"
+          animation="fade-right"
+          className=" "
           text="Заавал автобусны карт ашиглах шаардлагагүй QR Code уншуулаад зорчих боломж"
         >
           <IPhone boxShadow="0px 5px 25px rgba(0,0,0,0.6)" width={screenSize}>
@@ -37,11 +37,11 @@ export default function Visuals() {
       <div className="sm:w-1/2">
         <VisualWrapper
           color="white"
-          animation="fade-up"
+          animation="fade-left"
           text="Qpay, Socialpay болон банкны картаар төлбөр төлөх боломжтой хялбар төлбөрийн шийдэл"
         >
           <IPhone boxShadow="0px 5px 25px rgba(0,0,0,0.6)" width={screenSize}>
-            <AlignedImage src={Payment} alt="" priority width={screenSize} />
+            <Image src={Payment} alt="" priority fill />
           </IPhone>
         </VisualWrapper>
       </div>
@@ -49,7 +49,7 @@ export default function Visuals() {
       <div className="w-full">
         <VisualWrapper
           color="secondary"
-          animation="fade-up"
+          animation="slide-right"
           text="Заавал автобусны карт ашиглах шаардлагагүй QR Code уншуулаад зорчих боломж"
         >
           <IPhone boxShadow="0px 5px 25px rgba(0,0,0,0.6)" width={screenSize}>
@@ -73,8 +73,9 @@ export default function Visuals() {
       <div className="sm:w-1/2">
         <VisualWrapper
           shadow=""
-          color="primary"
+          color="secondary"
           animation="fade-up"
+          className=""
           text="Qpay, Socialpay болон банкны картаар төлбөр төлөх боломжтой хялбар төлбөрийн шийдэл"
         >
           <IPhone boxShadow="0px 5px 25px rgba(0,0,0,0.6)" width={screenSize}>

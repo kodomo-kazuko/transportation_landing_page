@@ -5,7 +5,6 @@ import { IPhone } from "@/app/components/iphone";
 import SideButton from "@/app/components/SideButton";
 import Image, { StaticImageData } from "next/image";
 import { useScreenSize } from "../components/getScreenSize";
-import AlignedImage from "../components/ImageFix";
 
 export type CardData = {
   title: string;
@@ -44,12 +43,7 @@ const ContentWrapper: React.FC<ContentWrapperProps> = ({
                 <Card title={card.title} description={card.description}>
                   <div className="flex w-11/12 md:w-7/10 mx-auto justify-center">
                     <IPhone boxShadow={undefined} width={screenSize}>
-                      <AlignedImage
-                        alt=""
-                        src={card.image}
-                        width={screenSize}
-                        priority
-                      />
+                      <Image alt="" src={card.image} priority fill />
                     </IPhone>
                   </div>
                 </Card>

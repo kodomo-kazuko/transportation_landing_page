@@ -2,7 +2,6 @@ import React, { ReactNode } from "react";
 import SwipeWrapper from "../wrappers/SwipeWrapper";
 import ColorWrapper, { WrapperBlueProps } from "../wrappers/ColorWrapper";
 import styled from "@emotion/styled";
-import AnimationWrapper from "./AnimationWrapper";
 
 const StyledH1 = styled.h1`
   font-size: calc(0.5em + 0.8vw);
@@ -14,6 +13,7 @@ interface VisualWrapperProps {
   text: string;
   children: ReactNode;
   shadow?: string;
+  className?: string;
 }
 
 const VisualWrapper: React.FC<VisualWrapperProps> = ({
@@ -22,17 +22,18 @@ const VisualWrapper: React.FC<VisualWrapperProps> = ({
   text,
   children,
   shadow,
+  className,
 }) => {
   const MotionProps = {
     whileHover: { scale: 1.02 },
     whileTap: { scale: 0.99 },
     zIndex: 2,
   };
-  const className = " p-10 sm:p-20";
+
   return (
     <SwipeWrapper animation={animation}>
       <div className={shadow}>
-        <ColorWrapper color={color} className={className}>
+        <ColorWrapper color={color} className={`p-10 sm:p-20 ${className}`}>
           <div className="flex justify-evenly">
             <div className="flex basis-1/3 justify-center items-center">
               {children}

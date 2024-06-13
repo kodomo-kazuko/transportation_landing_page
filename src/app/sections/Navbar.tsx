@@ -46,13 +46,13 @@ const NavBar: React.FC<NavBarProps> = ({ setShowSecondDiv, setScrollToId }) => {
   return (
     <div className="">
       <ColorWrapper color="secondary">
-        <div className="flex justify-between items-center p-3 sm:w-2/3 mx-auto">
-          <div className="hidden sm:flex sm:justify-center">
+        <div className="flex justify-between items-center p-3 md:w-4/5 mx-auto">
+          <div className="hidden md:flex md:justify-center">
             <button onClick={() => handleClick("", false)}>
               <Image priority alt="Logo" src={logoFull} />
             </button>
           </div>
-          <div className="flex items-center justify-between w-full sm:hidden">
+          <div className="flex items-center justify-between w-full md:hidden">
             <button onClick={() => handleClick("", false)}>
               <Image priority alt="Logo" src={logoFull} />
             </button>
@@ -61,7 +61,7 @@ const NavBar: React.FC<NavBarProps> = ({ setShowSecondDiv, setScrollToId }) => {
             </button>
           </div>
           {!isMobile && (
-            <div className="flex space-x-10">
+            <div className="flex md:space-x-1 lg:space-x-10 md: text-right">
               <MyButton
                 bgColor=""
                 fontType="sans"
