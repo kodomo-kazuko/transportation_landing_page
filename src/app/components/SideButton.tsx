@@ -6,9 +6,9 @@ interface SideButtonProps {
 
 const SideButton: React.FC<SideButtonProps> = ({ direction }) => {
   return (
-    <button className="p-4 bg-blue-500 text-white rounded-full text-3xl sm:mt-32">
+    <div className="p-4 bg-blue-500 text-white rounded-full text-3xl sm:mt-32">
       {direction === "right" ? <FaArrowRight /> : <FaArrowDown />}
-    </button>
+    </div>
   );
 };
 
