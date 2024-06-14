@@ -8,6 +8,9 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      screens: {
+        "3xl": "1800xp",
+      },
       colors: {
         "ub-primary": "#5F00DA",
         "ub-secondary": "#1B1D28",

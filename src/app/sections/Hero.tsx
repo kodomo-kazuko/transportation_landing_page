@@ -29,8 +29,8 @@ const createAnimatedText = (texts: string[], animationType: string) => {
 };
 
 const Hero: React.FC = () => {
-  const { screenSize, windowWidth } = useScreenSize({
-    landscapeRatio: { xs: 2, sm: 3, md: 4, lg: 4, xl: 5, "2xl": 5.5 },
+  const { windowWidth } = useScreenSize({
+    // landscapeRatio: { xs: 2, sm: 3, md: 4, lg: 4, xl: 5, "2xl": 5.5 },
   });
   const animationType = windowWidth <= 480 ? "fade-right" : "fade-right";
   const text = createAnimatedText(
@@ -48,19 +48,19 @@ const Hero: React.FC = () => {
       >
         <div className="flex flex-col space-y-4 md:w-1/2 md:flex md:items-start justify-center md:justify-start md:pl-10">
           {text}
-          <p className="px-20 text-center sm:px-20 text-lg text-gray-500 sm:text-xl md:text-2xl lg:ml-10 md:px-0 md:text-left">
+          <p className="px-20 text-center sm:px-20 text-lg text-gray-500 sm:text-xl md:text-2xl 3xl:text-3xl lg:ml-10 md:px-0 md:text-left">
             Гар утаснаасаа QR-ээр зорчиx,
             <br />
             шууд цэнэглэx, үлдэгдэлээ хян
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-3 lg:pl-10 justify-center sm:justify-center items-center">
+          <div className="flex flex-col sm:flex-col md:flex-row gap-3 lg:pl-10 justify-center sm:justify-center items-center">
             <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.99 }}>
               <a
-                className="w-1/2 sm:w-auto lg:w-fit focus-visible-class"
+                className="w-1/2 sm:w-auto lg:w-fit 3xl:w-auto focus-visible-class"
                 href=""
               >
-                <button className="w-60 sm:w-60 text-gray-100 bg-ub-secondary font-semibold rounded-2xl flex items-center justify-center gap-2 p-2">
+                <button className="w-60 sm:w-60 3xl:w-72 text-gray-100 bg-ub-secondary font-semibold rounded-2xl flex items-center justify-center gap-2 p-2">
                   <Image
                     alt="App Store Logo"
                     src={AppStore}
@@ -73,10 +73,10 @@ const Hero: React.FC = () => {
             </motion.div>
             <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.99 }}>
               <a
-                className="w-1/2 sm:w-auto lg:w-fit focus-visible-class"
+                className="w-1/2 sm:w-auto lg:w-fit 3xl:w-auto focus-visible-class"
                 href=""
               >
-                <button className="w-60 sm:w-60 text-gray-100 bg-ub-secondary font-semibold rounded-2xl flex items-center justify-center gap-2 p-2">
+                <button className="w-60 sm:w-60 3xl:w-72 text-gray-100 bg-ub-secondary font-semibold rounded-2xl flex items-center justify-center gap-2 p-2">
                   <Image
                     alt="Play Store Logo"
                     src={PlayStore}
@@ -92,13 +92,15 @@ const Hero: React.FC = () => {
         <div className="z-10 md:w-1/2 md:flex md:items-center md:justify-center relative">
           <motion.div className="absolute md:w-3/4 md:h-1/2 rounded-bl-full rounded-tr-full bg-ub-secondary" />
           <div className="flex justify-center items-center z-10">
-            <Image
-              src={test}
-              alt="Start Image"
-              width={250}
-              height={250}
-              priority
-            />
+            <div className="flex justify-center items-center z-10">
+              <Image
+                src={test}
+                alt="Start Image"
+                width={windowWidth * 0.16}
+                height={windowWidth * 0.16}
+                priority
+              />
+            </div>
           </div>
         </div>
       </div>
