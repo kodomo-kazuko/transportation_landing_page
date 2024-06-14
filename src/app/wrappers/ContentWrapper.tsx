@@ -28,7 +28,7 @@ const ContentWrapper: React.FC<ContentWrapperProps> = ({
       : false;
 
   const { screenSize } = useScreenSize({
-    landscapeRatio: { xs: 2.5, sm: 3, md: 4, lg: 6, xl: 6, "2xl": 6 },
+    landscapeRatio: { xs: 2.5, sm: 3, md: 4, lg: 6, xl: 7, "2xl": 7 },
   });
 
   return (
@@ -39,7 +39,7 @@ const ContentWrapper: React.FC<ContentWrapperProps> = ({
           <div
             className={`flex ${
               isMobile ? "flex-col space-y-8" : "flex-row space-x-8"
-            } justify-between items-center overflow-auto`}
+            } justify-around items-center overflow-auto`}
           >
             {cards.map((card, index) => (
               <>
