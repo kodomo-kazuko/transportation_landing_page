@@ -29,9 +29,10 @@ const createAnimatedText = (texts: string[], animationType: string) => {
 };
 
 const Hero: React.FC = () => {
-  const { windowWidth } = useScreenSize({
-    // landscapeRatio: { xs: 2, sm: 3, md: 4, lg: 4, xl: 5, "2xl": 5.5 },
+  const { screenSize, windowWidth } = useScreenSize({
+    landscapeRatio: { xs: 3, sm: 4, md: 7, lg: 7, xl: 7, "2xl": 7 },
   });
+  console.log(screenSize);
   const animationType = windowWidth <= 480 ? "fade-right" : "fade-right";
   const text = createAnimatedText(
     ["Санаа зоволгүй тайван зорч"],
@@ -96,8 +97,8 @@ const Hero: React.FC = () => {
               <Image
                 src={test}
                 alt="Start Image"
-                width={windowWidth * 0.16}
-                height={windowWidth * 0.16}
+                width={screenSize * 1.2}
+                height={screenSize * 1.2}
                 priority
               />
             </div>
