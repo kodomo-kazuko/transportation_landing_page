@@ -26,7 +26,7 @@ export default function Visuals() {
           color="secondary"
           animation="fade-right"
           className=" "
-          text="автобусны карт ашиглах шаардлагагүй. QR Code уншуулаад зорч"
+          text="Автобусны карт дахин ашиглах шаардлагагүй. QR Code уншуулаад зорч"
         >
           <IPhone boxShadow="0px 5px 25px rgba(0,0,0,0.6)" width={screenSize}>
             <Image src={GG} alt="" layout="fill" priority />
@@ -38,7 +38,7 @@ export default function Visuals() {
         <VisualWrapper
           color="white"
           animation="fade-left"
-          text="Qpay, Socialpay болон банкны картаар төлбөр төлөх боломжтой хялбар төлбөрийн шийдэл"
+          text="Qpay, Socialpay болон банкны картаар төлбөр төлөх хялбар шийдэл"
         >
           <IPhone boxShadow="0px 5px 25px rgba(0,0,0,0.6)" width={screenSize}>
             <Image src={Payment} alt="" priority fill />
@@ -50,7 +50,7 @@ export default function Visuals() {
         <VisualWrapper
           color="secondary"
           animation="fade-up"
-          text="Ахин Байнгийн суух автобусууда хайх шаардлаггүй. Хадгалахад болно"
+          text="Чиглэлээ хадгалах шинэ үйлчилгээ "
         >
           <IPhone boxShadow="0px 5px 25px rgba(0,0,0,0.6)" width={screenSize}>
             <Image src={bus_list} alt="" layout="fill" priority />
@@ -62,7 +62,7 @@ export default function Visuals() {
         <VisualWrapper
           color="white"
           animation="fade-left"
-          text="Газрын зураг дээрээс автобусны байршил болон зогсоол, карт борлуулах цэгүүдийг харах"
+          text="Газрын зураг дээрээс автобусны байршил, зогсоол, карт борлуулах цэгүүдийг харах"
         >
           <IPhone boxShadow="0px 5px 25px rgba(0,0,0,0.6)" width={screenSize}>
             <Image src={location} alt="" layout="fill" priority />
@@ -76,7 +76,7 @@ export default function Visuals() {
           color="secondary"
           animation="fade-right"
           className=""
-          text="одоогийн байршлаасаа аль автобусаар хаашаа явахыг хүсч байгаагаа харах боломжтой"
+          text="Очих байршла сонгоод хялбар зорч"
         >
           <IPhone boxShadow="0px 5px 25px rgba(0,0,0,0.6)" width={screenSize}>
             <Image src={direction} alt="Payment" fill priority />

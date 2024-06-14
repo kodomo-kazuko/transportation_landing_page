@@ -19,9 +19,7 @@ const createAnimatedText = (texts: string[], animationType: string) => {
         <div
           className={`text-4xl text-ub-secondary sm:text-5xl md:text-6xl font-bold lg:ml-10 mt-0  lg:mt-0 mb-4 text-center md:text-left`}
         >
-          {firstLine}
-          <br />
-          {secondLine}
+          {texts}
         </div>
       </SwipeWrapper>
     );
@@ -34,10 +32,7 @@ const Hero: React.FC = () => {
   });
   console.log(screenSize);
   const animationType = windowWidth <= 480 ? "fade-right" : "fade-right";
-  const text = createAnimatedText(
-    ["Санаа зоволгүй тайван зорч"],
-    animationType
-  );
+  const text = createAnimatedText(["Санаа Амар Зорч"], animationType);
 
   const buttonSize: number = 40;
 
@@ -50,9 +45,9 @@ const Hero: React.FC = () => {
         <div className="flex flex-col space-y-4 md:w-1/2 md:flex md:items-start justify-center md:justify-start md:pl-10">
           {text}
           <p className="px-20 text-center sm:px-20 text-lg text-gray-500 sm:text-xl md:text-2xl 3xl:text-3xl lg:ml-10 md:px-0 md:text-left">
-            Гар утаснаасаа QR-ээр зорчиx,
+            Нийтийн тээврийн үйлчилгээний Чиглэл, Зогсоол
             <br />
-            шууд цэнэглэx, үлдэгдэлээ хян
+            Байршил, Автобусны ирэх хугацааг хялбараар хар!
           </p>
 
           <div className="flex flex-col sm:flex-col md:flex-row gap-3 lg:pl-10 justify-center sm:justify-center items-center">
