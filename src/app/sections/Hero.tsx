@@ -9,15 +9,23 @@ import test from "../../../public/images/figIMG/test (2).png";
 import { motion } from "framer-motion";
 
 const createAnimatedText = (texts: string[], animationType: string) => {
-  return texts.map((text, index) => (
-    <SwipeWrapper key={index} animation={animationType} delay={index * 300}>
-      <div
-        className={`text-4xl text-ub-secondary sm:text-5xl md:text-6xl font-bold lg:ml-10 mt-0  lg:mt-0 mb-4 text-center sm:text-center`}
-      >
-        {text}
-      </div>
-    </SwipeWrapper>
-  ));
+  return texts.map((text, index) => {
+    const splitText = text.split(" ");
+    const firstLine = splitText.slice(0, splitText.length / 2).join(" ");
+    const secondLine = splitText.slice(splitText.length / 2).join(" ");
+
+    return (
+      <SwipeWrapper key={index} animation={animationType} delay={index * 300}>
+        <div
+          className={`text-4xl text-ub-secondary sm:text-5xl md:text-6xl font-bold lg:ml-10 mt-0  lg:mt-0 mb-4 text-center md:text-left`}
+        >
+          {firstLine}
+          <br />
+          {secondLine}
+        </div>
+      </SwipeWrapper>
+    );
+  });
 };
 
 const Hero: React.FC = () => {
@@ -26,11 +34,11 @@ const Hero: React.FC = () => {
   });
   const animationType = windowWidth <= 480 ? "fade-right" : "fade-right";
   const text = createAnimatedText(
-    ["Автобусны шинэ", "апп гарлаа!"],
+    ["Автобусны шинэ апп гарлаа!"],
     animationType
   );
 
-  const buttonSize: number = 35;
+  const buttonSize: number = 40;
 
   return (
     <ColorWrapper color={"transparent"}>

@@ -11,7 +11,7 @@ export default function Download() {
     landscapeRatio: { xs: 2.5, sm: 3, md: 4, lg: 6, xl: 6, "2xl": 9 },
   });
   const updateSize = screenSize;
-  const buttonSize: number = 35;
+  const buttonSize: number = 40;
   return (
     <div id="Download" className="lg:relative sm:none shadow-2xl rounded-xl">
       <ColorWrapper
