@@ -9,6 +9,7 @@ import Direction2 from "./manualSections/Direction2";
 import SwipeWrapper from "../wrappers/SwipeWrapper";
 import PhysicalCard from "./manualSections/PhysicalCard";
 import Spacer from "../components/spacer";
+import Footer from "../sections/Footer";
 
 export default function Manual() {
   let screenSize: number = 0;
@@ -41,6 +42,7 @@ export default function Manual() {
 
           <History />
         </div>
+        <Footer />
       </SwipeWrapper>
     );
   }
