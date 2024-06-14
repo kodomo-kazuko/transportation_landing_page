@@ -60,7 +60,7 @@ const Hero: React.FC = () => {
                 className="w-1/2 sm:w-auto lg:w-fit focus-visible-class"
                 href=""
               >
-                <button className="w-full sm:w-60 text-gray-100 bg-ub-secondary font-semibold rounded-2xl flex items-center justify-center gap-2 p-2">
+                <button className="w-60 sm:w-60 text-gray-100 bg-ub-secondary font-semibold rounded-2xl flex items-center justify-center gap-2 p-2">
                   <Image
                     alt="App Store Logo"
                     src={AppStore}
@@ -76,7 +76,7 @@ const Hero: React.FC = () => {
                 className="w-1/2 sm:w-auto lg:w-fit focus-visible-class"
                 href=""
               >
-                <button className="w-full sm:w-60 text-gray-100 bg-ub-secondary font-semibold rounded-2xl flex items-center justify-center gap-2 p-2">
+                <button className="w-60 sm:w-60 text-gray-100 bg-ub-secondary font-semibold rounded-2xl flex items-center justify-center gap-2 p-2">
                   <Image
                     alt="Play Store Logo"
                     src={PlayStore}

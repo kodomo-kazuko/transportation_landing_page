@@ -64,8 +64,8 @@ export default function Download() {
                       <Image
                         alt="Play Store Logo"
                         src={PlayStore}
-                        width={buttonSize}
-                        height={buttonSize}
+                        width={buttonSize - 3}
+                        height={buttonSize - 3}
                       />
                       <span>Google Play</span>
                     </button>
