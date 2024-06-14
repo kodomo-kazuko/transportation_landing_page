@@ -39,7 +39,7 @@ const ContentWrapper: React.FC<ContentWrapperProps> = ({
           <div
             className={`flex ${
               isMobile ? "flex-col space-y-8" : "flex-row space-x-8"
-            } justify-between items-center overflow-auto`}
+            } justify-between items-center overflow-auto w-full`}
           >
             {cards.map((card, index) => (
               <>
