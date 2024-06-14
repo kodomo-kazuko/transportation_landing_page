@@ -28,12 +28,12 @@ const ContentWrapper: React.FC<ContentWrapperProps> = ({
       : false;
 
   const { screenSize } = useScreenSize({
-    landscapeRatio: { xs: 2.5, sm: 3, md: 4, lg: 6, xl: 7, "2xl": 7 },
+    landscapeRatio: { xs: 2.5, sm: 3, md: 4, lg: 6, xl: 7, "2xl": 8 },
   });
 
   return (
-    <div className={` flex ${isMobile ? "flex-col" : "flex-row"}`}>
-      <ColorWrapper color="transparent">
+    <div className={` flex ${isMobile ? "flex-col" : "flex-row w-full"}`}>
+      <ColorWrapper color="transparent" className=" w-full">
         <div className="text-black text-3xl pl-8 md:text-4xl">{title}</div>
         <div>
           <div
