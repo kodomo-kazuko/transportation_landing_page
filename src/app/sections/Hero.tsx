@@ -34,7 +34,7 @@ const Hero: React.FC = () => {
   });
   const animationType = windowWidth <= 480 ? "fade-right" : "fade-right";
   const text = createAnimatedText(
-    ["Автобусны шинэ апп гарлаа!"],
+    ["Санаа зоволгүй тайван зорч"],
     animationType
   );
 
@@ -49,8 +49,9 @@ const Hero: React.FC = () => {
         <div className="flex flex-col space-y-4 md:w-1/2 md:flex md:items-start justify-center md:justify-start md:pl-10">
           {text}
           <p className="px-20 text-center sm:px-20 text-lg text-gray-500 sm:text-xl md:text-2xl lg:ml-10 md:px-0 md:text-left">
-            welcome the new and improved bus app. It would legit knock your
-            socks off if it had hands.
+            Гар утаснаасаа QR-ээр зорчиx,
+            <br />
+            шууд цэнэглэx, үлдэгдэлээ хян
           </p>
 
           <div className="flex flex-col sm:flex-row gap-3 lg:pl-10 justify-center sm:justify-center items-center">

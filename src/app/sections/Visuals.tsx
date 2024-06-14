@@ -5,7 +5,7 @@ import GG from "../../../public/images/figIMG/Home-Regular 3.png";
 import Payment from "../../../public/images/figIMG/Qpay.png";
 import bus_list from "../../../public/images/figIMG/Stations 1.png";
 import location from "../../../public/images/figIMG/Stations 4.png";
-import direction from "../../../public/images/figIMG/Биет-Картууд.png";
+import direction from "../../../public/images/figIMG/Get directions.png";
 
 import VisualWrapper from "../wrappers/VisualWrapper";
 
@@ -50,7 +50,7 @@ export default function Visuals() {
         <VisualWrapper
           color="secondary"
           animation="fade-up"
-          text="Заавал автобусны карт ашиглах шаардлагагүй QR Code уншуулаад зорчих боломж"
+          text="Ахин Байнгийн суух автобусууда хайх шаардлаггүй. Хадгалахад болно"
         >
           <IPhone boxShadow="0px 5px 25px rgba(0,0,0,0.6)" width={screenSize}>
             <Image src={bus_list} alt="" layout="fill" priority />
@@ -76,7 +76,7 @@ export default function Visuals() {
           color="secondary"
           animation="fade-right"
           className=""
-          text="Qpay, Socialpay болон банкны картаар төлбөр төлөх боломжтой хялбар төлбөрийн шийдэл"
+          text="одоогийн байршлаасаа аль автобусаар хаашаа явахыг хүсч байгаагаа харах боломжтой"
         >
           <IPhone boxShadow="0px 5px 25px rgba(0,0,0,0.6)" width={screenSize}>
             <Image src={direction} alt="Payment" fill priority />
