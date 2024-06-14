@@ -11,55 +11,45 @@ export default function Download() {
   const { screenSize, windowWidth } = useScreenSize({
     landscapeRatio: { xs: 2.5, sm: 3, md: 4, lg: 6, xl: 6, "2xl": 9 },
   });
-
-  const w = windowWidth * 0.3;
-  const h = windowWidth * 0.3;
-  const buttonSize = 40;
-
+  const updateSize = screenSize;
+  const buttonSize: number = 40;
   return (
-    <div id="Download" className="lg:relative shadow-2xl rounded-xl">
-      <ColorWrapper color="primary" className="justify-center flex">
-        <div className="container md:py-14 flex flex-col lg:flex-row lg:items-center overflow-clip">
-          <div className="relative lg:flex-1 flex justify-center lg:justify-center">
-            <motion.div
-              animate={{
-                y: [0, -20, 0],
-              }}
-              transition={{
-                duration: 3,
-                repeat: Infinity,
-                ease: "easeInOut",
-              }}
-            >
-              <div style={{ width: w, height: h }} className="relative">
-                <Image
-                  src={Start}
-                  alt="Library application"
-                  layout="fill"
-                  objectFit="contain"
-                  className="pointer-events-none select-none outline-none"
-                />
-              </div>
-            </motion.div>
+    <div id="Download" className="lg:relative sm:none shadow-2xl rounded-xl">
+      <ColorWrapper
+        color="primary"
+        className=" justify-center flex py-10 sm:py-20"
+      >
+        <div className="container sm: m-5 pb-8 sm:pb-6 lg:p-0 flex flex-col md:flex-row lg:items-center overflow-clip justify-center items-center px-4 ">
+          <div className="flex-1 relative">
+            <Image
+              src={Start}
+              layout="fill"
+              objectFit="cover"
+              alt=""
+              className="absolute w-full h-full"
+            />
           </div>
 
-          <div className="z-10 lg:flex-1 lg:pt-16 text-base-normal flex flex-col items-center lg:items-start px-4">
-            <div className="mb-8 sm:mb-10 font-normal text-sm sm:text-base">
-              <h1 className="font-semibold text-2xl leading-7 sm:text-3xl mb-5 sm:mb-6">
+          <div className="flex-1 z-10  text-base sm:text-lg lg:text-base-normal items-center flex flex-col justify-center lg:w-2/4">
+            <div className="mb-8 ">
+              <h1 className="font-semibold text-xl leading-7 sm:text-2xl lg:text-xl mb-5 sm:mb-6">
                 UBCARD аппликейшн татах
               </h1>
-              <p className="mb-8 sm:mb-10 font-normal text-sm sm:text-base">
+              <h1 className="font-normal text-sm sm:text-base lg:text-base">
                 Яг одоо аппликейшнаа татан авч хурдан, хялбар шийдлүүдийг өдөр
                 тутмын амьдралдаа хэрэгжүүлээрэй. Таны автобус аяллыг
                 хөнгөвчилнө.
-              </p>
-              <div className="flex flex-col w-2/3 md:w-auto md:flex-row gap-3 mx-auto md:mx-0">
+              </h1>
+            </div>
+
+            <div className="flex flex-col items-center justify-center lg:w-2/4">
+              <div className="flex flex-col sm:flex-row gap-3">
                 <motion.div
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.99 }}
                 >
                   <a className="w-full lg:w-fit focus-visible-class" href="">
-                    <button className="w-full lg:w-60 text-gray-700 bg-white font-semibold rounded-2xl flex items-center justify-center gap-2 p-2">
+                    <button className="w-full lg:w-60 text-gray-700 bg-white font-semibold  rounded-2xl flex items-center  justify-center gap-2 p-2">
                       <Image
                         alt="App Store Logo"
                         src={AppStore}
@@ -75,7 +65,7 @@ export default function Download() {
                   whileTap={{ scale: 0.99 }}
                 >
                   <a className="w-full lg:w-fit focus-visible-class" href="">
-                    <button className="w-full lg:w-60 text-gray-700 bg-white font-semibold rounded-2xl flex items-center justify-center gap-2 p-2">
+                    <button className="w-full lg:w-60 text-gray-700 bg-white font-semibold  rounded-2xl flex items-center  justify-center gap-2 p-2">
                       <Image
                         alt="Play Store Logo"
                         src={PlayStore}

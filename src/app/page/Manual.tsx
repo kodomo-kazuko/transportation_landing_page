@@ -23,7 +23,7 @@ export default function Manual() {
     return (
       <SwipeWrapper animation={"fade-right"}>
         <Spacer height="3vh" width="0" />
-        <div>
+        <div className=" mb-10">
           <Login />
 
           <Wallet />
@@ -42,6 +42,7 @@ export default function Manual() {
 
           <History />
         </div>
+
         <Footer />
       </SwipeWrapper>
     );
