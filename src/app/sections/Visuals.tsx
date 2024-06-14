@@ -19,9 +19,9 @@ export default function Visuals() {
   return (
     <div
       id="Visual"
-      className="flex flex-col sm:flex-row flex-wrap justify-center"
+      className="flex flex-col md:flex-row flex-wrap justify-center"
     >
-      <div className="sm:w-1/2">
+      <div className="md:w-1/2">
         <VisualWrapper
           color="secondary"
           animation="fade-right"
@@ -34,7 +34,7 @@ export default function Visuals() {
         </VisualWrapper>
       </div>
 
-      <div className="sm:w-1/2">
+      <div className="md:w-1/2">
         <VisualWrapper
           color="white"
           animation="fade-left"
@@ -58,7 +58,7 @@ export default function Visuals() {
         </VisualWrapper>
       </div>
 
-      <div className="sm:w-1/2">
+      <div className="md:w-1/2">
         <VisualWrapper
           color="white"
           animation="fade-left"
@@ -70,7 +70,7 @@ export default function Visuals() {
         </VisualWrapper>
       </div>
 
-      <div className="sm:w-1/2">
+      <div className="md:w-1/2">
         <VisualWrapper
           shadow=""
           color="secondary"
