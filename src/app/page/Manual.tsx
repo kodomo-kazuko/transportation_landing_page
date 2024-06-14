@@ -8,7 +8,6 @@ import Direction from "./manualSections/Direction";
 import Direction2 from "./manualSections/Direction2";
 import SwipeWrapper from "../wrappers/SwipeWrapper";
 import PhysicalCard from "./manualSections/PhysicalCard";
-import ScrollToTopButton from "../components/ScrollToTop";
 import Spacer from "../components/spacer";
 
 export default function Manual() {
@@ -42,8 +41,6 @@ export default function Manual() {
 
           <History />
         </div>
-
-        <ScrollToTopButton />
       </SwipeWrapper>
     );
   }
