@@ -45,7 +45,7 @@ export default function Download() {
               </motion.div>
             </div>
           </div>
-          <div className="lg:flex sm:basis-1/2 z-0 lg:pt-16 text-base-normal flex flex-col items-center lg:items-start px-4">
+          <div className="lg:flex sm:basis-2/3 z-0 lg:pt-16 text-base-normal flex flex-col items-center lg:items-start px-4">
             {" "}
             <div className="mb-8 lg:text-left sm:mb-10 font-normal text-sm sm:text-base">
               <h1 className="font-semibold text-2xl leading-7 sm:text-3xl mb-5 sm:mb-6">
