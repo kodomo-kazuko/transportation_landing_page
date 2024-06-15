@@ -76,7 +76,7 @@ export default function Visuals() {
           color="secondary"
           animation="fade-right"
           className=""
-          text="Очих байршла сонгоод хялбар зорч"
+          text="Очих байршлаа сонгоод хялбар зорч"
         >
           <IPhone boxShadow="0px 5px 25px rgba(0,0,0,0.6)" width={screenSize}>
             <Image src={direction} alt="Payment" fill priority />
