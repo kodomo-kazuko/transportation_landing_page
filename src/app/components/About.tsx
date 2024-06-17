@@ -3,7 +3,7 @@ import { FaFacebook, FaInstagram, FaXTwitter } from "react-icons/fa6";
 
 const InfoSection: React.FC = () => {
   return (
-    <div className=" py-8">
+    <div className=" pt-8">
       <div className="max-w-screen-xl mx-auto flex flex-wrap">
         <div className="w-full md:w-1/3 px-4 mb-5">
           <div className="shadow-2xl p-4">
