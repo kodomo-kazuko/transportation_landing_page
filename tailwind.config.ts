@@ -14,6 +14,7 @@ const config: Config = {
       colors: {
         "ub-primary": "#5F00DA",
         "ub-secondary": "#1B1D28",
+        "ub-gray": "#777777",
       },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",

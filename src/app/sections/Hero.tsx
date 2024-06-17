@@ -43,7 +43,7 @@ const Hero: React.FC = () => {
       >
         <div className="flex flex-col space-y-4 md:w-1/2 md:flex md:items-start justify-center md:justify-start md:pl-10">
           {text}
-          <p className="px-20 text-center sm:px-20 text-lg text-gray-500 sm:text-xl md:text-2xl 3xl:text-3xl lg:ml-10 md:px-0 md:text-left">
+          <p className="px-20 text-center sm:px-20 text-lg text-ub-gray sm:text-xl md:text-2xl 3xl:text-3xl lg:ml-10 md:px-0 md:text-left">
             Нийтийн тээврийн үйлчилгээний Чиглэл, Зогсоол
             <br />
             Байршил, Автобусны ирэх хугацааг хялбараар хар!
