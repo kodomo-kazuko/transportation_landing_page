@@ -32,7 +32,7 @@ export default function Download() {
               <motion.div
                 animate={{ y: [0, -50, 0] }}
                 transition={{
-                  duration: 4,
+                  duration: 8,
                   repeat: Infinity,
                   ease: "easeInOut",
                 }}
