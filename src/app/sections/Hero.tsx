@@ -85,16 +85,29 @@ const Hero: React.FC = () => {
           </div>
         </div>
         <div className="z-10 md:w-1/2 md:flex md:items-center md:justify-center relative">
-          <motion.div className="absolute md:w-3/4 md:h-1/2 rounded-bl-full rounded-tr-full bg-ub-secondary" />
+          <motion.div animate={{ y: [0, -30, 0] }}
+            transition={{
+              duration: 5,
+              repeat: Infinity,
+              ease: "easeInOut",
+              delay: 1
+            }} className="absolute md:w-3/4 md:h-1/2 rounded-bl-full rounded-tr-full bg-ub-secondary" />
           <div className="flex justify-center items-center z-10">
             <div className="flex justify-center items-center z-10">
-              <Image
-                src={test}
-                alt="Start Image"
-                width={screenSize * 1.2}
-                height={screenSize * 1.2}
-                priority
-              />
+              <motion.div
+                animate={{ y: [0, -30, 0] }}
+                transition={{
+                  duration: 5,
+                  repeat: Infinity,
+                  ease: "easeInOut",
+                }}
+              ><Image
+                  src={test}
+                  alt="Start Image"
+                  width={screenSize * 1.2}
+                  height={screenSize * 1.2}
+                  priority
+                /></motion.div>
             </div>
           </div>
         </div>
