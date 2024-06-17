@@ -31,7 +31,7 @@ const ContentWrapper: React.FC<ContentWrapperProps> = ({
       : false;
 
   const { screenSize } = useScreenSize({
-    landscapeRatio: { xs: 2.5, sm: 3, md: 4, lg: 7, xl: 8, "2xl": 8, "3xl": 9 },
+    landscapeRatio: { xs: 2.5, sm: 3, md: 4, lg: 6, xl: 6, "2xl": 7, "3xl": 9 },
   });
 
   return (
