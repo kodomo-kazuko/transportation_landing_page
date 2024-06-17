@@ -13,7 +13,7 @@ import { useScreenSize } from "../components/getScreenSize";
 
 export default function Visuals() {
   const { screenSize } = useScreenSize({
-    landscapeRatio: { xs: 2.5, sm: 5, md: 6, lg: 6, xl: 6, "2xl": 7 },
+    landscapeRatio: { xs: 2.5, sm: 5, md: 6, lg: 6, xl: 6, "2xl": 7, "3xl": 8 },
   });
 
   const globalShadow: string = "-10px 10px 5px rgba(0,0,0,0.3)"
