@@ -16,6 +16,8 @@ export default function Visuals() {
     landscapeRatio: { xs: 2.5, sm: 5, md: 6, lg: 6, xl: 6, "2xl": 7 },
   });
 
+  const globalShadow: string = "-10px 10px 5px rgba(0,0,0,0.3)"
+
   return (
     <div
       id="Visual"
@@ -28,7 +30,7 @@ export default function Visuals() {
           className=" "
           text="Биет картаа уншуулан утсаараа зорчих шинэ үйлчилгээ"
         >
-          <IPhone boxShadow="0px 5px 25px rgba(0,0,0,0.6)" width={screenSize}>
+          <IPhone boxShadow={globalShadow} width={screenSize}>
             <Image src={phys} alt="" layout="fill" priority />
           </IPhone>
         </VisualWrapper>
@@ -40,7 +42,7 @@ export default function Visuals() {
           animation="fade-left"
           text="Qpay, Socialpay болон банкны картаар төлбөр төлөх хялбар шийдэл"
         >
-          <IPhone boxShadow="0px 5px 25px rgba(0,0,0,0.6)" width={screenSize}>
+          <IPhone boxShadow={globalShadow} width={screenSize}>
             <Image src={Payment} alt="" priority fill />
           </IPhone>
         </VisualWrapper>
@@ -52,7 +54,7 @@ export default function Visuals() {
           animation="fade-up"
           text="Автобусны карт дахин ашиглах шаардлагагүй боллоо. Гар утсаа ашиглан автобусны төлбөрийг QR кодоор төлөх боломжтой."
         >
-          <IPhone boxShadow="0px 5px 25px rgba(0,0,0,0.6)" width={screenSize}>
+          <IPhone boxShadow={globalShadow} width={screenSize}>
             <Image src={GG} alt="" layout="fill" priority />
           </IPhone>
         </VisualWrapper>
@@ -64,7 +66,7 @@ export default function Visuals() {
           animation="fade-left"
           text="Газрын зураг дээрээс автобусны байршил, зогсоол, карт борлуулах цэгүүдийг харах"
         >
-          <IPhone boxShadow="0px 5px 25px rgba(0,0,0,0.6)" width={screenSize}>
+          <IPhone boxShadow={globalShadow} width={screenSize}>
             <Image src={location} alt="" layout="fill" priority />
           </IPhone>
         </VisualWrapper>
@@ -78,7 +80,7 @@ export default function Visuals() {
           className=""
           text="Очих байршлаа сонгоод хялбар зорч"
         >
-          <IPhone boxShadow="0px 5px 25px rgba(0,0,0,0.6)" width={screenSize}>
+          <IPhone boxShadow={globalShadow} width={screenSize}>
             <Image src={direction} alt="Payment" fill priority />
           </IPhone>
         </VisualWrapper>
