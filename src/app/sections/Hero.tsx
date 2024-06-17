@@ -31,7 +31,7 @@ const Hero: React.FC = () => {
     landscapeRatio: { xs: 3, sm: 4, md: 7, lg: 7, xl: 7, "2xl": 7 },
   });
   const animationType = windowWidth <= 480 ? "fade-right" : "fade-right";
-  const text = createAnimatedText(["Таны Шинэ Автобусны Туслах"], animationType);
+  const text = createAnimatedText(["Таны Автобусны Шинэ Туслах"], animationType);
 
   const buttonSize: number = 40;
 
