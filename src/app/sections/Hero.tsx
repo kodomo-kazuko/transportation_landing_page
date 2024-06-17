@@ -30,7 +30,6 @@ const Hero: React.FC = () => {
   const { screenSize, windowWidth } = useScreenSize({
     landscapeRatio: { xs: 3, sm: 4, md: 7, lg: 7, xl: 7, "2xl": 7 },
   });
-  console.log(screenSize);
   const animationType = windowWidth <= 480 ? "fade-right" : "fade-right";
   const text = createAnimatedText(["Санаа Амар Зорч"], animationType);
 
