@@ -9,7 +9,7 @@ import Start from "../../../public/images/figIMG/Phone_06.png";
 
 export default function Download() {
   const { screenSize, windowWidth } = useScreenSize({
-    landscapeRatio: { xs: 2, sm: 2, md: 2.5, lg: 3, xl: 3, "2xl": 3.4 },
+    landscapeRatio: { xs: 2, sm: 2, md: 3, lg: 3, xl: 3, "2xl": 3.4 },
   });
 
   const w = screenSize;
@@ -18,22 +18,29 @@ export default function Download() {
 
   return (
     <div id="Download" className="lg:relative shadow-2xl rounded-xl">
-      <ColorWrapper color="primary" className=" justify-end flex relative">
-        <div className="container md:py-14 justify-end flex lg:flex-row lg:items-center overflow-clip">
+      <ColorWrapper
+        color="primary"
+        className=" justify-center
+       flex relative"
+      >
+        <div className="container md:py-14 justify-center md:justify-end flex lg:flex-row lg:items-center overflow-clip">
           <div className="lg:flex lg:flex-1">
             <div
               className="relative md:absolute md:z-10"
               style={{ left: "0", top: "50%", transform: "translateY(-50%)" }}
             >
               <motion.div
-                animate={{ y: [0, -20, 0] }}
+                animate={{ y: [0, -50, 0] }}
                 transition={{
                   duration: 4,
                   repeat: Infinity,
                   ease: "easeInOut",
                 }}
               >
-                <div style={{ width: w, height: h }} className="relative">
+                <div
+                  style={{ width: w, height: h }}
+                  className=" absolute md:relative"
+                >
                   <Image
                     src={Start}
                     alt="Library application"
@@ -45,7 +52,7 @@ export default function Download() {
               </motion.div>
             </div>
           </div>
-          <div className="lg:flex sm:basis-2/3 z-0 lg:pt-16 text-base-normal flex flex-col items-center lg:items-start px-4">
+          <div className="lg:flex basis-2/3 z-0 lg:pt-16 text-base-normal flex flex-col items-center lg:items-start px-4">
             {" "}
             <div className="mb-8 lg:text-left sm:mb-10 font-normal text-sm sm:text-base">
               <h1 className="font-semibold text-2xl leading-7 sm:text-3xl mb-5 sm:mb-6">
