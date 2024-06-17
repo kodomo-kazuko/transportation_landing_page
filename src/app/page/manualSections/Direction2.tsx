@@ -6,19 +6,19 @@ import ContentWrapper, { CardData } from "@/app/wrappers/ContentWrapper";
 export default function Direction2() {
   const cards: CardData[] = [
     {
-      title: "Зогсоолын дэлгэрэнгүй",
+      title: "4. Зогсоолын дэлгэрэнгүй",
       description:
         "Сонгосон автобусны зогсоол дээр ирэх чиглэлийн автобуснууд харагдана.",
       image: image_1,
     },
     {
-      title: "Чиглэлийн дэлгэрэнгүй",
+      title: "5. Чиглэлийн дэлгэрэнгүй",
       description:
         "Сонгосон чиглэлийн автобуснууд хаана явж байгаа нь жагсаалт хэлбэрээр харагдана.",
       image: image_2,
     },
     {
-      title: "Чиглэлийн маршрут",
+      title: "6. Чиглэлийн маршрут",
       description: "Мөн газрын зураг дээрээс автобусны байршилыг харж болно.",
       image: image_3,
     },

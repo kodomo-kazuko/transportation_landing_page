@@ -6,19 +6,19 @@ import ContentWrapper, { CardData } from "@/app/wrappers/ContentWrapper";
 export default function Feedback() {
   const cards: CardData[] = [
     {
-      title: "Зорчилт",
+      title: "1. Зорчилт",
       description:
         "Картаа уншуулан автобусанд суусан үед тухайн автобусны явж буй байршил харагдана.",
       image: image_1,
     },
     {
-      title: "Жолоочид сэтгэгдэл үлдээх",
+      title: "2. Жолоочид сэтгэгдэл үлдээх",
       description:
         "Тухайн суусан автобусны жолоочид үнэлгээ өгч сэтгэгдэл үлдээх боломжтой.",
       image: image_2,
     },
     {
-      title: "Автобусанд сэтгэгдэл үлдээх",
+      title: "3. Автобусанд сэтгэгдэл үлдээх",
       description: "Мөн тухайн автобусанд сэтгэгдэл үлдээх боломжтой.",
       image: image_3,
     },

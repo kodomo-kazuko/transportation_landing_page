@@ -6,18 +6,18 @@ import ContentWrapper, { CardData } from "@/app/wrappers/ContentWrapper";
 export default function Discount() {
   const cards: CardData[] = [
     {
-      title: "Оюутны эрх",
+      title: "1. Оюутны эрх",
       description: "Оюутны хөнгөлөлттэй эрхийн тоо сар бүр шинэчлэгдэнэ.",
       image: image_1,
     },
     {
-      title: "Оюутны эрх",
+      title: "2. Оюутны эрх",
       description:
         "Оюутны хөнгөлөлттэй эрх нь амралтын өдрүүдээр хүчингүй болно.",
       image: image_2,
     },
     {
-      title: "Хязгааргүй эрх",
+      title: "3. Хязгааргүй эрх",
       description:
         "Өндөр настан болон хүндэт/тусгай хэрэгцээт иргэд хязгааргүй эрхээр зорчино.",
       image: image_3,

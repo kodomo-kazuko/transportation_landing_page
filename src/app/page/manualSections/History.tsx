@@ -6,18 +6,18 @@ import ContentWrapper, { CardData } from "@/app/wrappers/ContentWrapper";
 export default function History() {
   const cards: CardData[] = [
     {
-      title: "Зорчилтын түүх",
+      title: "1. Зорчилтын түүх",
       description:
         "Тухайн хэрэглэгчийн автобусаар зорчсон өдөр болон чиглэл харагдана.",
       image: image_1,
     },
     {
-      title: "Зорчилтын түүх хайх",
+      title: "2. Зорчилтын түүх хайх",
       description: "Мөн зорчсон түүхийг огноогоор хайх боломжтой.",
       image: image_2,
     },
     {
-      title: "Зорчилтын түүхийн дэлгэрэнгүй",
+      title: "3. Зорчилтын түүхийн дэлгэрэнгүй",
       description:
         "Зорчилтын дэлгэрэнгүй мэдээллийг харж үнэлгээ өгөх боломжтой.",
       image: image_3,

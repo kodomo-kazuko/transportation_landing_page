@@ -6,17 +6,17 @@ import ContentWrapper, { CardData } from "@/app/wrappers/ContentWrapper";
 export default function Direction() {
   const cards: CardData[] = [
     {
-      title: "Хадгалсан чиглэлүүд",
+      title: "1. Хадгалсан чиглэлүүд",
       description: "Өөрийн байнга зорчдог чиглэлүүдийг хадгалах боломжтой.",
       image: image_1,
     },
     {
-      title: "Чиглэл/зогсоол хайх",
+      title: "2. Чиглэл/зогсоол хайх",
       description: "Автобусны чиглэл болон зогсоолоор хайх боломжтой.",
       image: image_2,
     },
     {
-      title: "Байршил харах",
+      title: "3. Байршил харах",
       description: "Хайлтанд гарч ирсэн зогсоол газрын зураг дээр харагдана.",
       image: image_3,
     },

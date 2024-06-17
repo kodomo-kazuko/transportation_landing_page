@@ -6,19 +6,19 @@ import ContentWrapper, { CardData } from "@/app/wrappers/ContentWrapper";
 export default function Wallet() {
   const cards: CardData[] = [
     {
-      title: "Энгийн зорчилт",
+      title: "1. Энгийн зорчилт",
       description:
         "Энгийн зорчилт дээр хэдэн хүн зорчихоо тохируулах боломжтой.",
       image: image_1,
     },
     {
-      title: "Хөнгөлөлттэй эрх авах",
+      title: "2. Хөнгөлөлттэй эрх авах",
       description:
         "Тодорхой хоногийн дотор хязгааргүй зорчих эрхийг худалдан авч болно.",
       image: image_2,
     },
     {
-      title: "Хөнгөлөлттэй эрх ашиглах",
+      title: "3. Хөнгөлөлттэй эрх ашиглах",
       description:
         "Хөнгөлөлттэй ирхээр зорчсон тохиолдолд хэтэвчнээс мөнгө хасагдахгүй.",
       image: image_3,
