@@ -40,6 +40,8 @@ export function useScreenSize({
           newScreenSize = landscapeRatio.sm || 0;
         }
 
+        console.log(newScreenSize)
+
         setScreenSize(window.innerWidth / newScreenSize);
       }
     }

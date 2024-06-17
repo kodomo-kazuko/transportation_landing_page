@@ -5,7 +5,6 @@ import { IPhone } from "@/app/components/iphone";
 import SideButton from "@/app/components/SideButton";
 import Image, { StaticImageData } from "next/image";
 import { useScreenSize } from "../components/getScreenSize";
-import SwipeWrapper from "./SwipeWrapper";
 
 export type CardData = {
   title: string;
@@ -31,25 +30,25 @@ const ContentWrapper: React.FC<ContentWrapperProps> = ({
       : false;
 
   const { screenSize } = useScreenSize({
-    landscapeRatio: { xs: 2.5, sm: 3, md: 4, lg: 6, xl: 6, "2xl": 7, "3xl": 9 },
+    landscapeRatio: { xs: 2.5, sm: 6, md: 6, lg: 7, xl: 7, "2xl": 7, "3xl": 11 },
   });
 
   return (
-    <div className={` flex ${isMobile ? "flex-col" : "flex-row w-full"}`}>
+    <div className={` flex  sm:flex-col  md:flex-row w-full"}`}>
       <ColorWrapper color="transparent" className=" w-full">
-        <div className=" text-ub-primary text-3xl px-10 text-center md:pl-8 md:text-4xl ">
+        <div className=" text-ub-primary text-3xl text-center md:px-4 md:text-4xl ">
           <ColorWrapper color="primary" className={`rounded-2xl py-5 ${className}`}>
             {title}</ColorWrapper>
         </div>
         <div>
           <div
-            className={`flex ${isMobile ? "flex-col space-y-8" : "flex-row space-x-8"
+            className={`flex flex-col  sm:flex-row "
               } justify-between items-center overflow-auto w-full`}
           >
             {cards.map((card, index) => (
               <>
                 <Card title={card.title} description={card.description}>
-                  <div className="flex w-11/12 md:w-7/10 mx-auto justify-center">
+                  <div className="flex w-10/12 md:w-7/10 mx-auto justify-center">
                     <IPhone boxShadow={undefined} width={screenSize}>
                       <Image alt="" src={card.image} priority fill />
                     </IPhone>
