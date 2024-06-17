@@ -36,8 +36,8 @@ const ContentWrapper: React.FC<ContentWrapperProps> = ({
   return (
     <div className={` flex  sm:flex-col  md:flex-row w-full"}`}>
       <ColorWrapper color="transparent" className=" w-full">
-        <div className=" text-ub-primary text-3xl text-center md:px-4 md:text-4xl ">
-          <ColorWrapper color="primary" className={`rounded-2xl py-5 ${className}`}>
+        <div className=" text-ub-primary text-3xl text-center px-5 sm:p-4 md:text-4xl ">
+          <ColorWrapper color="primary" className={`rounded-2xl py-5 ${className} `}>
             {title}</ColorWrapper>
         </div>
         <div>
