@@ -9,7 +9,7 @@ import Start from "../../../public/images/figIMG/Phone_06.png";
 
 export default function Download() {
   const { screenSize, windowWidth } = useScreenSize({
-    landscapeRatio: { xs: 2, sm: 2, md: 3, lg: 3, xl: 3, "2xl": 3.4 },
+    landscapeRatio: { xs: 2, sm: 2, md: 3, lg: 3, xl: 3, "2xl": 3.4, "3xl": 4 },
   });
 
   const w = screenSize;

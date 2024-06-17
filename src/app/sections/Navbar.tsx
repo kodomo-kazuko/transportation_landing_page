@@ -13,7 +13,7 @@ interface NavBarProps {
 
 const MOBILE_SCREEN_WIDTH = 768;
 
-const NavBar: React.FC<NavBarProps> = ({ setShowSecondDiv, setScrollToId }) => {
+const NavBar: React.FC<NavBarProps> = ({ setShowSecondDiv }) => {
   const [isMenuVisible, setIsMenuVisible] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
 
