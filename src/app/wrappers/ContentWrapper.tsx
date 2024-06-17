@@ -31,11 +31,11 @@ const ContentWrapper: React.FC<ContentWrapperProps> = ({
       : false;
 
   const { screenSize } = useScreenSize({
-    landscapeRatio: { xs: 2.5, sm: 3, md: 4, lg: 7, xl: 8, "2xl": 9, "3xl": 10 },
+    landscapeRatio: { xs: 2.5, sm: 3, md: 4, lg: 7, xl: 8, "2xl": 8, "3xl": 9 },
   });
 
   return (
-    <div className={` flex ${isMobile ? "flex-col" : "flex-row w-full"} pb-20`}>
+    <div className={` flex ${isMobile ? "flex-col" : "flex-row w-full"}`}>
       <ColorWrapper color="transparent" className=" w-full">
         <div className=" text-ub-primary text-3xl px-10 text-center md:pl-8 md:text-4xl ">
           <ColorWrapper color="primary" className={`rounded-2xl py-5 ${className}`}>
