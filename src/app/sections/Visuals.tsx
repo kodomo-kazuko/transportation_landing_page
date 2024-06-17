@@ -50,7 +50,7 @@ export default function Visuals() {
         <VisualWrapper
           color="secondary"
           animation="fade-up"
-          text="Автобусны карт дахин ашиглах шаардлагагүй. QR Code уншуулаад зорч"
+          text="Автобусны карт дахин ашиглах шаардлагагүй боллоо. Гар утсаа ашиглан автобусны төлбөрийг QR кодоор төлөх боломжтой."
         >
           <IPhone boxShadow="0px 5px 25px rgba(0,0,0,0.6)" width={screenSize}>
             <Image src={GG} alt="" layout="fill" priority />

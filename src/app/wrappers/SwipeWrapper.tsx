@@ -18,11 +18,11 @@ const SwipeWrapper: React.FC<ScrollWrapperProps> = ({
     let offset;
     const screenWidth = window.innerWidth;
     if (screenWidth < 640) {
-      offset = 200; // Mobile devices
+      offset = 200;
     } else if (screenWidth < 1024) {
       offset = 250; // Tablets
     } else {
-      offset = 300; // Desktops
+      offset = 500; // Desktops
     }
 
     AOS.init({
