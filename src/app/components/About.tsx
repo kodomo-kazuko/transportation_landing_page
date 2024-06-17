@@ -89,8 +89,10 @@ const InfoSection: React.FC = () => {
         </div>
         <div className="w-full md:w-1/3 px-4 mb-5">
           <div className="shadow-2xl p-4">
-            <h6 className="text-lg text-gray-300 mb-2">trademark</h6>
-            <div className="flex space-x-3"></div>
+            <h6 className="text-lg  mb-2"></h6>
+            <div className="flex space-x-3 text-gray-200 text-sm">
+              <p>Нийтийн Тээврийн Газар &copy;2024</p>
+            </div>
           </div>
         </div>
       </div>
