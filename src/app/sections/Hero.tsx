@@ -28,7 +28,7 @@ const createAnimatedText = (texts: string[], animationType: string) => {
 
 const Hero: React.FC = () => {
   const { screenSize, windowWidth } = useScreenSize({
-    landscapeRatio: { xs: 3, sm: 4, md: 7, lg: 7, xl: 7, "2xl": 7 },
+    landscapeRatio: { xs: 3, sm: 4, md: 7, lg: 7, xl: 7, "2xl": 7, "3xl": 8 },
   });
   const animationType = windowWidth <= 480 ? "fade-right" : "fade-right";
   const text = createAnimatedText(["Таны Автобусны Шинэ Туслах"], animationType);

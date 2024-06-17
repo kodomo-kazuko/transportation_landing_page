@@ -1,6 +1,6 @@
 import { useState, useEffect, useCallback } from "react";
 
-const defaultBreakpoints = { xs: 2.5, sm: 3, md: 4, lg: 5, xl: 6, "2xl": 7 };
+const defaultBreakpoints = { xs: 2.5, sm: 3, md: 4, lg: 5, xl: 6, "2xl": 7, "3xl": 10 };
 
 export function useScreenSize({
   landscapeRatio = defaultBreakpoints,
@@ -20,7 +20,10 @@ export function useScreenSize({
       setWindowWidth(window.innerWidth);
       if (!constantSize) {
         let newScreenSize = landscapeRatio.xs || 0;
-        if (window.innerWidth >= 1536) {
+        if (window.innerWidth >= 1800) {
+          newScreenSize = landscapeRatio["3xl"] || 0;
+        }
+        else if (window.innerWidth >= 1536) {
           // 2xl
           newScreenSize = landscapeRatio["2xl"] || 0;
         } else if (window.innerWidth >= 1280) {

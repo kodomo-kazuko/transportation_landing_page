@@ -11,16 +11,19 @@ export type CardData = {
   title: string;
   description: string;
   image: StaticImageData;
+  className?: string
 };
 
 interface ContentWrapperProps {
   title: string;
   cards: CardData[];
+  className?: string
 }
 
 const ContentWrapper: React.FC<ContentWrapperProps> = ({
   title,
   cards,
+  className,
 }: ContentWrapperProps) => {
   const isMobile =
     typeof window !== "undefined"
@@ -28,20 +31,20 @@ const ContentWrapper: React.FC<ContentWrapperProps> = ({
       : false;
 
   const { screenSize } = useScreenSize({
-    landscapeRatio: { xs: 2.5, sm: 3, md: 4, lg: 6, xl: 7, "2xl": 8 },
+    landscapeRatio: { xs: 2.5, sm: 3, md: 4, lg: 7, xl: 8, "2xl": 9, "3xl": 10 },
   });
 
   return (
-    <div className={` flex ${isMobile ? "flex-col" : "flex-row w-full"}`}>
+    <div className={` flex ${isMobile ? "flex-col" : "flex-row w-full"} pb-20`}>
       <ColorWrapper color="transparent" className=" w-full">
-        <div className="text-black text-3xl px-10 text-left md:pl-8 md:text-4xl">
-          {title}
+        <div className=" text-ub-primary text-3xl px-10 text-center md:pl-8 md:text-4xl ">
+          <ColorWrapper color="primary" className={`rounded-2xl py-5 ${className}`}>
+            {title}</ColorWrapper>
         </div>
         <div>
           <div
-            className={`flex ${
-              isMobile ? "flex-col space-y-8" : "flex-row space-x-8"
-            } justify-between items-center overflow-auto w-full`}
+            className={`flex ${isMobile ? "flex-col space-y-8" : "flex-row space-x-8"
+              } justify-between items-center overflow-auto w-full`}
           >
             {cards.map((card, index) => (
               <>

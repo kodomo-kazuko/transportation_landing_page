@@ -24,5 +24,5 @@ export default function Direction2() {
     },
   ];
 
-  return <ContentWrapper title="" cards={cards} />;
+  return <ContentWrapper title="" cards={cards} className=" bg-white pb-0" />;
 }

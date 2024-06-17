@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 body {
-  @apply font-semibold text-gray-700;
+  @apply font-medium text-gray-700;
   background-color: #eeeeee;
   overflow-x: hidden;
   /* background-image: url("../../public//images//background/luke-chesser-PHtp0cDBJSM-unsplash.jpg"); */
