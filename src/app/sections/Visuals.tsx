@@ -48,7 +48,7 @@ export default function Visuals() {
       <div className="md:w-1/2">
 
         <VisualWrapper
-          color="white"
+          color="primary"
           animation="fade-up"
           text="Qpay, Socialpay болон банкны картаар төлбөр төлөх хялбар шийдэл"
         // className=" md:rounded-r-3xl md:mr-5"
@@ -71,7 +71,7 @@ export default function Visuals() {
 
 
         <VisualWrapper
-          color="secondary"
+          color="white"
           animation="fade-up"
           text="Автобусны карт дахин ашиглах шаардлагагүй. Гар утасны QR кодоо ашиглан автобусны төлбөрийг хялбараар төлөх шинэ үйлчилгээ"
         // className=" md:rounded-3xl md:mx-5"
@@ -94,7 +94,7 @@ export default function Visuals() {
       <div className="md:w-1/2">
 
         <VisualWrapper
-          color="white"
+          color="primary"
           animation="fade-up"
           text="Газрын зураг дээрээс автобусны байршил, зогсоол, карт борлуулах цэгүүдийг харах"
         // className=" md:rounded-l-3xl md:ml-5"

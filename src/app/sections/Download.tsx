@@ -19,7 +19,7 @@ export default function Download() {
   return (
     <div id="Download" className="lg:relative shadow-2xl rounded-xl">
       <ColorWrapper
-        color="secondary"
+        color="primary"
         className=" justify-center
        flex relative"
       >
