@@ -9,7 +9,7 @@ interface ParallaxProps {
     spanClassName: string;
 }
 
-const ParallaxText: FC<ParallaxProps> = ({ text, baseVelocity = 100, spanCount, spanClassName }) => {
+const ParallaxText: FC<ParallaxProps> = ({ text, baseVelocity = 50, spanCount, spanClassName }) => {
     const baseX = useMotionValue(0);
     const { scrollY } = useScroll();
     const scrollVelocity = useVelocity(scrollY);
@@ -19,7 +19,7 @@ const ParallaxText: FC<ParallaxProps> = ({ text, baseVelocity = 100, spanCount, 
     const directionFactor = useRef<number>(1);
 
     useAnimationFrame((t, delta) => {
-        let moveBy = directionFactor.current * baseVelocity * (delta / 1000);
+        let moveBy = directionFactor.current * baseVelocity * (delta / 500);
         if (velocityFactor.get() < 0) directionFactor.current = -1;
         else if (velocityFactor.get() > 0) directionFactor.current = 1;
         moveBy += directionFactor.current * moveBy * velocityFactor.get();
@@ -45,8 +45,8 @@ const ParallaxText: FC<ParallaxProps> = ({ text, baseVelocity = 100, spanCount, 
 const App: FC = () => {
     return (
         <section>
-            <ParallaxText text="UB CARD" baseVelocity={-0.2} spanCount={100} spanClassName="block mr-5 text-ub-primary" />
-            <ParallaxText text="UB CARD" baseVelocity={0.2} spanCount={100} spanClassName="block mr-5 text-ub-secondary" />
+            <ParallaxText text="UB CARD" baseVelocity={-0.05} spanCount={100} spanClassName="block mr-5 text-ub-primary" />
+            <ParallaxText text="UB CARD" baseVelocity={0.05} spanCount={100} spanClassName="block mr-5 text-ub-secondary" />
         </section>
     );
 };
