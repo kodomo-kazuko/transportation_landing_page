@@ -34,8 +34,9 @@ const NavBar: React.FC<NavBarProps> = ({ setShowSecondDiv }) => {
     setShowSecondDiv(shouldShowSecondDiv);
     setTimeout(() => {
       const element = document.getElementById(id);
+
       if (element) {
-        const offset = window.innerHeight * 0.05;
+        const offset = window.innerHeight * 0.5 - 150;
         window.scrollTo({
           top: element.offsetTop - offset,
           behavior: "smooth",
@@ -43,6 +44,7 @@ const NavBar: React.FC<NavBarProps> = ({ setShowSecondDiv }) => {
       }
     }, 100);
   };
+
 
   return (
     <>

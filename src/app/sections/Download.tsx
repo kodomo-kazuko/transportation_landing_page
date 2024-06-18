@@ -8,7 +8,7 @@ import { motion } from "framer-motion";
 import Start from "../../../public/images/figIMG/Phone_06.png";
 
 export default function Download() {
-  const { screenSize, windowWidth } = useScreenSize({
+  const { screenSize } = useScreenSize({
     landscapeRatio: { xs: 2, sm: 2, md: 3, lg: 3, xl: 3, "2xl": 3.4, "3xl": 4 },
   });
 
@@ -30,9 +30,9 @@ export default function Download() {
               style={{ left: "0", top: "50%", transform: "translateY(-50%)" }}
             >
               <motion.div
-                animate={{ y: [0, -50, 0] }}
+                animate={{ y: [0, -50, 0], }}
                 transition={{
-                  duration: 8,
+                  duration: 5,
                   repeat: Infinity,
                   ease: "easeInOut",
                 }}
