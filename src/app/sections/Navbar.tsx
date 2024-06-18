@@ -16,6 +16,7 @@ const MOBILE_SCREEN_WIDTH = 768;
 const NavBar: React.FC<NavBarProps> = ({ setShowSecondDiv }) => {
   const [isMenuVisible, setIsMenuVisible] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
+  const [isSticky, setIsSticky] = useState(true); // Keep NavBar sticky by default
 
   const checkScreenSize = () => {
     setIsMobile(window.innerWidth < MOBILE_SCREEN_WIDTH);
@@ -24,7 +25,6 @@ const NavBar: React.FC<NavBarProps> = ({ setShowSecondDiv }) => {
   useEffect(() => {
     checkScreenSize();
     window.addEventListener("resize", checkScreenSize);
-
     return () => {
       window.removeEventListener("resize", checkScreenSize);
     };
@@ -45,80 +45,60 @@ const NavBar: React.FC<NavBarProps> = ({ setShowSecondDiv }) => {
   };
 
   return (
-    <div className="">
-      <ColorWrapper color="secondary" className=" p-1">
-        <div className="flex justify-between items-center p-3 md:w-11/12 mx-auto">
-          <div className="hidden md:flex md:justify-center">
-            <motion.div whileHover={{ scale: 1.1 }}>
+    <>
+      <div className={`fixed top-0 left-0 w-full z-50`}>
+        <ColorWrapper color="secondary" className="p-1">
+          <div className="flex justify-between items-center p-3 md:w-11/12 mx-auto">
+            <div className="hidden md:flex md:justify-center">
               <button onClick={() => handleClick("", false)}>
-                <Image priority alt="Logo" src={logoFull} />
+                <motion.div whileHover={{ scale: 1.1 }}>
+                  <Image priority alt="Logo" src={logoFull} />
+                </motion.div>
               </button>
-            </motion.div>
+            </div>
+            <div className="flex items-center justify-between w-full md:hidden">
+              <button onClick={() => handleClick("", false)}>
+                <motion.div whileHover={{ scale: 1.1 }} className=" pl-2">
+                  <Image priority alt="Logo" src={logoFull} />
+                </motion.div>
+              </button>
+              <button onClick={() => setIsMenuVisible(!isMenuVisible)}>
+                <FaBars size={30} />
+              </button>
+            </div>
+            {!isMobile && (
+              <div className="flex md:space-x-1 lg:space-x-10 text-right">
+                <MyButton bgColor="" fontType="sans" onClick={() => handleClick("", true)}>
+                  Ашиглах заавар
+                </MyButton>
+                <MyButton bgColor="" fontType="sans" onClick={() => handleClick("FAQ", false)}>
+                  Түгээмэл асуултууд
+                </MyButton>
+                <MyButton bgColor="" fontType="sans" onClick={() => handleClick("Footer", false)}>
+                  Холбоо барих
+                </MyButton>
+              </div>
+            )}
           </div>
-          <div className="flex items-center justify-between w-full md:hidden">
-            <button onClick={() => handleClick("", false)}>
-              <Image priority alt="Logo" src={logoFull} />
-            </button>
-            <button onClick={() => setIsMenuVisible(!isMenuVisible)}>
-              <FaBars size={30} />
-            </button>
-          </div>
-          {!isMobile && (
-            <div className="flex md:space-x-1 lg:space-x-10 md: text-right">
-              <MyButton
-                bgColor=""
-                fontType="sans"
-                onClick={() => handleClick("", true)}
-              >
+          {isMobile && isMenuVisible && (
+            <div className="flex flex-col space-y-2 p-4 md:p-4">
+              <MyButton bgColor="" fontType="sans" onClick={() => handleClick("", true)}>
                 Ашиглах заавар
               </MyButton>
-              <MyButton
-                bgColor=""
-                fontType="sans"
-                onClick={() => handleClick("FAQ", false)}
-              >
+              <MyButton bgColor="" fontType="sans" onClick={() => handleClick("FAQ", false)}>
                 Түгээмэл асуултууд
               </MyButton>
-
-              <MyButton
-                bgColor=""
-                fontType="sans"
-                onClick={() => handleClick("Footer", false)}
-              >
+              <MyButton bgColor="" fontType="sans" onClick={() => handleClick("Footer", false)}>
                 Холбоо барих
               </MyButton>
             </div>
           )}
-        </div>
-        {isMobile && isMenuVisible && (
-          <div className="flex flex-col space-y-2 p-4">
-            <MyButton
-              bgColor=""
-              fontType="sans"
-              onClick={() => handleClick("", true)}
-            >
-              Ашиглах заавар
-            </MyButton>
-            <MyButton
-              bgColor=""
-              fontType="sans"
-              onClick={() => handleClick("FAQ", false)}
-            >
-              Түгээмэл асуултууд
-            </MyButton>
-
-            <MyButton
-              bgColor=""
-              fontType="sans"
-              onClick={() => handleClick("Footer", false)}
-            >
-              Холбоо барих
-            </MyButton>
-          </div>
-        )}
-      </ColorWrapper>
-    </div>
+        </ColorWrapper>
+      </div>
+    </>
   );
+
+
 };
 
 export default NavBar;

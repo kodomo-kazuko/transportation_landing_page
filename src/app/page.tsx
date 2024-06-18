@@ -34,6 +34,8 @@ export default function Home() {
           setScrollToId={setScrollToId}
         />
 
+        <Spacer height="70px" width="" />
+
         {showSecondDiv ? Manual() : Main()}
       </div>
       <div className=" -z-50">

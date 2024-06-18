@@ -22,7 +22,6 @@ export default function Manual() {
 
     return (
       <SwipeWrapper animation={"fade-right"}>
-        <Spacer height="3vh" width="0" />
         <div className=" mb-10">
           <Login />
 
