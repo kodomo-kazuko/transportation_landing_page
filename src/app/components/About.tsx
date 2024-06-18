@@ -62,7 +62,7 @@ const InfoSection: React.FC = () => {
         <div className="w-full md:w-1/3 px-4 mb-5">
           <div className="shadow-2xl p-4">
             <h6 className="text-lg font-bold mb-2">Олон нийтийн сүлжээнд</h6>
-            <div className="flex space-x-3">
+            <div className="flex space-x-5">
               <a
                 href="#"
                 className="text-xl text-gray-700 hover:text-gray-900"

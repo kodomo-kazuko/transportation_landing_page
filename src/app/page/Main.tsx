@@ -5,6 +5,7 @@ import FAQ from "../sections/FAQ";
 import Footer from "../sections/Footer";
 import Hero from "../sections/Hero";
 import Visuals from "../sections/Visuals";
+import Glider from "../components/Glider";
 
 export default function Main() {
   return (
@@ -15,7 +16,15 @@ export default function Main() {
 
       <Spacer height="3vh" width="0" />
 
+      <Glider />
+
+      <Spacer height="3vh" width="0" />
+
       <Visuals />
+
+      <Spacer height="3vh" width="0" />
+
+      <Glider />
 
       <Spacer height="3vh" width="0" />
 

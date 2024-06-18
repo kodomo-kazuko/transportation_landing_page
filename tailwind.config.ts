@@ -8,6 +8,10 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        plaster: ["Plaster", "sans-serif"],
+        hobo: ["Heebo", "sans-serif"],
+      },
       screens: {
         "3xl": "1800xp",
       },

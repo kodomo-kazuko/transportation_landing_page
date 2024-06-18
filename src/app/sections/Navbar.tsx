@@ -16,7 +16,6 @@ const MOBILE_SCREEN_WIDTH = 768;
 const NavBar: React.FC<NavBarProps> = ({ setShowSecondDiv }) => {
   const [isMenuVisible, setIsMenuVisible] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
-  const [isSticky, setIsSticky] = useState(true); // Keep NavBar sticky by default
 
   const checkScreenSize = () => {
     setIsMobile(window.innerWidth < MOBILE_SCREEN_WIDTH);

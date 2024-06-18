@@ -1,15 +1,14 @@
 import { IPhone } from "../components/iphone";
 import Image from "next/image";
-
 import GG from "../../../public/images/figIMG/Home-Regular 3.png";
 import Payment from "../../../public/images/figIMG/Qpay.png";
 import phys from "../../../public/images/figIMG/Биет-Картууд.png";
 import location from "../../../public/images/figIMG/Stations 4.png";
 import direction from "../../../public/images/figIMG/Get directions.png";
-import AnimationWrapper from "../wrappers/AnimationWrapper";
 import VisualWrapper from "../wrappers/VisualWrapper";
 
 import { useScreenSize } from "../components/getScreenSize";
+import Glider from "../components/Glider";
 
 export default function Visuals() {
 
@@ -37,7 +36,10 @@ export default function Visuals() {
           </IPhone>
         </VisualWrapper>
 
+
+
       </div>
+
 
       <div className="md:w-1/2">
 
@@ -80,6 +82,8 @@ export default function Visuals() {
         </VisualWrapper>
 
       </div>
+
+
 
       <div className="md:w-1/2">
 

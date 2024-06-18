@@ -1,3 +1,6 @@
+@import url("https://fonts.googleapis.com/css2?family=Plaster&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Heebo:wght@100..900&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -6,11 +9,6 @@ body {
   @apply font-medium text-gray-700;
   background-color: #eeeeee;
   overflow-x: hidden;
-  /* background-image: url("../../public//images//background/luke-chesser-PHtp0cDBJSM-unsplash.jpg"); */
-  /* background-color: lightgrey; */
-  /* background-color: #ece7e4; */
-  /* background-color: #cdd1d8; */
-  /* background-color: white; */
 }
 
 ::-webkit-scrollbar {
