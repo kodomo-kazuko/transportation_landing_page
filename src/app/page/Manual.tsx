@@ -22,7 +22,7 @@ export default function Manual() {
 
     return (
       <SwipeWrapper animation={"fade-right"}>
-        <div className=" mb-10">
+        <div className=" mb-10 md:px-5">
           <Login />
 
           <Wallet />

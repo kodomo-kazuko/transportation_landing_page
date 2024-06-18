@@ -14,17 +14,17 @@ export default function Main() {
         <Hero />
       </SwipeWrapper>
 
-      <Spacer height="3vh" width="0" />
+      {/* <Spacer height="3vh" width="0" />
 
-      <Glider />
+      <Glider /> */}
 
       <Spacer height="3vh" width="0" />
 
       <Visuals />
 
-      <Spacer height="3vh" width="0" />
+      {/* <Spacer height="3vh" width="0" />
 
-      <Glider />
+      <Glider /> */}
 
       <Spacer height="3vh" width="0" />
 

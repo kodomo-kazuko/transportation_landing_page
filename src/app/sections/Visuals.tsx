@@ -27,10 +27,11 @@ export default function Visuals() {
       <div className="md:w-1/2">
 
         <VisualWrapper
-          color="primary"
-          animation="fade-right"
-          className=" "
-          text="Биет картаа уншуулан утсаараа зорчих шинэ үйлчилгээ"
+          color="secondary"
+          animation="fade-up"
+          // className=" md:rounded-l-3xl md:ml-5"
+          text="Биет картаа холбон утсаараа зорчих шинэ үйлчилгээ"
+
         >
           <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95, rotate: 1 }}>
             <IPhone boxShadow={globalShadow} width={screenSize}>
@@ -47,9 +48,10 @@ export default function Visuals() {
       <div className="md:w-1/2">
 
         <VisualWrapper
-          color="secondary"
-          animation="fade-right"
+          color="white"
+          animation="fade-up"
           text="Qpay, Socialpay болон банкны картаар төлбөр төлөх хялбар шийдэл"
+        // className=" md:rounded-r-3xl md:mr-5"
         >
           <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95, rotate: 2 }}>
             <IPhone boxShadow={globalShadow} width={screenSize}>
@@ -65,13 +67,14 @@ export default function Visuals() {
       <div className="w-full">
 
 
-        <Glider />
+        {/* <Glider /> */}
 
 
         <VisualWrapper
-          color="transparent"
-          animation="fade-left"
+          color="secondary"
+          animation="fade-up"
           text="Автобусны карт дахин ашиглах шаардлагагүй. Гар утасны QR кодоо ашиглан автобусны төлбөрийг хялбараар төлөх шинэ үйлчилгээ"
+        // className=" md:rounded-3xl md:mx-5"
         >
           <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95, rotate: 2 }}>
             <IPhone boxShadow={globalShadow} width={screenSize}>
@@ -80,9 +83,9 @@ export default function Visuals() {
           </motion.div>
         </VisualWrapper>
 
-        <div className=" -z-10">
-          <Glider />
-        </div>
+
+        {/* <Glider /> */}
+
 
       </div>
 
@@ -91,9 +94,10 @@ export default function Visuals() {
       <div className="md:w-1/2">
 
         <VisualWrapper
-          color="secondary"
-          animation="fade-right"
+          color="white"
+          animation="fade-up"
           text="Газрын зураг дээрээс автобусны байршил, зогсоол, карт борлуулах цэгүүдийг харах"
+        // className=" md:rounded-l-3xl md:ml-5"
         >
           <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95, rotate: 2 }}>
             <IPhone boxShadow={globalShadow} width={screenSize}>
@@ -110,10 +114,11 @@ export default function Visuals() {
 
         <VisualWrapper
           shadow=""
-          color="primary"
-          animation="fade-right"
-          className=""
+          color="secondary"
+          animation="fade-up"
+          // className="md:rounded-r-3xl md:mr-5"
           text="Очих байршлаа сонгоод хялбар зорч"
+
         >
           <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95, rotate: 2 }}>
             <IPhone boxShadow={globalShadow} width={screenSize}>

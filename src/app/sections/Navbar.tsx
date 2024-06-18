@@ -69,29 +69,41 @@ const NavBar: React.FC<NavBarProps> = ({ setShowSecondDiv }) => {
             </div>
             {!isMobile && (
               <div className="flex md:space-x-1 lg:space-x-10 text-right">
-                <MyButton bgColor="" fontType="sans" onClick={() => handleClick("", true)}>
-                  Ашиглах заавар
-                </MyButton>
-                <MyButton bgColor="" fontType="sans" onClick={() => handleClick("FAQ", false)}>
-                  Түгээмэл асуултууд
-                </MyButton>
-                <MyButton bgColor="" fontType="sans" onClick={() => handleClick("Footer", false)}>
-                  Холбоо барих
-                </MyButton>
+                <motion.div whileHover={{ scale: 1.1 }}>
+                  <MyButton bgColor="" fontType="sans" onClick={() => handleClick("", true)}>
+                    Ашиглах заавар
+                  </MyButton>
+                </motion.div>
+                <motion.div whileHover={{ scale: 1.1 }}>
+                  <MyButton bgColor="" fontType="sans" onClick={() => handleClick("FAQ", false)}>
+                    Түгээмэл асуултууд
+                  </MyButton>
+                </motion.div>
+                <motion.div whileHover={{ scale: 1.1 }}>
+                  <MyButton bgColor="" fontType="sans" onClick={() => handleClick("Footer", false)}>
+                    Холбоо барих
+                  </MyButton>
+                </motion.div>
               </div>
             )}
           </div>
           {isMobile && isMenuVisible && (
             <div className="flex flex-col space-y-2 p-4 md:p-4">
-              <MyButton bgColor="" fontType="sans" onClick={() => handleClick("", true)}>
-                Ашиглах заавар
-              </MyButton>
-              <MyButton bgColor="" fontType="sans" onClick={() => handleClick("FAQ", false)}>
-                Түгээмэл асуултууд
-              </MyButton>
-              <MyButton bgColor="" fontType="sans" onClick={() => handleClick("Footer", false)}>
-                Холбоо барих
-              </MyButton>
+              <motion.div whileHover={{ scale: 1.03 }}>
+                <MyButton bgColor="" fontType="sans" onClick={() => handleClick("", true)}>
+                  Ашиглах заавар
+                </MyButton>
+              </motion.div>
+              <motion.div whileHover={{ scale: 1.03 }}>
+                <MyButton bgColor="" fontType="sans" onClick={() => handleClick("FAQ", false)}>
+                  Түгээмэл асуултууд
+                </MyButton>
+              </motion.div>
+              <motion.div whileHover={{ scale: 1.03 }}>
+                <MyButton bgColor="" fontType="sans" onClick={() => handleClick("Footer", false)}>
+                  Холбоо барих
+                </MyButton>
+              </motion.div>
             </div>
           )}
         </ColorWrapper>

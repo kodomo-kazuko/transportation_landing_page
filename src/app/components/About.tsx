@@ -3,10 +3,10 @@ import { FaFacebook, FaInstagram, FaXTwitter } from "react-icons/fa6";
 
 const InfoSection: React.FC = () => {
   return (
-    <div className=" pt-8">
+    <div className=" pt-8 text-gray-600">
       <div className="max-w-screen-xl mx-auto flex flex-wrap">
         <div className="w-full md:w-1/3 px-4 mb-5">
-          <div className="shadow-2xl p-4">
+          <div className="shadow-md p-4">
             <h5 className="text-xl font-bold mb-2">Бидний тухай</h5>
             <p className="mb-4">
               Нийтийн тээврийн салбар орчин үеийн дэвшилтэт техник, технологийг
@@ -16,14 +16,14 @@ const InfoSection: React.FC = () => {
         </div>
 
         <div className="w-full md:w-1/3 px-4 mb-5">
-          <div className="shadow-2xl p-4">
+          <div className="shadow-md p-4">
             <h5 className="text-xl font-bold mb-2">Үйл ажиллагаа</h5>
             <nav>
               <ul className="space-y-2">
                 <li>
                   <a
                     href="https://transport.ub.gov.mn/en/?page_id=4653"
-                    className=" text-white underline"
+                    className=" hover:underline"
                   >
                     Хүүхдийн автобусны зөвшөөрөл
                   </a>
@@ -31,7 +31,7 @@ const InfoSection: React.FC = () => {
                 <li>
                   <a
                     href="https://transport.ub.gov.mn/en/?page_id=4341"
-                    className="text-white underline"
+                    className="hover:underline"
                   >
                     Ачаа тээврийн түр зөвшөөрөл
                   </a>
@@ -39,7 +39,7 @@ const InfoSection: React.FC = () => {
                 <li>
                   <a
                     href="https://transport.ub.gov.mn/en/?page_id=4656"
-                    className="text-white underline"
+                    className="hover:underline"
                   >
                     Ажилчдын автобусны зөвшөөрөл
                   </a>
@@ -50,7 +50,7 @@ const InfoSection: React.FC = () => {
         </div>
 
         <div className="w-full md:w-1/3 px-4 mb-5">
-          <div className="shadow-2xl p-4">
+          <div className="shadow-md p-4">
             <h5 className="text-xl font-bold mb-2">Холбоо барих</h5>
             <p>
               Улаанбаатар хот, Чингэлтэй дүүрэг, 4 дүгээр хороо, Бага тойруу 15,
@@ -60,7 +60,7 @@ const InfoSection: React.FC = () => {
           </div>
         </div>
         <div className="w-full md:w-1/3 px-4 mb-5">
-          <div className="shadow-2xl p-4">
+          <div className="shadow-md p-4">
             <h6 className="text-lg font-bold mb-2">Олон нийтийн сүлжээнд</h6>
             <div className="flex space-x-5">
               <a
@@ -68,21 +68,21 @@ const InfoSection: React.FC = () => {
                 className="text-xl text-gray-700 hover:text-gray-900"
                 aria-label="facebook"
               >
-                <FaFacebook color="white" />
+                <FaFacebook color="black" />
               </a>
               <a
                 href="#"
                 className="text-xl text-gray-700 hover:text-gray-900"
                 aria-label="twitter"
               >
-                <FaXTwitter color="white" />
+                <FaXTwitter color="black" />
               </a>
               <a
                 href="#"
                 className="text-xl text-gray-700 hover:text-gray-900"
                 aria-label="instagram"
               >
-                <FaInstagram color="white" />
+                <FaInstagram color="black" />
               </a>
             </div>
           </div>
