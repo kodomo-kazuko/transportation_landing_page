@@ -55,6 +55,8 @@ export default function Visuals() {
 
       </div>
 
+      <Glider />
+
       <div className="w-full">
 
         <VisualWrapper
@@ -68,6 +70,8 @@ export default function Visuals() {
         </VisualWrapper>
 
       </div>
+
+      <Glider />
 
       <div className="md:w-1/2">
 
