@@ -45,8 +45,8 @@ const ParallaxText: FC<ParallaxProps> = ({ text, baseVelocity = 50, spanCount, s
 const App: FC = () => {
     return (
         <section>
-            <ParallaxText text="UB CARD" baseVelocity={-0.05} spanCount={100} spanClassName="block mr-5 text-ub-primary" />
-            <ParallaxText text="UB CARD" baseVelocity={0.05} spanCount={100} spanClassName="block mr-5 text-ub-secondary" />
+            <ParallaxText text="UB CARD" baseVelocity={-0.05} spanCount={100} spanClassName="block mr-5 text-gray-100" />
+            <ParallaxText text="UB CARD" baseVelocity={0.05} spanCount={100} spanClassName="block mr-5 text-gray-200" />
         </section>
     );
 };
