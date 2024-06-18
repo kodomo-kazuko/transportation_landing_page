@@ -57,7 +57,7 @@ export default function Visuals() {
 
         <VisualWrapper
           color="transparent"
-          animation="fade-right"
+          animation="fade-left"
           text="Автобусны карт дахин ашиглах шаардлагагүй боллоо. Гар утсаа ашиглан автобусны төлбөрийг QR кодоор төлөх боломжтой."
         >
           <IPhone boxShadow={globalShadow} width={screenSize}>
