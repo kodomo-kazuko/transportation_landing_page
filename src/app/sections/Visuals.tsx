@@ -9,6 +9,7 @@ import VisualWrapper from "../wrappers/VisualWrapper";
 
 import { useScreenSize } from "../components/getScreenSize";
 import Glider from "../components/Glider";
+import { animate, motion } from "framer-motion";
 
 export default function Visuals() {
 
@@ -31,9 +32,11 @@ export default function Visuals() {
           className=" "
           text="Биет картаа уншуулан утсаараа зорчих шинэ үйлчилгээ"
         >
-          <IPhone boxShadow={globalShadow} width={screenSize}>
-            <Image src={phys} alt="" layout="fill" priority />
-          </IPhone>
+          <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95, rotate: 1 }}>
+            <IPhone boxShadow={globalShadow} width={screenSize}>
+              <Image src={phys} alt="" layout="fill" priority />
+            </IPhone>
+          </motion.div>
         </VisualWrapper>
 
 
@@ -48,30 +51,42 @@ export default function Visuals() {
           animation="fade-right"
           text="Qpay, Socialpay болон банкны картаар төлбөр төлөх хялбар шийдэл"
         >
-          <IPhone boxShadow={globalShadow} width={screenSize}>
-            <Image src={Payment} alt="" priority fill />
-          </IPhone>
+          <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95, rotate: 2 }}>
+            <IPhone boxShadow={globalShadow} width={screenSize}>
+              <Image src={Payment} alt="" priority fill />
+            </IPhone>
+          </motion.div>
         </VisualWrapper>
 
       </div>
 
-      <Glider />
+
 
       <div className="w-full">
+
+
+        <Glider />
+
 
         <VisualWrapper
           color="transparent"
           animation="fade-left"
-          text="Автобусны карт дахин ашиглах шаардлагагүй боллоо. Гар утсаа ашиглан автобусны төлбөрийг QR кодоор төлөх боломжтой."
+          text="Автобусны карт дахин ашиглах шаардлагагүй. Гар утасны QR кодоо ашиглан автобусны төлбөрийг хялбараар төлөх шинэ үйлчилгээ"
         >
-          <IPhone boxShadow={globalShadow} width={screenSize}>
-            <Image src={GG} alt="" layout="fill" priority />
-          </IPhone>
+          <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95, rotate: 2 }}>
+            <IPhone boxShadow={globalShadow} width={screenSize}>
+              <Image src={GG} alt="" layout="fill" priority />
+            </IPhone>
+          </motion.div>
         </VisualWrapper>
+
+        <div className=" -z-10">
+          <Glider />
+        </div>
 
       </div>
 
-      <Glider />
+
 
       <div className="md:w-1/2">
 
@@ -80,9 +95,11 @@ export default function Visuals() {
           animation="fade-right"
           text="Газрын зураг дээрээс автобусны байршил, зогсоол, карт борлуулах цэгүүдийг харах"
         >
-          <IPhone boxShadow={globalShadow} width={screenSize}>
-            <Image src={location} alt="" layout="fill" priority />
-          </IPhone>
+          <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95, rotate: 2 }}>
+            <IPhone boxShadow={globalShadow} width={screenSize}>
+              <Image src={location} alt="" layout="fill" priority />
+            </IPhone>
+          </motion.div>
         </VisualWrapper>
 
       </div>
@@ -98,9 +115,11 @@ export default function Visuals() {
           className=""
           text="Очих байршлаа сонгоод хялбар зорч"
         >
-          <IPhone boxShadow={globalShadow} width={screenSize}>
-            <Image src={direction} alt="Payment" fill priority />
-          </IPhone>
+          <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95, rotate: 2 }}>
+            <IPhone boxShadow={globalShadow} width={screenSize}>
+              <Image src={direction} alt="Payment" fill priority />
+            </IPhone>
+          </motion.div>
         </VisualWrapper>
 
       </div>

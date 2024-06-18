@@ -33,7 +33,7 @@ const ParallaxText: FC<ParallaxProps> = ({ text, baseVelocity = 50, spanCount, s
     return (
         <div className="overflow-hidden tracking-tighter leading-none m-0 whitespace-nowrap flex flex-nowrap">
             <motion.div
-                className="font-plaster uppercase text-5xl flex whitespace-nowrap"
+                className="font-plaster uppercase text-5xl flex whitespace-nowrap "
                 style={{ x }}
             >
                 {spans}
@@ -45,8 +45,8 @@ const ParallaxText: FC<ParallaxProps> = ({ text, baseVelocity = 50, spanCount, s
 const App: FC = () => {
     return (
         <section>
-            <ParallaxText text="UB CARD" baseVelocity={-0.05} spanCount={100} spanClassName="block mr-5 text-gray-100" />
-            <ParallaxText text="UB CARD" baseVelocity={0.05} spanCount={100} spanClassName="block mr-5 text-gray-200" />
+            <ParallaxText text="UB CARD" baseVelocity={-0.05} spanCount={100} spanClassName="block mr-5 text-blue-100" />
+            <ParallaxText text="UB CARD" baseVelocity={0.05} spanCount={100} spanClassName="block mr-5 text-yellow-100" />
         </section>
     );
 };

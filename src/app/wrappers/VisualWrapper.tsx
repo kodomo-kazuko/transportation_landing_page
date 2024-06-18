@@ -2,7 +2,6 @@ import React, { ReactNode } from "react";
 import SwipeWrapper from "../wrappers/SwipeWrapper";
 import ColorWrapper, { WrapperBlueProps } from "../wrappers/ColorWrapper";
 import styled from "@emotion/styled";
-import AnimationWrapper from "./AnimationWrapper";
 
 const StyledH1 = styled.h1`
   font-size: calc(0.5em + 0.8vw);
