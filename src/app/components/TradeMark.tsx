@@ -5,33 +5,11 @@ import Image from "next/image";
 export default function TradeMark() {
     const size: number = 30
     return (
-        <div className="flex justify-center items-center pb-5">
+        <div className="flex justify-center items-center pb-5 mr-1">
             <Image src={theirIcon} alt="Icon" className="mr-2" height={size} width={size} />
             <p className="text-gray-500 text-sm">Нийтийн Тээврийн Газар ©2024</p>
 
-            <div className="ml-10 flex space-x-5">
-                <a
-                    href="#"
-                    className="text-xl text-gray-700 hover:text-gray-900"
-                    aria-label="facebook"
-                >
-                    <FaFacebook color="white" />
-                </a>
-                <a
-                    href="#"
-                    className="text-xl text-gray-700 hover:text-gray-900"
-                    aria-label="twitter"
-                >
-                    <FaXTwitter color="white" />
-                </a>
-                <a
-                    href="#"
-                    className="text-xl text-gray-700 hover:text-gray-900"
-                    aria-label="instagram"
-                >
-                    <FaInstagram color="white" />
-                </a>
-
+            <div className=" ml-24">
 
             </div>
         </div>
