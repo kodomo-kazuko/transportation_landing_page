@@ -16,25 +16,14 @@ interface VisualWrapperProps {
   className?: string;
 }
 
-const VisualWrapper: React.FC<VisualWrapperProps> = ({
-  color,
-  animation,
-  text,
-  children,
-  shadow,
-  className,
-}) => {
-  const MotionProps = {};
-
+const VisualWrapper: React.FC<VisualWrapperProps> = ({ color, animation, text, children, shadow, className }) => {
   return (
     <SwipeWrapper animation={animation}>
       <div className={shadow}>
-        <ColorWrapper color={color} className={`p-10 sm:p-20 ${className}`}>
+        <ColorWrapper color={color} className={`px-12 py-9 sm:px-20 sm:py-20 ${className}`}>
           <div className="flex justify-evenly">
-            <div className="flex basis-1/3 justify-center items-center">
-              {children}
-            </div>
-            <div className="flex basis-1/3 justify-center items-center">
+            <div className="flex basis-1/6 justify-center items-center">{children}</div>
+            <div className="flex basis-3/6 justify-center items-center">
               <StyledH1>{text}</StyledH1>
             </div>
           </div>
