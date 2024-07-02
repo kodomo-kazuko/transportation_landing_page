@@ -1,10 +1,12 @@
 import React, { useState, useEffect } from "react";
 import MyButton from "../components/Button";
 import Image from "next/image";
-import logoFull from "../../../public/images/logo/UBCard-Logo.svg";
+// import logoFull from "../../../public/images/logo/UBCard-Logo.svg";
 import { FaBars } from "react-icons/fa";
 import ColorWrapper from "../wrappers/ColorWrapper";
 import { motion } from "framer-motion";
+import theirIcon from "../../../public/images/Icon/Niitiin-teever-logo 1 (1).svg";
+import logo_word from "../../../public/images/logo/logo_words.svg";
 
 interface NavBarProps {
   setShowSecondDiv: (showSecondDiv: boolean) => void;
@@ -44,7 +46,6 @@ const NavBar: React.FC<NavBarProps> = ({ setShowSecondDiv }) => {
     }, 100);
   };
 
-
   return (
     <>
       <div className={`fixed top-0 left-0 w-full z-50`}>
@@ -52,15 +53,17 @@ const NavBar: React.FC<NavBarProps> = ({ setShowSecondDiv }) => {
           <div className="flex justify-between items-center p-3 md:w-11/12 mx-auto">
             <div className="hidden md:flex md:justify-center">
               <button onClick={() => handleClick("", false)}>
-                <motion.div whileHover={{ scale: 1.1 }}>
-                  <Image priority alt="Logo" src={logoFull} />
+                <motion.div whileHover={{ scale: 1.1 }} className=" flex space-x-4">
+                  <Image priority alt="Logo" src={theirIcon} height={40} width={40} />
+                  <Image priority alt="Logo" src={logo_word} />
                 </motion.div>
               </button>
             </div>
             <div className="flex items-center justify-between w-full md:hidden">
               <button onClick={() => handleClick("", false)}>
-                <motion.div whileHover={{ scale: 1.1 }} className=" pl-2">
-                  <Image priority alt="Logo" src={logoFull} />
+                <motion.div whileHover={{ scale: 1.1 }} className=" flex space-x-4">
+                  <Image priority alt="Logo" src={theirIcon} height={40} width={40} />
+                  <Image priority alt="Logo" src={logo_word} />
                 </motion.div>
               </button>
               <button onClick={() => setIsMenuVisible(!isMenuVisible)}>
@@ -110,8 +113,6 @@ const NavBar: React.FC<NavBarProps> = ({ setShowSecondDiv }) => {
       </div>
     </>
   );
-
-
 };
 
 export default NavBar;
