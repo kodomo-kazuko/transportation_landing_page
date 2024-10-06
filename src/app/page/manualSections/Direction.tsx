@@ -22,5 +22,9 @@ export default function Direction() {
     },
   ];
 
-  return <ContentWrapper title="Чиглэл" cards={cards} />;
+  return (
+    <div id="direction">
+      <ContentWrapper title="Чиглэл" cards={cards} />{" "}
+    </div>
+  );
 }

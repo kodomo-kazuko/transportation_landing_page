@@ -24,5 +24,9 @@ export default function History() {
     },
   ];
 
-  return <ContentWrapper title="Зорчилтын түүх" cards={cards} />;
+  return (
+    <div id="history">
+      <ContentWrapper title="Зорчилтын түүх" cards={cards} />
+    </div>
+  );
 }

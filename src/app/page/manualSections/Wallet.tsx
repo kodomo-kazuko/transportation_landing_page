@@ -25,5 +25,9 @@ export default function Wallet() {
     },
   ];
 
-  return <ContentWrapper title="Хэтэвч" cards={cards} />;
+  return (
+    <div id="wallet">
+      <ContentWrapper title="Хэтэвч" cards={cards} />
+    </div>
+  );
 }

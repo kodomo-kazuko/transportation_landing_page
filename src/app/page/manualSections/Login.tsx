@@ -25,5 +25,9 @@ export default function Login() {
     },
   ];
 
-  return <ContentWrapper title="Нэвтрэх" cards={cards} />;
+  return (
+    <div id="login">
+      <ContentWrapper title="Нэвтрэх" cards={cards} />
+    </div>
+  );
 }

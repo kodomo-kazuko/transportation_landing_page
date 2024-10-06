@@ -23,5 +23,9 @@ export default function PhysicalCard() {
     },
   ];
 
-  return <ContentWrapper title="Биет карт" cards={cards} />;
+  return (
+    <div id="physicalCard">
+      <ContentWrapper title="Биет карт" cards={cards} />
+    </div>
+  );
 }
