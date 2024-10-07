@@ -24,7 +24,7 @@ const ContentWrapper: React.FC<ContentWrapperProps> = ({
   title,
   cards,
   className,
-  secondColumnCards, // receiving second column cards
+  secondColumnCards,
 }: ContentWrapperProps) => {
   const isMobile =
     typeof window !== "undefined"
