@@ -136,47 +136,72 @@ const NavBar: React.FC<NavBarProps> = ({ setShowSecondDiv }) => {
                       Ашиглах заавар
                     </Button>
                   </DropdownTrigger>
+
                   <DropdownMenu
                     aria-label="Static Actions"
-                    className="grid grid-cols-2 gap-4 p-2 bg-white rounded-lg"
+                    className="w-full grid gap-4 p-3 mb-2 bg-white rounded-lg w-full border-b border-gray-300"
                   >
-                    <DropdownItem key="login">
-                      <Link href="#login">
+                    <DropdownItem
+                      key="login"
+                      className="w-full border-b border-gray-300 mb-2 pb-2 flex justify-center"
+                    >
+                      <Link href="#login" className="w-full text-center">
                         <p>Нэвтрэх</p>
                       </Link>
                     </DropdownItem>
-                    <DropdownItem key="wallet">
-                      <Link href="#wallet">
+                    <DropdownItem
+                      key="wallet"
+                      className="w-full border-b border-gray-300 mb-2 pb-2 flex justify-center"
+                    >
+                      <Link href="#wallet" className="w-full text-center">
                         <p>Хэтэвч</p>
                       </Link>
                     </DropdownItem>
-                    <DropdownItem key="discount">
-                      <Link href="#discount">
+                    <DropdownItem
+                      key="discount"
+                      className="w-full border-b border-gray-300 mb-2 pb-2 flex justify-center"
+                    >
+                      <Link href="#discount" className="w-full text-center">
                         <p>Хөнгөлөлттэй эрх</p>
                       </Link>
                     </DropdownItem>
-                    <DropdownItem key="charge">
-                      <Link href="#charge">
+                    <DropdownItem
+                      key="charge"
+                      className="w-full border-b border-gray-300 mb-2 pb-2 flex justify-center"
+                    >
+                      <Link href="#charge" className="w-full text-center">
                         <p>Хэтэвч цэнэглэх</p>
                       </Link>
                     </DropdownItem>
-                    <DropdownItem key="physicalCard">
-                      <Link href="#physicalCard">
+                    <DropdownItem
+                      key="physicalCard"
+                      className="w-full border-b border-gray-300 mb-2 pb-2 "
+                    >
+                      <Link href="#physicalCard" className="w-full text-center">
                         <p>Биет карт</p>
                       </Link>
                     </DropdownItem>
-                    <DropdownItem key="direction">
-                      <Link href="#direction">
+                    <DropdownItem
+                      key="direction"
+                      className="w-full border-b border-gray-300 mb-2 pb-2 flex justify-center"
+                    >
+                      <Link href="#direction" className="w-full text-center">
                         <p>Чиглэл</p>
                       </Link>
                     </DropdownItem>
-                    <DropdownItem key="feedback">
-                      <Link href="#feedback">
+                    <DropdownItem
+                      key="feedback"
+                      className="w-full border-b border-gray-300 mb-2 pb-2 flex justify-center"
+                    >
+                      <Link href="#feedback" className="w-full text-center">
                         <p>Сэтгэгдэл үлдээх</p>
                       </Link>
                     </DropdownItem>
-                    <DropdownItem key="history">
-                      <Link href="#history">
+                    <DropdownItem
+                      key="history"
+                      className="w-full flex justify-center"
+                    >
+                      <Link href="#history" className="w-full text-center">
                         <p>Зорчилтын түүх</p>
                       </Link>
                     </DropdownItem>
