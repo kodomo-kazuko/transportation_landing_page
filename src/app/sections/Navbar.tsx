@@ -108,7 +108,10 @@ const NavBar: React.FC<NavBarProps> = ({ setShowSecondDiv }) => {
                   </MyButton>
                 </motion.div>
                 <motion.div whileHover={{ scale: 1.1 }}>
-                  <Button onClick={() => handleClick("FAQ", false)}>
+                  <Button
+                    onClick={() => handleClick("FAQ", false)}
+                    style={{ marginTop: 4 }}
+                  >
                     Түгээмэл асуултууд
                   </Button>
                 </motion.div>
@@ -130,7 +133,7 @@ const NavBar: React.FC<NavBarProps> = ({ setShowSecondDiv }) => {
                 <Dropdown>
                   <DropdownTrigger className="font-sans font-normal text-gray-100">
                     <Button
-                      style={{ marginTop: -5, marginLeft: -14 }}
+                      style={{ marginLeft: -14 }}
                       onClick={() => handleClick("", true)}
                     >
                       Ашиглах заавар
@@ -209,13 +212,15 @@ const NavBar: React.FC<NavBarProps> = ({ setShowSecondDiv }) => {
                 </Dropdown>
               </motion.div>
               <motion.div whileHover={{ scale: 1.03 }}>
-                <MyButton
-                  bgColor=""
-                  fontType="sans"
-                  onClick={() => handleClick("FAQ", false)}
-                >
-                  Түгээмэл асуултууд
-                </MyButton>
+                <div>
+                  <MyButton
+                    bgColor=""
+                    fontType="sans"
+                    onClick={() => handleClick("FAQ", false)}
+                  >
+                    Түгээмэл асуултууд
+                  </MyButton>
+                </div>
               </motion.div>
               <motion.div whileHover={{ scale: 1.03 }}>
                 <MyButton
