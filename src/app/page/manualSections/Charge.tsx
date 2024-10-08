@@ -24,5 +24,9 @@ export default function Charge() {
     },
   ];
 
-  return <ContentWrapper title="Хэтэвч цэнэглэх" cards={cards} />;
+  return (
+    <div id="charge">
+      <ContentWrapper title="Хэтэвч цэнэглэх" cards={cards} />
+    </div>
+  );
 }

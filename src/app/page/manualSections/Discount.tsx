@@ -24,5 +24,9 @@ export default function Discount() {
     },
   ];
 
-  return <ContentWrapper title="Хөнгөлөлттэй эрх" cards={cards} />;
+  return (
+    <div id="discount">
+      <ContentWrapper title="Хөнгөлөлттэй эрх" cards={cards} />
+    </div>
+  );
 }

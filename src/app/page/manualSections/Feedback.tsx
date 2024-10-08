@@ -24,5 +24,9 @@ export default function Feedback() {
     },
   ];
 
-  return <ContentWrapper title="Сэтгэгдэл үлдээх" cards={cards} />;
+  return (
+    <div id="feedback">
+      <ContentWrapper title="Сэтгэгдэл үлдээх" cards={cards} />
+    </div>
+  );
 }
