@@ -6,20 +6,20 @@ import ContentWrapper, { CardData } from "@/app/wrappers/ContentWrapper";
 export default function Charge() {
   const cards: CardData[] = [
     {
-      title: "1. Мөнгөн дүн оруулах",
+      title: "1. Хэтэвч цэнэглэлт",
       description:
-        "Цэнэглэх дүнгээ оруулж үргэлжлүүлэх товч дарж төлбөрийн нөхцөл сонгоно.",
+        "Цэнэглэх мөнгөн дүнг оруулж үргэлжлүүлэх товчийг дарж төлбөрийн нөхцөл сонгоно.",
       image: image_1,
     },
     {
-      title: "2. Төлбөр төлөх",
+      title: "2. Төлбөрийн суваг",
       description:
-        "Qpay, Socialpay болон банкны картаар төлбөр төлөх боломжтой.",
+        "Та өөрийн хүссэн банкны данс болон QPay, SocialPay ашиглан төлбөр төлөх боломжтой.",
       image: image_2,
     },
     {
-      title: "3. Картаар төлбөр төлөх",
-      description: "Өөрийн холбосон банкны картаар төлбөр төлнө .",
+      title: "3. Банкны картаар төлбөр төлөлт",
+      description: "Та өөрийн холбосон картаар төлбөр төлөх боломжтой.",
       image: image_3,
     },
   ];

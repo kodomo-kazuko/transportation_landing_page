@@ -6,19 +6,18 @@ import ContentWrapper, { CardData } from "@/app/wrappers/ContentWrapper";
 export default function PhysicalCard() {
   const cards: CardData[] = [
     {
-      title: "1. Биет картын жагсаалт",
-      description: "Биет картуудыг өөрийн бүртгэл дээр холбох боломжтой.",
+      title: "1. Банкны картаар төлбөр төлөлт",
+      description: "Та өөрийн холбосон картаар төлбөр төлөх боломжтой.",
       image: image_1,
     },
     {
-      title: "2. Картын дэлгэрэнгүй",
-      description:
-        "Биет картын цэнэглэлт болон зорчилтын түүхийг харах боломжтой.",
+      title: "2. Банкны картаар төлбөр төлөлт",
+      description: "Та өөрийн холбосон картаар төлбөр төлөх боломжтой.",
       image: image_2,
     },
     {
       title: "3. Карт цэнэглэх",
-      description: "Мөн гар утаснаас биет картыг цэнэглэх боломжтой.",
+      description: "Өөрийн хэтэвчнээс NFC карт уншигч дээр биет картыг уншуулан цэнэглэх боломжтой.",
       image: image_3,
     },
   ];
