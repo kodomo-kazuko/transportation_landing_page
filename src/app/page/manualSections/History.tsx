@@ -13,7 +13,7 @@ export default function History() {
     },
     {
       title: "2. Зорчилтын түүх хайх",
-      description: "Мөн зорчсон түүхийг огноогоор хайх боломжтой.",
+      description: "Зорчсон түүхийг огноогоор хайх боломжтой.",
       image: image_2,
     },
     {
