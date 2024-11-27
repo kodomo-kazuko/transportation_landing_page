@@ -19,17 +19,24 @@ export default function Visuals() {
   const globalShadow: string = "-10px 10px 5px rgba(0,0,0,0.3)";
 
   return (
-    <div id="Visual" className="flex flex-col md:flex-row flex-wrap justify-center">
+    <div
+      id="Visual"
+      className="flex flex-col md:flex-row flex-wrap justify-center"
+    >
       <div className="md:w-1/2">
         <VisualWrapper
           color="secondary"
           animation="fade-up"
           // className=" md:rounded-l-3xl md:ml-5"
-          text="Биет картаа холбон гар утсаараа төлбөр төлөх боломж"
+          text="UBCARD аппликейшнаар дамжуулан зорчих эрхийн QR код үүсгэн ашиглах боломжтой боллоо."
+          // className=" md:rounded-3xl md:mx-5"
         >
-          <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95, rotate: 1 }}>
+          <motion.div
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95, rotate: 2 }}
+          >
             <IPhone boxShadow={globalShadow} width={screenSize}>
-              <Image src={phys} alt="" layout="fill" priority />
+              <Image src={GG} alt="" layout="fill" priority />
             </IPhone>
           </motion.div>
         </VisualWrapper>
@@ -39,10 +46,13 @@ export default function Visuals() {
         <VisualWrapper
           color="primary"
           animation="fade-up"
-          text="Qpay, Socialpay болон бүх төрлийн банкны карт ашиглан төлбөр төлөх хялбар шийдэл"
+          text="Qpay, Socialpay ашиглан төлбөр төлөх боломжтой"
           // className=" md:rounded-r-3xl md:mr-5"
         >
-          <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95, rotate: 2 }}>
+          <motion.div
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95, rotate: 2 }}
+          >
             <IPhone boxShadow={globalShadow} width={screenSize}>
               <Image src={Payment} alt="" priority fill />
             </IPhone>
@@ -56,14 +66,14 @@ export default function Visuals() {
         <VisualWrapper
           color="white"
           animation="fade-up"
-          text="Бүх хэрэглээг илүү хялбараар.
-                UBCARD аппликейшнаар дамжуулах үүсэх өөрийн QR кодоо ашиглан зорчих төлбөрөө төлөөрэй.
-                Дахин карт ашиглах шаардлагагүй боллоо."
-          // className=" md:rounded-3xl md:mx-5"
+          text="Автобусны биет картаа холбон аппликейшнээр автобусны картаа цэнэглэх боломжтой"
         >
-          <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95, rotate: 2 }}>
+          <motion.div
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95, rotate: 1 }}
+          >
             <IPhone boxShadow={globalShadow} width={screenSize}>
-              <Image src={GG} alt="" layout="fill" priority />
+              <Image src={phys} alt="" layout="fill" priority />
             </IPhone>
           </motion.div>
         </VisualWrapper>
@@ -75,10 +85,13 @@ export default function Visuals() {
         <VisualWrapper
           color="primary"
           animation="fade-up"
-          text="UBCARD аппликейшнаар автобусны байршлын мэдээллийг цагийн горимоор харах боломжтойгоос гадна, зогсоол, карт борлуулах цэгүүдийг газрын зураг дээрээс харах боломжтой."
+          text="UBCARD аппликейшнаар автобусны байршлыг харах боломжтойгоос гадна, зогсоол, карт борлуулах цэгүүдийг газрын зураг дээрээс харах боломжтой."
           // className=" md:rounded-l-3xl md:ml-5"
         >
-          <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95, rotate: 2 }}>
+          <motion.div
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95, rotate: 2 }}
+          >
             <IPhone boxShadow={globalShadow} width={screenSize}>
               <Image src={location} alt="" layout="fill" priority />
             </IPhone>
@@ -94,7 +107,10 @@ export default function Visuals() {
           // className="md:rounded-r-3xl md:mr-5"
           text="Зам тооцоолох шинэ шийдлийн тусламжтайгаар өөрийн очих байршлыг оруулан хүссэн газраа саадгүй хүрээрэй."
         >
-          <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95, rotate: 2 }}>
+          <motion.div
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95, rotate: 2 }}
+          >
             <IPhone boxShadow={globalShadow} width={screenSize}>
               <Image src={direction} alt="Payment" fill priority />
             </IPhone>
