@@ -1,15 +1,14 @@
-import Login from "./manualSections/Login";
-import Wallet from "./manualSections/Wallet";
+import Footer from "../sections/Footer";
+import SwipeWrapper from "../wrappers/SwipeWrapper";
 import Charge from "./manualSections/Charge";
-import History from "./manualSections/History";
-import Discount from "./manualSections/Discount";
-import Feedback from "./manualSections/Feedback";
 import Direction from "./manualSections/Direction";
 import Direction2 from "./manualSections/Direction2";
-import SwipeWrapper from "../wrappers/SwipeWrapper";
+import Discount from "./manualSections/Discount";
+import Feedback from "./manualSections/Feedback";
+import History from "./manualSections/History";
+import Login from "./manualSections/Login";
 import PhysicalCard from "./manualSections/PhysicalCard";
-import Spacer from "../components/spacer";
-import Footer from "../sections/Footer";
+import Wallet from "./manualSections/Wallet";
 
 export default function Manual() {
   let screenSize: number = 0;

@@ -24,7 +24,7 @@ export default function Home() {
       }
       setScrollToId(null);
     }
-  }, [showSecondDiv]);
+  }, [scrollToId, showSecondDiv]);
 
   return (
     <Layout>
@@ -36,7 +36,7 @@ export default function Home() {
 
         <Spacer height="70px" width="" />
 
-        {showSecondDiv ? Manual() : Main()}
+        {showSecondDiv ? <Manual /> : <Main />}
       </div>
       <div className=" -z-50">
         <ScrollToTopButton />
