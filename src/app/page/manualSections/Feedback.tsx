@@ -19,10 +19,14 @@ export default function Feedback() {
     },
     {
       title: "3. Автобусанд сэтгэгдэл үлдээх",
-      description: "Мөн тухайн автобусанд сэтгэгдэл үлдээх боломжтой.",
+      description: "Уг зорчилт хийж буй автобусанд сэтгэгдэл үлдээх боломжтой.",
       image: image_3,
     },
   ];
 
-  return <ContentWrapper title="Сэтгэгдэл үлдээх" cards={cards} />;
+  return (
+    <div id="feedback">
+      <ContentWrapper title="Сэтгэгдэл үлдээх" cards={cards} />
+    </div>
+  );
 }

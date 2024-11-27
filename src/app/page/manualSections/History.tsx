@@ -8,7 +8,7 @@ export default function History() {
     {
       title: "1. Зорчилтын түүх",
       description:
-        "Тухайн хэрэглэгчийн автобусаар зорчсон өдөр болон чиглэл харагдана.",
+        "Автобусаар зорчилт хийсэн түүх түүнтэй холбогдох мэдээлэл харагдана.",
       image: image_1,
     },
     {
@@ -16,13 +16,17 @@ export default function History() {
       description: "Зорчсон түүхийг огноогоор хайх боломжтой.",
       image: image_2,
     },
-    {
-      title: "3. Зорчилтын түүхийн дэлгэрэнгүй",
-      description:
-        "Зорчилтын дэлгэрэнгүй мэдээллийг харж үнэлгээ өгөх боломжтой.",
-      image: image_3,
-    },
+    // {
+    //   title: "3. Зорчилтын түүхийн дэлгэрэнгүй",
+    //   description:
+    //     "Зорчилтын дэлгэрэнгүй мэдээллийг харж үнэлгээ өгөх боломжтой.",
+    //   image: image_3,
+    // },
   ];
 
-  return <ContentWrapper title="Зорчилтын түүх" cards={cards} />;
+  return (
+    <div id="history">
+      <ContentWrapper title="Зорчилтын түүх" cards={cards} />
+    </div>
+  );
 }

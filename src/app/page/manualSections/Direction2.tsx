@@ -24,5 +24,9 @@ export default function Direction2() {
     },
   ];
 
-  return <ContentWrapper title="" cards={cards} className=" bg-white pb-0" />;
+  return (
+    <div id="direction2">
+      <ContentWrapper title="" cards={cards} className=" bg-white pb-0" />
+    </div>
+  );
 }
