@@ -24,7 +24,7 @@ export default function Home() {
       }
       setScrollToId(null);
     }
-  }, [scrollToId, showSecondDiv]);
+  }, []);
 
   return (
     <Layout>
