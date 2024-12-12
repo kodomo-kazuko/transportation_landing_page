@@ -142,7 +142,7 @@ const NavBar: React.FC<NavBarProps> = ({ setShowSecondDiv }) => {
 
                   <DropdownMenu
                     aria-label="Static Actions"
-                    className="w-full grid gap-4 p-3 mb-2 bg-white rounded-lg w-full border-b border-gray-300"
+                    className="w-full grid gap-4 p-3 mb-2 bg-white rounded-lg border-b border-gray-300"
                   >
                     <DropdownItem
                       key="login"

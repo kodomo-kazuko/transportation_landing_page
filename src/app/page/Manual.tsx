@@ -1,4 +1,3 @@
-import Footer from "../sections/Footer";
 import SwipeWrapper from "../wrappers/SwipeWrapper";
 import Charge from "./manualSections/Charge";
 import Direction from "./manualSections/Direction";
@@ -21,7 +20,7 @@ export default function Manual() {
 
     return (
       <SwipeWrapper animation={"fade-right"}>
-        <div className=" mb-10 md:px-5">
+        <div className="mb-10 md:px-5">
           <Login />
 
           <Wallet />
@@ -40,8 +39,6 @@ export default function Manual() {
 
           <History />
         </div>
-
-        <Footer />
       </SwipeWrapper>
     );
   }

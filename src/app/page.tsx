@@ -7,6 +7,7 @@ import ScrollToTopButton from "./components/ScrollToTop";
 import Manual from "./page/Manual";
 import Main from "./page/Main";
 import Spacer from "./components/spacer";
+import Footer from "./sections/Footer";
 
 export default function Home() {
   const [showSecondDiv, setShowSecondDiv] = useState(false);
@@ -41,6 +42,8 @@ export default function Home() {
       <div className=" -z-50">
         <ScrollToTopButton />
       </div>
+
+      <Footer />
     </Layout>
   );
 }
