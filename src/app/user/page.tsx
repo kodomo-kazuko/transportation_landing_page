@@ -36,7 +36,7 @@ export default function UserPage() {
 
     try {
       const response = await fetch(
-        `https://app-backend-dev.ubcard.mn/user/me/deactivate`,
+        `https://app-backend-dev.ubcard.mn/auth/deactivate`,
         {
           method: "DELETE",
           headers: {
