@@ -38,7 +38,7 @@ export default function UserPage() {
       const response = await fetch(
         `https://app-backend-dev.ubcard.mn/user/me/deactivate`,
         {
-          method: "POST",
+          method: "DELETE",
           headers: {
             "Content-Type": "application/json",
           },
