@@ -6,6 +6,7 @@ import AppStore from "../../../public/images/Icon/AppStore.svg";
 import { useScreenSize } from "../components/getScreenSize";
 import { motion } from "framer-motion";
 import Start from "../../../public/images/figIMG/Phone_06.png";
+import Link from "next/link";
 
 export default function Download() {
   const { screenSize } = useScreenSize({
@@ -25,12 +26,9 @@ export default function Download() {
       >
         <div className="container md:py-14 justify-center md:justify-end flex lg:flex-row lg:items-center overflow-clip">
           <div className="lg:flex lg:flex-1">
-            <div
-              className="relative md:absolute md:z-10"
-              style={{ left: "0", top: "50%", transform: "translateY(-50%)" }}
-            >
+            <div className="relative md:absolute md:z-10 left-0 top-1/2 transform -translate-y-1/2">
               <motion.div
-                animate={{ y: [0, -50, 0], }}
+                animate={{ y: [0, -10, 0] }}
                 transition={{
                   duration: 5,
                   repeat: Infinity,
@@ -52,24 +50,28 @@ export default function Download() {
               </motion.div>
             </div>
           </div>
-          <div className="lg:flex basis-2/3 z-0 lg:pt-16 text-base-normal flex flex-col items-center lg:items-start px-4">
-            {" "}
+
+          <div className="lg:flex basis-2/3 z-0 lg:pt-16 text-base-normal flex flex-col items-center lg:items-start p-4">
             <div className="mb-8 lg:text-left sm:mb-10 font-normal text-sm sm:text-base">
               <h1 className="font-semibold text-2xl leading-7 sm:text-3xl mb-5 sm:mb-6">
-                {" "}
-                UBCARD аппликейшн татах{" "}
+                UBCARD аппликейшн татах
               </h1>
-              <p className="mb-8 lg:text-left md:pr-40 lg:px-0 lg:pr-20 sm:mb-10 font-normal text-sm sm:text-base">
+
+              <p className="mb-8 lg:text-left md:pr-40 lg:px-0 lg:pr-20 sm:mb-10 font-normal text-sm text-pretty sm:text-base">
                 Яг одоо аппликейшнаа татан авч хурдан, хялбар шийдлүүдийг өдөр
                 тутмын амьдралдаа хэрэгжүүлээрэй. Таны автобус аяллыг
                 хөнгөвчилнө.
               </p>
+
               <div className="flex flex-col w-60 md:w-auto md:flex-row gap-3 mx-auto lg:mx-0">
                 <motion.div
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.99 }}
                 >
-                  <a className="w-full lg:w-fit focus-visible-class" href="">
+                  <Link
+                    className="w-full lg:w-fit focus-visible-class"
+                    href={process.env.NEXT_PUBLIC_APPSTORE_URL || "/"}
+                  >
                     <button className="w-full lg:w-60 text-gray-700 bg-white font-semibold rounded-2xl flex items-center justify-center gap-2 p-2">
                       <Image
                         alt="App Store Logo"
@@ -79,13 +81,17 @@ export default function Download() {
                       />
                       <span>App Store</span>
                     </button>
-                  </a>
+                  </Link>
                 </motion.div>
+
                 <motion.div
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.99 }}
                 >
-                  <a className="w-full lg:w-fit focus-visible-class" href="">
+                  <Link
+                    className="w-full lg:w-fit focus-visible-class"
+                    href={process.env.NEXT_PUBLIC_PLAYSTORE_URL || "/"}
+                  >
                     <button className="w-full lg:w-60 text-gray-700 bg-white font-semibold rounded-2xl flex items-center justify-center gap-2 p-2">
                       <Image
                         alt="Play Store Logo"
@@ -95,7 +101,7 @@ export default function Download() {
                       />
                       <span>Google Play</span>
                     </button>
-                  </a>
+                  </Link>
                 </motion.div>
               </div>
             </div>
