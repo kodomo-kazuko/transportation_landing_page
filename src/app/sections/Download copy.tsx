@@ -9,7 +9,15 @@ import Start from "../../../public/images/figIMG/Phone_06.png";
 
 export default function Download() {
   const { screenSize, windowWidth } = useScreenSize({
-    landscapeRatio: { xs: 2.5, sm: 3, md: 4, lg: 6, xl: 6, "2xl": 9, "3xl": 10 },
+    landscapeRatio: {
+      xs: 2.5,
+      sm: 3,
+      md: 4,
+      lg: 6,
+      xl: 6,
+      "2xl": 9,
+      "3xl": 10,
+    },
   });
   const updateSize = screenSize;
   const buttonSize: number = 40;
