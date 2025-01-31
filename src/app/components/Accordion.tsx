@@ -70,7 +70,8 @@ export function AccordionItem({
         onClick={() => setSelected(open ? null : value)}
         className="flex justify-between items-center p-4 font-medium"
       >
-        {trigger}
+        <span className="w-11/12">{trigger}</span>
+
         <ChevronDown
           size={16}
           className={`transition-transform ${open ? "rotate-180" : ""}`}
