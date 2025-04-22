@@ -25,7 +25,7 @@ export default function Manual() {
 
           <Wallet />
 
-          <Discount />
+          {/* <Discount /> */}
 
           <Charge />
 
